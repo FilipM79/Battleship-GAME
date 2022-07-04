@@ -1,23 +1,25 @@
 package battleship;
 
 import java.util.Scanner;
-
 public class Main {
     public static String inputCoordinates;
     public static String[][] battleField;
+    public static String[][] battleFieldCopy;
     public static boolean correctLength = true;
 
     public static void main(String[] args) {
         // Write your code here
+        Field start = new Field();
+        start.blank();
 
-        Field field = new Field();
-        field.blank();
-        battleField = new String[field.field.length][];
-        for(int i = 0; i < field.field.length; i++)
-            battleField[i] = field.field[i].clone();
+        //copying start.blank field array to battlefield array
+        battleField = new String[start.field.length][];
+        for(int i = 0; i < start.field.length; i++)
+            battleField[i] = start.field[i].clone();
 
         Scanner scanner = new Scanner(System.in);
 
+        // populating array
         correctLength = true;
         while (correctLength) {
             System.out.println(GamePrinter.aircraftCarrier());
@@ -57,5 +59,7 @@ public class Main {
             inputCoordinates = scanner.nextLine().toUpperCase().trim();
             Vessel.positionPatrolBoat();
         }
+        scanner.close();
+
     }
 }

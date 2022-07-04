@@ -1,8 +1,7 @@
 package battleship;
 
-import java.util.Scanner;
-
 class Vessel extends Main {
+
     String name;
     int length;
     static Vessel aircraftCarrier = new Vessel("Aircraft Carrier", 5);
@@ -21,20 +20,26 @@ class Vessel extends Main {
         Field field = new Field();
         coordinates.setInputString(inputCoordinates);
 
-        if (aircraftCarrier.length == coordinates.getColumnDiff() + 1 ||
-                aircraftCarrier.length == coordinates.getRowDiff() + 1) {
-            //new GamePrinter();
-            System.out.println();
-            field.newField();
-            correctLength = false;
+        //populating newField array if conditions are met
 
-        } else if (coordinates.getColumnDiff() != 0 && coordinates.getRowDiff() != 0) {
-            System.out.println("Wrong direction, try again.");
+        //if (coordinates.getSpaceIndex() == -1) {
+            if (aircraftCarrier.length == coordinates.getColumnDiff() + 1 ||
+                    aircraftCarrier.length == coordinates.getRowDiff() + 1) {
+                //new GamePrinter();
+                System.out.println();
+                field.newField();
+                field.copy(); //added
+                correctLength = false;
 
-        } else {
-            System.out.println("Wrong length, try again.");
+            } else if (coordinates.getColumnDiff() != 0 && coordinates.getRowDiff() != 0) {
+                System.out.println("Wrong direction, try again.");
+
+            } else {
+                System.out.println("Wrong length, try again.");
+            //}
         }
     }
+
 
     public static void positionBattleship() {
         Coordinates coordinates = new Coordinates();
@@ -46,6 +51,7 @@ class Vessel extends Main {
             //new GamePrinter();
             System.out.println();
             field.newField();
+            field.copy(); //added
             correctLength = false;
 
         } else if (coordinates.getColumnDiff() != 0 && coordinates.getRowDiff() != 0) {
@@ -66,6 +72,7 @@ class Vessel extends Main {
             //new GamePrinter();
             System.out.println();
             field.newField();
+            field.copy(); //added
             correctLength = false;
 
         } else if (coordinates.getColumnDiff() != 0 && coordinates.getRowDiff() != 0) {
@@ -87,6 +94,7 @@ class Vessel extends Main {
             //new GamePrinter();
             System.out.println();
             field.newField();
+            field.copy(); //added
             correctLength = false;
 
         } else if (coordinates.getColumnDiff() != 0 && coordinates.getRowDiff() != 0) {
@@ -100,13 +108,14 @@ class Vessel extends Main {
     public static void positionPatrolBoat() {
         Coordinates coordinates = new Coordinates();
         Field field = new Field();
-        coordinates.setInputString(inputCoordinates);
+        coordinates.setInputString(Vessel.inputCoordinates);
 
         if (patrolBoat.length == coordinates.getColumnDiff() + 1 ||
                 patrolBoat.length == coordinates.getRowDiff() + 1) {
             //new GamePrinter();
             System.out.println();
             field.newField();
+            field.copy(); //added
             correctLength = false;
 
         } else if (coordinates.getColumnDiff() != 0 && coordinates.getRowDiff() != 0) {
@@ -115,5 +124,6 @@ class Vessel extends Main {
         } else {
             System.out.println("Wrong length, try again.");
         }
+
     }
 }

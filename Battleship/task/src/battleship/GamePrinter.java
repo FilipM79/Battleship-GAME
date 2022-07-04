@@ -4,10 +4,10 @@ class GamePrinter extends Coordinates {
     static String inputMessage;
 
     GamePrinter() {
-        System.out.println("Unete koordinate su: " + getInputString() + ".\n"
-                + "K1 (row, column) je " + getK1RowNum() + ", " + getK1ColumnNum() + ".\n"
-                + "K2 (row, column) je " + getK2RowNum() + ", " + getK2ColumnNum() + ".\n"
-                + "Row difference je: " + getRowDiff() + ", " + "column difference je: " + getColumnDiff());
+        System.out.println("Input coordinates : " + getInputString() + ".\n"
+                + "K1 (row, column) is " + getK1RowNum() + ", " + getK1ColumnNum() + ".\n"
+                + "K2 (row, column) is " + getK2RowNum() + ", " + getK2ColumnNum() + ".\n"
+                + "Row difference is: " + getRowDiff() + ", " + "column difference is: " + getColumnDiff());
     }
 
     static String aircraftCarrier () {

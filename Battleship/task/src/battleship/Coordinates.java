@@ -2,7 +2,7 @@ package battleship;
 
 class Coordinates extends Main {
 
-    private String inputString = inputCoordinates;
+    String inputString = inputCoordinates;
     private final int f = inputString.length();
     private final int spaceIndex = inputString.indexOf(" ");
     private final String k1 = inputString.substring(0, spaceIndex);
@@ -15,39 +15,28 @@ class Coordinates extends Main {
     private final int rowDiff = Math.abs(k2RowNum - k1RowNum);
     private final int columnDiff = Math.abs(k2ColumnNum - k1ColumnNum) / 2;
 
-    public Coordinates() {
-        int columnDiff = Math.abs(k2ColumnNum - k1ColumnNum) / 2;
-    }
-
     public void setInputString(String inputString) {
         this.inputString = inputString;
     }
-
     public String getInputString() {
         return inputString;
     }
-
+    public int getSpaceIndex() { return spaceIndex; }
     public int getK1RowNum() {
         return k1RowNum;
     }
-
-
     public int getK2RowNum() {
         return k2RowNum;
     }
-
     public int getK1ColumnNum() {
         return k1ColumnNum;
     }
-
     public int getK2ColumnNum() {
         return k2ColumnNum;
     }
-
     public int getRowDiff() {
         return rowDiff;
     }
-
     public int getColumnDiff() {
         return columnDiff;
     }
