@@ -85,3 +85,483 @@
 /Topics/Static members/Too many cats/src/
 /Topics/Static members/Detail manufacturing/src/
 /Topics/Instance methods/
+/.gradle/7.3.3/checksums/checksums.lock
+/.gradle/7.3.3/checksums/md5-checksums.bin
+/.gradle/7.3.3/checksums/sha1-checksums.bin
+/.gradle/7.3.3/dependencies-accessors/dependencies-accessors.lock
+/.gradle/7.3.3/dependencies-accessors/gc.properties
+/.gradle/7.3.3/executionHistory/executionHistory.lock
+/.gradle/7.3.3/fileChanges/last-build.bin
+/.gradle/7.3.3/fileHashes/fileHashes.lock
+/.gradle/7.3.3/gc.properties
+/.idea/frameworkLessonHistory/storage.storageData
+/.idea/frameworkLessonHistory/storage.storageRecordIndex
+/.idea/modules/Battleship/task/out/Battleship.Battleship-task-out.iml
+/.idea/modules/Battleship/task/out/Battleship.Battleship-task-out.main.iml
+/.idea/modules/Battleship/task/out/Battleship.Battleship-task-out.test.iml
+/.idea/modules/Battleship/task/Battleship.Battleship-task.iml
+/.idea/modules/Battleship/task/Battleship.Battleship-task.main.iml
+/.idea/modules/Battleship/task/Battleship.Battleship-task.test.iml
+/.idea/modules/Topics/Custom exceptions/Checked exception with constructor/Battleship.Topics-Custom_exceptions-Checked_exception_with_constructor.iml
+/.idea/modules/Topics/Custom exceptions/Checked exception with constructor/Battleship.Topics-Custom_exceptions-Checked_exception_with_constructor.main.iml
+/.idea/modules/Topics/Custom exceptions/Checked exception with constructor/Battleship.Topics-Custom_exceptions-Checked_exception_with_constructor.test.iml
+/.idea/modules/Topics/Custom exceptions/Custom exceptions features/Battleship.Topics-Custom_exceptions-Custom_exceptions_features.iml
+/.idea/modules/Topics/Custom exceptions/Custom exceptions features/Battleship.Topics-Custom_exceptions-Custom_exceptions_features.main.iml
+/.idea/modules/Topics/Custom exceptions/Custom exceptions features/Battleship.Topics-Custom_exceptions-Custom_exceptions_features.test.iml
+/.idea/modules/Topics/Custom exceptions/DriverNotReadyException/Battleship.Topics-Custom_exceptions-DriverNotReadyException.iml
+/.idea/modules/Topics/Custom exceptions/DriverNotReadyException/Battleship.Topics-Custom_exceptions-DriverNotReadyException.main.iml
+/.idea/modules/Topics/Custom exceptions/DriverNotReadyException/Battleship.Topics-Custom_exceptions-DriverNotReadyException.test.iml
+/.idea/modules/Topics/Custom exceptions/Square class/Battleship.Topics-Custom_exceptions-Square_class.iml
+/.idea/modules/Topics/Custom exceptions/Square class/Battleship.Topics-Custom_exceptions-Square_class.main.iml
+/.idea/modules/Topics/Custom exceptions/Square class/Battleship.Topics-Custom_exceptions-Square_class.test.iml
+/.idea/modules/Topics/Custom exceptions/Theory/Battleship.Topics-Custom_exceptions-Theory.iml
+/.idea/modules/Topics/Custom exceptions/Theory/Battleship.Topics-Custom_exceptions-Theory.main.iml
+/.idea/modules/Topics/Custom exceptions/Theory/Battleship.Topics-Custom_exceptions-Theory.test.iml
+/.idea/modules/Topics/Exception handling/Converting and multiplying/Battleship.Topics-Exception_handling-Converting_and_multiplying.iml
+/.idea/modules/Topics/Exception handling/Converting and multiplying/Battleship.Topics-Exception_handling-Converting_and_multiplying.main.iml
+/.idea/modules/Topics/Exception handling/Converting and multiplying/Battleship.Topics-Exception_handling-Converting_and_multiplying.test.iml
+/.idea/modules/Topics/Exception handling/Determine a block for handling exceptions/Battleship.Topics-Exception_handling-Determine_a_block_for_handling_exceptions.iml
+/.idea/modules/Topics/Exception handling/Determine a block for handling exceptions/Battleship.Topics-Exception_handling-Determine_a_block_for_handling_exceptions.main.iml
+/.idea/modules/Topics/Exception handling/Determine a block for handling exceptions/Battleship.Topics-Exception_handling-Determine_a_block_for_handling_exceptions.test.iml
+/.idea/modules/Topics/Exception handling/Theory/Battleship.Topics-Exception_handling-Theory.iml
+/.idea/modules/Topics/Exception handling/Theory/Battleship.Topics-Exception_handling-Theory.main.iml
+/.idea/modules/Topics/Exception handling/Theory/Battleship.Topics-Exception_handling-Theory.test.iml
+/.idea/modules/Topics/Files/Are siblings/Battleship.Topics-Files-Are_siblings.iml
+/.idea/modules/Topics/Files/Are siblings/Battleship.Topics-Files-Are_siblings.main.iml
+/.idea/modules/Topics/Files/Are siblings/Battleship.Topics-Files-Are_siblings.test.iml
+/.idea/modules/Topics/Files/Theory/Battleship.Topics-Files-Theory.iml
+/.idea/modules/Topics/Files/Theory/Battleship.Topics-Files-Theory.main.iml
+/.idea/modules/Topics/Files/Theory/Battleship.Topics-Files-Theory.test.iml
+/.idea/modules/Topics/Getters and setters/Account/Battleship.Topics-Getters_and_setters-Account.iml
+/.idea/modules/Topics/Getters and setters/Account/Battleship.Topics-Getters_and_setters-Account.main.iml
+/.idea/modules/Topics/Getters and setters/Account/Battleship.Topics-Getters_and_setters-Account.test.iml
+/.idea/modules/Topics/Getters and setters/Book/Battleship.Topics-Getters_and_setters-Book.iml
+/.idea/modules/Topics/Getters and setters/Book/Battleship.Topics-Getters_and_setters-Book.main.iml
+/.idea/modules/Topics/Getters and setters/Book/Battleship.Topics-Getters_and_setters-Book.test.iml
+/.idea/modules/Topics/Getters and setters/Choose a pair of getter and setter/Battleship.Topics-Getters_and_setters-Choose_a_pair_of_getter_and_setter.iml
+/.idea/modules/Topics/Getters and setters/Choose a pair of getter and setter/Battleship.Topics-Getters_and_setters-Choose_a_pair_of_getter_and_setter.main.iml
+/.idea/modules/Topics/Getters and setters/Choose a pair of getter and setter/Battleship.Topics-Getters_and_setters-Choose_a_pair_of_getter_and_setter.test.iml
+/.idea/modules/Topics/Getters and setters/Complex/Battleship.Topics-Getters_and_setters-Complex.iml
+/.idea/modules/Topics/Getters and setters/Complex/Battleship.Topics-Getters_and_setters-Complex.main.iml
+/.idea/modules/Topics/Getters and setters/Complex/Battleship.Topics-Getters_and_setters-Complex.test.iml
+/.idea/modules/Topics/Getters and setters/Getting the fullname/Battleship.Topics-Getters_and_setters-Getting_the_fullname.iml
+/.idea/modules/Topics/Getters and setters/Getting the fullname/Battleship.Topics-Getters_and_setters-Getting_the_fullname.main.iml
+/.idea/modules/Topics/Getters and setters/Getting the fullname/Battleship.Topics-Getters_and_setters-Getting_the_fullname.test.iml
+/.idea/modules/Topics/Getters and setters/The name of getter/Battleship.Topics-Getters_and_setters-The_name_of_getter.iml
+/.idea/modules/Topics/Getters and setters/The name of getter/Battleship.Topics-Getters_and_setters-The_name_of_getter.main.iml
+/.idea/modules/Topics/Getters and setters/The name of getter/Battleship.Topics-Getters_and_setters-The_name_of_getter.test.iml
+/.idea/modules/Topics/Getters and setters/The name of setter/Battleship.Topics-Getters_and_setters-The_name_of_setter.iml
+/.idea/modules/Topics/Getters and setters/The name of setter/Battleship.Topics-Getters_and_setters-The_name_of_setter.main.iml
+/.idea/modules/Topics/Getters and setters/The name of setter/Battleship.Topics-Getters_and_setters-The_name_of_setter.test.iml
+/.idea/modules/Topics/Getters and setters/Theory/Battleship.Topics-Getters_and_setters-Theory.iml
+/.idea/modules/Topics/Getters and setters/Theory/Battleship.Topics-Getters_and_setters-Theory.main.iml
+/.idea/modules/Topics/Getters and setters/Theory/Battleship.Topics-Getters_and_setters-Theory.test.iml
+/.idea/modules/Topics/Hierarchy of exceptions/BadRequestException/Battleship.Topics-Hierarchy_of_exceptions-BadRequestException.iml
+/.idea/modules/Topics/Hierarchy of exceptions/BadRequestException/Battleship.Topics-Hierarchy_of_exceptions-BadRequestException.main.iml
+/.idea/modules/Topics/Hierarchy of exceptions/BadRequestException/Battleship.Topics-Hierarchy_of_exceptions-BadRequestException.test.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Base class/Battleship.Topics-Hierarchy_of_exceptions-Base_class.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Base class/Battleship.Topics-Hierarchy_of_exceptions-Base_class.main.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Base class/Battleship.Topics-Hierarchy_of_exceptions-Base_class.test.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Base classes of RuntimeException/Battleship.Topics-Hierarchy_of_exceptions-Base_classes_of_RuntimeException.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Base classes of RuntimeException/Battleship.Topics-Hierarchy_of_exceptions-Base_classes_of_RuntimeException.main.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Base classes of RuntimeException/Battleship.Topics-Hierarchy_of_exceptions-Base_classes_of_RuntimeException.test.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Overview the hierarchy/Battleship.Topics-Hierarchy_of_exceptions-Overview_the_hierarchy.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Overview the hierarchy/Battleship.Topics-Hierarchy_of_exceptions-Overview_the_hierarchy.main.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Overview the hierarchy/Battleship.Topics-Hierarchy_of_exceptions-Overview_the_hierarchy.test.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Overview the hierarchy (1)/Battleship.Topics-Hierarchy_of_exceptions-Overview_the_hierarchy__1_.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Overview the hierarchy (1)/Battleship.Topics-Hierarchy_of_exceptions-Overview_the_hierarchy__1_.main.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Overview the hierarchy (1)/Battleship.Topics-Hierarchy_of_exceptions-Overview_the_hierarchy__1_.test.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Subclasses of Exception/Battleship.Topics-Hierarchy_of_exceptions-Subclasses_of_Exception.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Subclasses of Exception/Battleship.Topics-Hierarchy_of_exceptions-Subclasses_of_Exception.main.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Subclasses of Exception/Battleship.Topics-Hierarchy_of_exceptions-Subclasses_of_Exception.test.iml
+/.idea/modules/Topics/Hierarchy of exceptions/The base class/Battleship.Topics-Hierarchy_of_exceptions-The_base_class.iml
+/.idea/modules/Topics/Hierarchy of exceptions/The base class/Battleship.Topics-Hierarchy_of_exceptions-The_base_class.main.iml
+/.idea/modules/Topics/Hierarchy of exceptions/The base class/Battleship.Topics-Hierarchy_of_exceptions-The_base_class.test.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Theory/Battleship.Topics-Hierarchy_of_exceptions-Theory.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Theory/Battleship.Topics-Hierarchy_of_exceptions-Theory.main.iml
+/.idea/modules/Topics/Hierarchy of exceptions/Theory/Battleship.Topics-Hierarchy_of_exceptions-Theory.test.iml
+/.idea/modules/Topics/Hierarchy of exceptions/UncheckedException/Battleship.Topics-Hierarchy_of_exceptions-UncheckedException.iml
+/.idea/modules/Topics/Hierarchy of exceptions/UncheckedException/Battleship.Topics-Hierarchy_of_exceptions-UncheckedException.main.iml
+/.idea/modules/Topics/Hierarchy of exceptions/UncheckedException/Battleship.Topics-Hierarchy_of_exceptions-UncheckedException.test.iml
+/.idea/modules/Topics/Inheritance/Access members inside child classes/Battleship.Topics-Inheritance-Access_members_inside_child_classes.iml
+/.idea/modules/Topics/Inheritance/Access members inside child classes/Battleship.Topics-Inheritance-Access_members_inside_child_classes.main.iml
+/.idea/modules/Topics/Inheritance/Access members inside child classes/Battleship.Topics-Inheritance-Access_members_inside_child_classes.test.iml
+/.idea/modules/Topics/Inheritance/Classes for Hospital/Battleship.Topics-Inheritance-Classes_for_Hospital.iml
+/.idea/modules/Topics/Inheritance/Classes for Hospital/Battleship.Topics-Inheritance-Classes_for_Hospital.main.iml
+/.idea/modules/Topics/Inheritance/Classes for Hospital/Battleship.Topics-Inheritance-Classes_for_Hospital.test.iml
+/.idea/modules/Topics/Inheritance/Find the same hierarchy/Battleship.Topics-Inheritance-Find_the_same_hierarchy.iml
+/.idea/modules/Topics/Inheritance/Find the same hierarchy/Battleship.Topics-Inheritance-Find_the_same_hierarchy.main.iml
+/.idea/modules/Topics/Inheritance/Find the same hierarchy/Battleship.Topics-Inheritance-Find_the_same_hierarchy.test.iml
+/.idea/modules/Topics/Inheritance/Incorrect class hierarchies/Battleship.Topics-Inheritance-Incorrect_class_hierarchies.iml
+/.idea/modules/Topics/Inheritance/Incorrect class hierarchies/Battleship.Topics-Inheritance-Incorrect_class_hierarchies.main.iml
+/.idea/modules/Topics/Inheritance/Incorrect class hierarchies/Battleship.Topics-Inheritance-Incorrect_class_hierarchies.test.iml
+/.idea/modules/Topics/Inheritance/Inheriting members/Battleship.Topics-Inheritance-Inheriting_members.iml
+/.idea/modules/Topics/Inheritance/Inheriting members/Battleship.Topics-Inheritance-Inheriting_members.main.iml
+/.idea/modules/Topics/Inheritance/Inheriting members/Battleship.Topics-Inheritance-Inheriting_members.test.iml
+/.idea/modules/Topics/Inheritance/Theory/Battleship.Topics-Inheritance-Theory.iml
+/.idea/modules/Topics/Inheritance/Theory/Battleship.Topics-Inheritance-Theory.main.iml
+/.idea/modules/Topics/Inheritance/Theory/Battleship.Topics-Inheritance-Theory.test.iml
+/.idea/modules/Topics/Input streams/Byte vs character input streams/Battleship.Topics-Input_streams-Byte_vs_character_input_streams.iml
+/.idea/modules/Topics/Input streams/Byte vs character input streams/Battleship.Topics-Input_streams-Byte_vs_character_input_streams.main.iml
+/.idea/modules/Topics/Input streams/Byte vs character input streams/Battleship.Topics-Input_streams-Byte_vs_character_input_streams.test.iml
+/.idea/modules/Topics/Input streams/Convert to bytes/Battleship.Topics-Input_streams-Convert_to_bytes.iml
+/.idea/modules/Topics/Input streams/Convert to bytes/Battleship.Topics-Input_streams-Convert_to_bytes.main.iml
+/.idea/modules/Topics/Input streams/Convert to bytes/Battleship.Topics-Input_streams-Convert_to_bytes.test.iml
+/.idea/modules/Topics/Input streams/Count words/Battleship.Topics-Input_streams-Count_words.iml
+/.idea/modules/Topics/Input streams/Count words/Battleship.Topics-Input_streams-Count_words.main.iml
+/.idea/modules/Topics/Input streams/Count words/Battleship.Topics-Input_streams-Count_words.test.iml
+/.idea/modules/Topics/Input streams/FileInputStream class/Battleship.Topics-Input_streams-FileInputStream_class.iml
+/.idea/modules/Topics/Input streams/FileInputStream class/Battleship.Topics-Input_streams-FileInputStream_class.main.iml
+/.idea/modules/Topics/Input streams/FileInputStream class/Battleship.Topics-Input_streams-FileInputStream_class.test.iml
+/.idea/modules/Topics/Input streams/Read into an array/Battleship.Topics-Input_streams-Read_into_an_array.iml
+/.idea/modules/Topics/Input streams/Read into an array/Battleship.Topics-Input_streams-Read_into_an_array.main.iml
+/.idea/modules/Topics/Input streams/Read into an array/Battleship.Topics-Input_streams-Read_into_an_array.test.iml
+/.idea/modules/Topics/Input streams/Reverse input text/Battleship.Topics-Input_streams-Reverse_input_text.iml
+/.idea/modules/Topics/Input streams/Reverse input text/Battleship.Topics-Input_streams-Reverse_input_text.main.iml
+/.idea/modules/Topics/Input streams/Reverse input text/Battleship.Topics-Input_streams-Reverse_input_text.test.iml
+/.idea/modules/Topics/Input streams/Theory/Battleship.Topics-Input_streams-Theory.iml
+/.idea/modules/Topics/Input streams/Theory/Battleship.Topics-Input_streams-Theory.main.iml
+/.idea/modules/Topics/Input streams/Theory/Battleship.Topics-Input_streams-Theory.test.iml
+/.idea/modules/Topics/Instance methods/Car/Battleship.Topics-Instance_methods-Car.iml
+/.idea/modules/Topics/Instance methods/Car/Battleship.Topics-Instance_methods-Car.main.iml
+/.idea/modules/Topics/Instance methods/Car/Battleship.Topics-Instance_methods-Car.test.iml
+/.idea/modules/Topics/Instance methods/Circle/Battleship.Topics-Instance_methods-Circle.iml
+/.idea/modules/Topics/Instance methods/Circle/Battleship.Topics-Instance_methods-Circle.main.iml
+/.idea/modules/Topics/Instance methods/Circle/Battleship.Topics-Instance_methods-Circle.test.iml
+/.idea/modules/Topics/Instance methods/Complex numbers/Battleship.Topics-Instance_methods-Complex_numbers.iml
+/.idea/modules/Topics/Instance methods/Complex numbers/Battleship.Topics-Instance_methods-Complex_numbers.main.iml
+/.idea/modules/Topics/Instance methods/Complex numbers/Battleship.Topics-Instance_methods-Complex_numbers.test.iml
+/.idea/modules/Topics/Instance methods/Counter/Battleship.Topics-Instance_methods-Counter.iml
+/.idea/modules/Topics/Instance methods/Counter/Battleship.Topics-Instance_methods-Counter.main.iml
+/.idea/modules/Topics/Instance methods/Counter/Battleship.Topics-Instance_methods-Counter.test.iml
+/.idea/modules/Topics/Instance methods/Declare me/Battleship.Topics-Instance_methods-Declare_me.iml
+/.idea/modules/Topics/Instance methods/Declare me/Battleship.Topics-Instance_methods-Declare_me.main.iml
+/.idea/modules/Topics/Instance methods/Declare me/Battleship.Topics-Instance_methods-Declare_me.test.iml
+/.idea/modules/Topics/Instance methods/In a box/Battleship.Topics-Instance_methods-In_a_box.iml
+/.idea/modules/Topics/Instance methods/In a box/Battleship.Topics-Instance_methods-In_a_box.main.iml
+/.idea/modules/Topics/Instance methods/In a box/Battleship.Topics-Instance_methods-In_a_box.test.iml
+/.idea/modules/Topics/Instance methods/Instance method and its class/Battleship.Topics-Instance_methods-Instance_method_and_its_class.iml
+/.idea/modules/Topics/Instance methods/Instance method and its class/Battleship.Topics-Instance_methods-Instance_method_and_its_class.main.iml
+/.idea/modules/Topics/Instance methods/Instance method and its class/Battleship.Topics-Instance_methods-Instance_method_and_its_class.test.iml
+/.idea/modules/Topics/Instance methods/Invoke instance method/Battleship.Topics-Instance_methods-Invoke_instance_method.iml
+/.idea/modules/Topics/Instance methods/Invoke instance method/Battleship.Topics-Instance_methods-Invoke_instance_method.main.iml
+/.idea/modules/Topics/Instance methods/Invoke instance method/Battleship.Topics-Instance_methods-Invoke_instance_method.test.iml
+/.idea/modules/Topics/Instance methods/Patient needs a doctor/Battleship.Topics-Instance_methods-Patient_needs_a_doctor.iml
+/.idea/modules/Topics/Instance methods/Patient needs a doctor/Battleship.Topics-Instance_methods-Patient_needs_a_doctor.main.iml
+/.idea/modules/Topics/Instance methods/Patient needs a doctor/Battleship.Topics-Instance_methods-Patient_needs_a_doctor.test.iml
+/.idea/modules/Topics/Instance methods/Simulating a clock/Battleship.Topics-Instance_methods-Simulating_a_clock.iml
+/.idea/modules/Topics/Instance methods/Simulating a clock/Battleship.Topics-Instance_methods-Simulating_a_clock.main.iml
+/.idea/modules/Topics/Instance methods/Simulating a clock/Battleship.Topics-Instance_methods-Simulating_a_clock.test.iml
+/.idea/modules/Topics/Instance methods/The Robot class/Battleship.Topics-Instance_methods-The_Robot_class.iml
+/.idea/modules/Topics/Instance methods/The Robot class/Battleship.Topics-Instance_methods-The_Robot_class.main.iml
+/.idea/modules/Topics/Instance methods/The Robot class/Battleship.Topics-Instance_methods-The_Robot_class.test.iml
+/.idea/modules/Topics/Instance methods/Theory/Battleship.Topics-Instance_methods-Theory.iml
+/.idea/modules/Topics/Instance methods/Theory/Battleship.Topics-Instance_methods-Theory.main.iml
+/.idea/modules/Topics/Instance methods/Theory/Battleship.Topics-Instance_methods-Theory.test.iml
+/.idea/modules/Topics/Instance methods/What is it/Battleship.Topics-Instance_methods-What_is_it.iml
+/.idea/modules/Topics/Instance methods/What is it/Battleship.Topics-Instance_methods-What_is_it.main.iml
+/.idea/modules/Topics/Instance methods/What is it/Battleship.Topics-Instance_methods-What_is_it.test.iml
+/.idea/modules/Topics/Iterating over arrays/Alphabetical order/Battleship.Topics-Iterating_over_arrays-Alphabetical_order.iml
+/.idea/modules/Topics/Iterating over arrays/Alphabetical order/Battleship.Topics-Iterating_over_arrays-Alphabetical_order.main.iml
+/.idea/modules/Topics/Iterating over arrays/Alphabetical order/Battleship.Topics-Iterating_over_arrays-Alphabetical_order.test.iml
+/.idea/modules/Topics/Iterating over arrays/Count how many times a number occurs/Battleship.Topics-Iterating_over_arrays-Count_how_many_times_a_number_occurs.iml
+/.idea/modules/Topics/Iterating over arrays/Count how many times a number occurs/Battleship.Topics-Iterating_over_arrays-Count_how_many_times_a_number_occurs.main.iml
+/.idea/modules/Topics/Iterating over arrays/Count how many times a number occurs/Battleship.Topics-Iterating_over_arrays-Count_how_many_times_a_number_occurs.test.iml
+/.idea/modules/Topics/Iterating over arrays/Find the sum/Battleship.Topics-Iterating_over_arrays-Find_the_sum.iml
+/.idea/modules/Topics/Iterating over arrays/Find the sum/Battleship.Topics-Iterating_over_arrays-Find_the_sum.main.iml
+/.idea/modules/Topics/Iterating over arrays/Find the sum/Battleship.Topics-Iterating_over_arrays-Find_the_sum.test.iml
+/.idea/modules/Topics/Iterating over arrays/Individual taxes/Battleship.Topics-Iterating_over_arrays-Individual_taxes.iml
+/.idea/modules/Topics/Iterating over arrays/Individual taxes/Battleship.Topics-Iterating_over_arrays-Individual_taxes.main.iml
+/.idea/modules/Topics/Iterating over arrays/Individual taxes/Battleship.Topics-Iterating_over_arrays-Individual_taxes.test.iml
+/.idea/modules/Topics/Iterating over arrays/Select loops/Battleship.Topics-Iterating_over_arrays-Select_loops.iml
+/.idea/modules/Topics/Iterating over arrays/Select loops/Battleship.Topics-Iterating_over_arrays-Select_loops.main.iml
+/.idea/modules/Topics/Iterating over arrays/Select loops/Battleship.Topics-Iterating_over_arrays-Select_loops.test.iml
+/.idea/modules/Topics/Iterating over arrays/Select one loop/Battleship.Topics-Iterating_over_arrays-Select_one_loop.iml
+/.idea/modules/Topics/Iterating over arrays/Select one loop/Battleship.Topics-Iterating_over_arrays-Select_one_loop.main.iml
+/.idea/modules/Topics/Iterating over arrays/Select one loop/Battleship.Topics-Iterating_over_arrays-Select_one_loop.test.iml
+/.idea/modules/Topics/Iterating over arrays/Sum array elements greater than a value/Battleship.Topics-Iterating_over_arrays-Sum_array_elements_greater_than_a_value.iml
+/.idea/modules/Topics/Iterating over arrays/Sum array elements greater than a value/Battleship.Topics-Iterating_over_arrays-Sum_array_elements_greater_than_a_value.main.iml
+/.idea/modules/Topics/Iterating over arrays/Sum array elements greater than a value/Battleship.Topics-Iterating_over_arrays-Sum_array_elements_greater_than_a_value.test.iml
+/.idea/modules/Topics/Iterating over arrays/The index of the first max in an array/Battleship.Topics-Iterating_over_arrays-The_index_of_the_first_max_in_an_array.iml
+/.idea/modules/Topics/Iterating over arrays/The index of the first max in an array/Battleship.Topics-Iterating_over_arrays-The_index_of_the_first_max_in_an_array.main.iml
+/.idea/modules/Topics/Iterating over arrays/The index of the first max in an array/Battleship.Topics-Iterating_over_arrays-The_index_of_the_first_max_in_an_array.test.iml
+/.idea/modules/Topics/Iterating over arrays/The sum of array elements/Battleship.Topics-Iterating_over_arrays-The_sum_of_array_elements.iml
+/.idea/modules/Topics/Iterating over arrays/The sum of array elements/Battleship.Topics-Iterating_over_arrays-The_sum_of_array_elements.main.iml
+/.idea/modules/Topics/Iterating over arrays/The sum of array elements/Battleship.Topics-Iterating_over_arrays-The_sum_of_array_elements.test.iml
+/.idea/modules/Topics/Iterating over arrays/Theory/Battleship.Topics-Iterating_over_arrays-Theory.iml
+/.idea/modules/Topics/Iterating over arrays/Theory/Battleship.Topics-Iterating_over_arrays-Theory.main.iml
+/.idea/modules/Topics/Iterating over arrays/Theory/Battleship.Topics-Iterating_over_arrays-Theory.test.iml
+/.idea/modules/Topics/Iterating over arrays/Triples/Battleship.Topics-Iterating_over_arrays-Triples.iml
+/.idea/modules/Topics/Iterating over arrays/Triples/Battleship.Topics-Iterating_over_arrays-Triples.main.iml
+/.idea/modules/Topics/Iterating over arrays/Triples/Battleship.Topics-Iterating_over_arrays-Triples.test.iml
+/.idea/modules/Topics/Multidimensional array/Cinema/Battleship.Topics-Multidimensional_array-Cinema.iml
+/.idea/modules/Topics/Multidimensional array/Cinema/Battleship.Topics-Multidimensional_array-Cinema.main.iml
+/.idea/modules/Topics/Multidimensional array/Cinema/Battleship.Topics-Multidimensional_array-Cinema.test.iml
+/.idea/modules/Topics/Multidimensional array/Find the corners/Battleship.Topics-Multidimensional_array-Find_the_corners.iml
+/.idea/modules/Topics/Multidimensional array/Find the corners/Battleship.Topics-Multidimensional_array-Find_the_corners.main.iml
+/.idea/modules/Topics/Multidimensional array/Find the corners/Battleship.Topics-Multidimensional_array-Find_the_corners.test.iml
+/.idea/modules/Topics/Multidimensional array/Getting an element from a 3D array/Battleship.Topics-Multidimensional_array-Getting_an_element_from_a_3D_array.iml
+/.idea/modules/Topics/Multidimensional array/Getting an element from a 3D array/Battleship.Topics-Multidimensional_array-Getting_an_element_from_a_3D_array.main.iml
+/.idea/modules/Topics/Multidimensional array/Getting an element from a 3D array/Battleship.Topics-Multidimensional_array-Getting_an_element_from_a_3D_array.test.iml
+/.idea/modules/Topics/Multidimensional array/Indexing rules/Battleship.Topics-Multidimensional_array-Indexing_rules.iml
+/.idea/modules/Topics/Multidimensional array/Indexing rules/Battleship.Topics-Multidimensional_array-Indexing_rules.main.iml
+/.idea/modules/Topics/Multidimensional array/Indexing rules/Battleship.Topics-Multidimensional_array-Indexing_rules.test.iml
+/.idea/modules/Topics/Multidimensional array/Maximum element in a matrix/Battleship.Topics-Multidimensional_array-Maximum_element_in_a_matrix.iml
+/.idea/modules/Topics/Multidimensional array/Maximum element in a matrix/Battleship.Topics-Multidimensional_array-Maximum_element_in_a_matrix.main.iml
+/.idea/modules/Topics/Multidimensional array/Maximum element in a matrix/Battleship.Topics-Multidimensional_array-Maximum_element_in_a_matrix.test.iml
+/.idea/modules/Topics/Multidimensional array/Multidimensional array features/Battleship.Topics-Multidimensional_array-Multidimensional_array_features.iml
+/.idea/modules/Topics/Multidimensional array/Multidimensional array features/Battleship.Topics-Multidimensional_array-Multidimensional_array_features.main.iml
+/.idea/modules/Topics/Multidimensional array/Multidimensional array features/Battleship.Topics-Multidimensional_array-Multidimensional_array_features.test.iml
+/.idea/modules/Topics/Multidimensional array/Practical applications/Battleship.Topics-Multidimensional_array-Practical_applications.iml
+/.idea/modules/Topics/Multidimensional array/Practical applications/Battleship.Topics-Multidimensional_array-Practical_applications.main.iml
+/.idea/modules/Topics/Multidimensional array/Practical applications/Battleship.Topics-Multidimensional_array-Practical_applications.test.iml
+/.idea/modules/Topics/Multidimensional array/Printing lengths of nested arrays/Battleship.Topics-Multidimensional_array-Printing_lengths_of_nested_arrays.iml
+/.idea/modules/Topics/Multidimensional array/Printing lengths of nested arrays/Battleship.Topics-Multidimensional_array-Printing_lengths_of_nested_arrays.main.iml
+/.idea/modules/Topics/Multidimensional array/Printing lengths of nested arrays/Battleship.Topics-Multidimensional_array-Printing_lengths_of_nested_arrays.test.iml
+/.idea/modules/Topics/Multidimensional array/Reverse elements/Battleship.Topics-Multidimensional_array-Reverse_elements.iml
+/.idea/modules/Topics/Multidimensional array/Reverse elements/Battleship.Topics-Multidimensional_array-Reverse_elements.main.iml
+/.idea/modules/Topics/Multidimensional array/Reverse elements/Battleship.Topics-Multidimensional_array-Reverse_elements.test.iml
+/.idea/modules/Topics/Multidimensional array/The star figure/Battleship.Topics-Multidimensional_array-The_star_figure.iml
+/.idea/modules/Topics/Multidimensional array/The star figure/Battleship.Topics-Multidimensional_array-The_star_figure.main.iml
+/.idea/modules/Topics/Multidimensional array/The star figure/Battleship.Topics-Multidimensional_array-The_star_figure.test.iml
+/.idea/modules/Topics/Multidimensional array/Theory/Battleship.Topics-Multidimensional_array-Theory.iml
+/.idea/modules/Topics/Multidimensional array/Theory/Battleship.Topics-Multidimensional_array-Theory.main.iml
+/.idea/modules/Topics/Multidimensional array/Theory/Battleship.Topics-Multidimensional_array-Theory.test.iml
+/.idea/modules/Topics/Multiple constructors/About constructors/Battleship.Topics-Multiple_constructors-About_constructors.iml
+/.idea/modules/Topics/Multiple constructors/About constructors/Battleship.Topics-Multiple_constructors-About_constructors.main.iml
+/.idea/modules/Topics/Multiple constructors/About constructors/Battleship.Topics-Multiple_constructors-About_constructors.test.iml
+/.idea/modules/Topics/Multiple constructors/Class instantiation/Battleship.Topics-Multiple_constructors-Class_instantiation.iml
+/.idea/modules/Topics/Multiple constructors/Class instantiation/Battleship.Topics-Multiple_constructors-Class_instantiation.main.iml
+/.idea/modules/Topics/Multiple constructors/Class instantiation/Battleship.Topics-Multiple_constructors-Class_instantiation.test.iml
+/.idea/modules/Topics/Multiple constructors/Employee/Battleship.Topics-Multiple_constructors-Employee.iml
+/.idea/modules/Topics/Multiple constructors/Employee/Battleship.Topics-Multiple_constructors-Employee.main.iml
+/.idea/modules/Topics/Multiple constructors/Employee/Battleship.Topics-Multiple_constructors-Employee.test.iml
+/.idea/modules/Topics/Multiple constructors/Entanglement/Battleship.Topics-Multiple_constructors-Entanglement.iml
+/.idea/modules/Topics/Multiple constructors/Entanglement/Battleship.Topics-Multiple_constructors-Entanglement.main.iml
+/.idea/modules/Topics/Multiple constructors/Entanglement/Battleship.Topics-Multiple_constructors-Entanglement.test.iml
+/.idea/modules/Topics/Multiple constructors/Movie/Battleship.Topics-Multiple_constructors-Movie.iml
+/.idea/modules/Topics/Multiple constructors/Movie/Battleship.Topics-Multiple_constructors-Movie.main.iml
+/.idea/modules/Topics/Multiple constructors/Movie/Battleship.Topics-Multiple_constructors-Movie.test.iml
+/.idea/modules/Topics/Multiple constructors/Phone/Battleship.Topics-Multiple_constructors-Phone.iml
+/.idea/modules/Topics/Multiple constructors/Phone/Battleship.Topics-Multiple_constructors-Phone.main.iml
+/.idea/modules/Topics/Multiple constructors/Phone/Battleship.Topics-Multiple_constructors-Phone.test.iml
+/.idea/modules/Topics/Multiple constructors/Suppose, you have a class/Battleship.Topics-Multiple_constructors-Suppose,_you_have_a_class.iml
+/.idea/modules/Topics/Multiple constructors/Suppose, you have a class/Battleship.Topics-Multiple_constructors-Suppose,_you_have_a_class.main.iml
+/.idea/modules/Topics/Multiple constructors/Suppose, you have a class/Battleship.Topics-Multiple_constructors-Suppose,_you_have_a_class.test.iml
+/.idea/modules/Topics/Multiple constructors/The Int class/Battleship.Topics-Multiple_constructors-The_Int_class.iml
+/.idea/modules/Topics/Multiple constructors/The Int class/Battleship.Topics-Multiple_constructors-The_Int_class.main.iml
+/.idea/modules/Topics/Multiple constructors/The Int class/Battleship.Topics-Multiple_constructors-The_Int_class.test.iml
+/.idea/modules/Topics/Multiple constructors/Theory/Battleship.Topics-Multiple_constructors-Theory.iml
+/.idea/modules/Topics/Multiple constructors/Theory/Battleship.Topics-Multiple_constructors-Theory.main.iml
+/.idea/modules/Topics/Multiple constructors/Theory/Battleship.Topics-Multiple_constructors-Theory.test.iml
+/.idea/modules/Topics/Multiple constructors/Time/Battleship.Topics-Multiple_constructors-Time.iml
+/.idea/modules/Topics/Multiple constructors/Time/Battleship.Topics-Multiple_constructors-Time.main.iml
+/.idea/modules/Topics/Multiple constructors/Time/Battleship.Topics-Multiple_constructors-Time.test.iml
+/.idea/modules/Topics/Package/Binary search/Battleship.Topics-Package-Binary_search.iml
+/.idea/modules/Topics/Package/Binary search/Battleship.Topics-Package-Binary_search.main.iml
+/.idea/modules/Topics/Package/Binary search/Battleship.Topics-Package-Binary_search.test.iml
+/.idea/modules/Topics/Package/Getting input/Battleship.Topics-Package-Getting_input.iml
+/.idea/modules/Topics/Package/Getting input/Battleship.Topics-Package-Getting_input.main.iml
+/.idea/modules/Topics/Package/Getting input/Battleship.Topics-Package-Getting_input.test.iml
+/.idea/modules/Topics/Package/Theory/Battleship.Topics-Package-Theory.iml
+/.idea/modules/Topics/Package/Theory/Battleship.Topics-Package-Theory.main.iml
+/.idea/modules/Topics/Package/Theory/Battleship.Topics-Package-Theory.test.iml
+/.idea/modules/Topics/Static members/About static members/Battleship.Topics-Static_members-About_static_members.iml
+/.idea/modules/Topics/Static members/About static members/Battleship.Topics-Static_members-About_static_members.main.iml
+/.idea/modules/Topics/Static members/About static members/Battleship.Topics-Static_members-About_static_members.test.iml
+/.idea/modules/Topics/Static members/Accessing static members/Battleship.Topics-Static_members-Accessing_static_members.iml
+/.idea/modules/Topics/Static members/Accessing static members/Battleship.Topics-Static_members-Accessing_static_members.main.iml
+/.idea/modules/Topics/Static members/Accessing static members/Battleship.Topics-Static_members-Accessing_static_members.test.iml
+/.idea/modules/Topics/Static members/Applying the static keyword/Battleship.Topics-Static_members-Applying_the_static_keyword.iml
+/.idea/modules/Topics/Static members/Applying the static keyword/Battleship.Topics-Static_members-Applying_the_static_keyword.main.iml
+/.idea/modules/Topics/Static members/Applying the static keyword/Battleship.Topics-Static_members-Applying_the_static_keyword.test.iml
+/.idea/modules/Topics/Static members/Detail manufacturing/Battleship.Topics-Static_members-Detail_manufacturing.iml
+/.idea/modules/Topics/Static members/Detail manufacturing/Battleship.Topics-Static_members-Detail_manufacturing.main.iml
+/.idea/modules/Topics/Static members/Detail manufacturing/Battleship.Topics-Static_members-Detail_manufacturing.test.iml
+/.idea/modules/Topics/Static members/Mystery of the methods/Battleship.Topics-Static_members-Mystery_of_the_methods.iml
+/.idea/modules/Topics/Static members/Mystery of the methods/Battleship.Topics-Static_members-Mystery_of_the_methods.main.iml
+/.idea/modules/Topics/Static members/Mystery of the methods/Battleship.Topics-Static_members-Mystery_of_the_methods.test.iml
+/.idea/modules/Topics/Static members/Project constants and methods/Battleship.Topics-Static_members-Project_constants_and_methods.iml
+/.idea/modules/Topics/Static members/Project constants and methods/Battleship.Topics-Static_members-Project_constants_and_methods.main.iml
+/.idea/modules/Topics/Static members/Project constants and methods/Battleship.Topics-Static_members-Project_constants_and_methods.test.iml
+/.idea/modules/Topics/Static members/Searching bugs/Battleship.Topics-Static_members-Searching_bugs.iml
+/.idea/modules/Topics/Static members/Searching bugs/Battleship.Topics-Static_members-Searching_bugs.main.iml
+/.idea/modules/Topics/Static members/Searching bugs/Battleship.Topics-Static_members-Searching_bugs.test.iml
+/.idea/modules/Topics/Static members/Statements/Battleship.Topics-Static_members-Statements.iml
+/.idea/modules/Topics/Static members/Statements/Battleship.Topics-Static_members-Statements.main.iml
+/.idea/modules/Topics/Static members/Statements/Battleship.Topics-Static_members-Statements.test.iml
+/.idea/modules/Topics/Static members/Static fields/Battleship.Topics-Static_members-Static_fields.iml
+/.idea/modules/Topics/Static members/Static fields/Battleship.Topics-Static_members-Static_fields.main.iml
+/.idea/modules/Topics/Static members/Static fields/Battleship.Topics-Static_members-Static_fields.test.iml
+/.idea/modules/Topics/Static members/Theory/Battleship.Topics-Static_members-Theory.iml
+/.idea/modules/Topics/Static members/Theory/Battleship.Topics-Static_members-Theory.main.iml
+/.idea/modules/Topics/Static members/Theory/Battleship.Topics-Static_members-Theory.test.iml
+/.idea/modules/Topics/Static members/Time constants/Battleship.Topics-Static_members-Time_constants.iml
+/.idea/modules/Topics/Static members/Time constants/Battleship.Topics-Static_members-Time_constants.main.iml
+/.idea/modules/Topics/Static members/Time constants/Battleship.Topics-Static_members-Time_constants.test.iml
+/.idea/modules/Topics/Static members/Too many cats/Battleship.Topics-Static_members-Too_many_cats.iml
+/.idea/modules/Topics/Static members/Too many cats/Battleship.Topics-Static_members-Too_many_cats.main.iml
+/.idea/modules/Topics/Static members/Too many cats/Battleship.Topics-Static_members-Too_many_cats.test.iml
+/.idea/modules/Topics/The keyword super/Accessing constructors of a base class/Battleship.Topics-The_keyword_super-Accessing_constructors_of_a_base_class.iml
+/.idea/modules/Topics/The keyword super/Accessing constructors of a base class/Battleship.Topics-The_keyword_super-Accessing_constructors_of_a_base_class.main.iml
+/.idea/modules/Topics/The keyword super/Accessing constructors of a base class/Battleship.Topics-The_keyword_super-Accessing_constructors_of_a_base_class.test.iml
+/.idea/modules/Topics/The keyword super/Bank account/Battleship.Topics-The_keyword_super-Bank_account.iml
+/.idea/modules/Topics/The keyword super/Bank account/Battleship.Topics-The_keyword_super-Bank_account.main.iml
+/.idea/modules/Topics/The keyword super/Bank account/Battleship.Topics-The_keyword_super-Bank_account.test.iml
+/.idea/modules/Topics/The keyword super/Employees/Battleship.Topics-The_keyword_super-Employees.iml
+/.idea/modules/Topics/The keyword super/Employees/Battleship.Topics-The_keyword_super-Employees.main.iml
+/.idea/modules/Topics/The keyword super/Employees/Battleship.Topics-The_keyword_super-Employees.test.iml
+/.idea/modules/Topics/The keyword super/Fix the non-compiled hierarchy/Battleship.Topics-The_keyword_super-Fix_the_non-compiled_hierarchy.iml
+/.idea/modules/Topics/The keyword super/Fix the non-compiled hierarchy/Battleship.Topics-The_keyword_super-Fix_the_non-compiled_hierarchy.main.iml
+/.idea/modules/Topics/The keyword super/Fix the non-compiled hierarchy/Battleship.Topics-The_keyword_super-Fix_the_non-compiled_hierarchy.test.iml
+/.idea/modules/Topics/The keyword super/Theory/Battleship.Topics-The_keyword_super-Theory.iml
+/.idea/modules/Topics/The keyword super/Theory/Battleship.Topics-The_keyword_super-Theory.main.iml
+/.idea/modules/Topics/The keyword super/Theory/Battleship.Topics-The_keyword_super-Theory.test.iml
+/.idea/modules/Topics/The keyword super/When the keyword is used/Battleship.Topics-The_keyword_super-When_the_keyword_is_used.iml
+/.idea/modules/Topics/The keyword super/When the keyword is used/Battleship.Topics-The_keyword_super-When_the_keyword_is_used.main.iml
+/.idea/modules/Topics/The keyword super/When the keyword is used/Battleship.Topics-The_keyword_super-When_the_keyword_is_used.test.iml
+/.idea/modules/Topics/The keyword super/Why we use the super keyword/Battleship.Topics-The_keyword_super-Why_we_use_the_super_keyword.iml
+/.idea/modules/Topics/The keyword super/Why we use the super keyword/Battleship.Topics-The_keyword_super-Why_we_use_the_super_keyword.main.iml
+/.idea/modules/Topics/The keyword super/Why we use the super keyword/Battleship.Topics-The_keyword_super-Why_we_use_the_super_keyword.test.iml
+/.idea/modules/Topics/The while and do-while loops/Collatz conjecture/Battleship.Topics-The_while_and_do-while_loops-Collatz_conjecture.iml
+/.idea/modules/Topics/The while and do-while loops/Collatz conjecture/Battleship.Topics-The_while_and_do-while_loops-Collatz_conjecture.main.iml
+/.idea/modules/Topics/The while and do-while loops/Collatz conjecture/Battleship.Topics-The_while_and_do-while_loops-Collatz_conjecture.test.iml
+/.idea/modules/Topics/The while and do-while loops/Determine the result/Battleship.Topics-The_while_and_do-while_loops-Determine_the_result.iml
+/.idea/modules/Topics/The while and do-while loops/Determine the result/Battleship.Topics-The_while_and_do-while_loops-Determine_the_result.main.iml
+/.idea/modules/Topics/The while and do-while loops/Determine the result/Battleship.Topics-The_while_and_do-while_loops-Determine_the_result.test.iml
+/.idea/modules/Topics/The while and do-while loops/Determine the result (1)/Battleship.Topics-The_while_and_do-while_loops-Determine_the_result__1_.iml
+/.idea/modules/Topics/The while and do-while loops/Determine the result (1)/Battleship.Topics-The_while_and_do-while_loops-Determine_the_result__1_.main.iml
+/.idea/modules/Topics/The while and do-while loops/Determine the result (1)/Battleship.Topics-The_while_and_do-while_loops-Determine_the_result__1_.test.iml
+/.idea/modules/Topics/The while and do-while loops/Magic code/Battleship.Topics-The_while_and_do-while_loops-Magic_code.iml
+/.idea/modules/Topics/The while and do-while loops/Magic code/Battleship.Topics-The_while_and_do-while_loops-Magic_code.main.iml
+/.idea/modules/Topics/The while and do-while loops/Magic code/Battleship.Topics-The_while_and_do-while_loops-Magic_code.test.iml
+/.idea/modules/Topics/The while and do-while loops/Squares of natural numbers/Battleship.Topics-The_while_and_do-while_loops-Squares_of_natural_numbers.iml
+/.idea/modules/Topics/The while and do-while loops/Squares of natural numbers/Battleship.Topics-The_while_and_do-while_loops-Squares_of_natural_numbers.main.iml
+/.idea/modules/Topics/The while and do-while loops/Squares of natural numbers/Battleship.Topics-The_while_and_do-while_loops-Squares_of_natural_numbers.test.iml
+/.idea/modules/Topics/The while and do-while loops/Statements/Battleship.Topics-The_while_and_do-while_loops-Statements.iml
+/.idea/modules/Topics/The while and do-while loops/Statements/Battleship.Topics-The_while_and_do-while_loops-Statements.main.iml
+/.idea/modules/Topics/The while and do-while loops/Statements/Battleship.Topics-The_while_and_do-while_loops-Statements.test.iml
+/.idea/modules/Topics/The while and do-while loops/The largest element of a sequence/Battleship.Topics-The_while_and_do-while_loops-The_largest_element_of_a_sequence.iml
+/.idea/modules/Topics/The while and do-while loops/The largest element of a sequence/Battleship.Topics-The_while_and_do-while_loops-The_largest_element_of_a_sequence.main.iml
+/.idea/modules/Topics/The while and do-while loops/The largest element of a sequence/Battleship.Topics-The_while_and_do-while_loops-The_largest_element_of_a_sequence.test.iml
+/.idea/modules/Topics/The while and do-while loops/The length of the sequence/Battleship.Topics-The_while_and_do-while_loops-The_length_of_the_sequence.iml
+/.idea/modules/Topics/The while and do-while loops/The length of the sequence/Battleship.Topics-The_while_and_do-while_loops-The_length_of_the_sequence.main.iml
+/.idea/modules/Topics/The while and do-while loops/The length of the sequence/Battleship.Topics-The_while_and_do-while_loops-The_length_of_the_sequence.test.iml
+/.idea/modules/Topics/The while and do-while loops/The number of loop body executions/Battleship.Topics-The_while_and_do-while_loops-The_number_of_loop_body_executions.iml
+/.idea/modules/Topics/The while and do-while loops/The number of loop body executions/Battleship.Topics-The_while_and_do-while_loops-The_number_of_loop_body_executions.main.iml
+/.idea/modules/Topics/The while and do-while loops/The number of loop body executions/Battleship.Topics-The_while_and_do-while_loops-The_number_of_loop_body_executions.test.iml
+/.idea/modules/Topics/The while and do-while loops/The sequence/Battleship.Topics-The_while_and_do-while_loops-The_sequence.iml
+/.idea/modules/Topics/The while and do-while loops/The sequence/Battleship.Topics-The_while_and_do-while_loops-The_sequence.main.iml
+/.idea/modules/Topics/The while and do-while loops/The sequence/Battleship.Topics-The_while_and_do-while_loops-The_sequence.test.iml
+/.idea/modules/Topics/The while and do-while loops/The smallest value/Battleship.Topics-The_while_and_do-while_loops-The_smallest_value.iml
+/.idea/modules/Topics/The while and do-while loops/The smallest value/Battleship.Topics-The_while_and_do-while_loops-The_smallest_value.main.iml
+/.idea/modules/Topics/The while and do-while loops/The smallest value/Battleship.Topics-The_while_and_do-while_loops-The_smallest_value.test.iml
+/.idea/modules/Topics/The while and do-while loops/The sum of elements/Battleship.Topics-The_while_and_do-while_loops-The_sum_of_elements.iml
+/.idea/modules/Topics/The while and do-while loops/The sum of elements/Battleship.Topics-The_while_and_do-while_loops-The_sum_of_elements.main.iml
+/.idea/modules/Topics/The while and do-while loops/The sum of elements/Battleship.Topics-The_while_and_do-while_loops-The_sum_of_elements.test.iml
+/.idea/modules/Topics/The while and do-while loops/Theory/Battleship.Topics-The_while_and_do-while_loops-Theory.iml
+/.idea/modules/Topics/The while and do-while loops/Theory/Battleship.Topics-The_while_and_do-while_loops-Theory.main.iml
+/.idea/modules/Topics/The while and do-while loops/Theory/Battleship.Topics-The_while_and_do-while_loops-Theory.test.iml
+/.idea/modules/Topics/Throwing exceptions/Days of the week/Battleship.Topics-Throwing_exceptions-Days_of_the_week.iml
+/.idea/modules/Topics/Throwing exceptions/Days of the week/Battleship.Topics-Throwing_exceptions-Days_of_the_week.main.iml
+/.idea/modules/Topics/Throwing exceptions/Days of the week/Battleship.Topics-Throwing_exceptions-Days_of_the_week.test.iml
+/.idea/modules/Topics/Throwing exceptions/How to throw an exception/Battleship.Topics-Throwing_exceptions-How_to_throw_an_exception.iml
+/.idea/modules/Topics/Throwing exceptions/How to throw an exception/Battleship.Topics-Throwing_exceptions-How_to_throw_an_exception.main.iml
+/.idea/modules/Topics/Throwing exceptions/How to throw an exception/Battleship.Topics-Throwing_exceptions-How_to_throw_an_exception.test.iml
+/.idea/modules/Topics/Throwing exceptions/Possible declaration/Battleship.Topics-Throwing_exceptions-Possible_declaration.iml
+/.idea/modules/Topics/Throwing exceptions/Possible declaration/Battleship.Topics-Throwing_exceptions-Possible_declaration.main.iml
+/.idea/modules/Topics/Throwing exceptions/Possible declaration/Battleship.Topics-Throwing_exceptions-Possible_declaration.test.iml
+/.idea/modules/Topics/Throwing exceptions/The most general statement/Battleship.Topics-Throwing_exceptions-The_most_general_statement.iml
+/.idea/modules/Topics/Throwing exceptions/The most general statement/Battleship.Topics-Throwing_exceptions-The_most_general_statement.main.iml
+/.idea/modules/Topics/Throwing exceptions/The most general statement/Battleship.Topics-Throwing_exceptions-The_most_general_statement.test.iml
+/.idea/modules/Topics/Throwing exceptions/The root of a number/Battleship.Topics-Throwing_exceptions-The_root_of_a_number.iml
+/.idea/modules/Topics/Throwing exceptions/The root of a number/Battleship.Topics-Throwing_exceptions-The_root_of_a_number.main.iml
+/.idea/modules/Topics/Throwing exceptions/The root of a number/Battleship.Topics-Throwing_exceptions-The_root_of_a_number.test.iml
+/.idea/modules/Topics/Throwing exceptions/Theory/Battleship.Topics-Throwing_exceptions-Theory.iml
+/.idea/modules/Topics/Throwing exceptions/Theory/Battleship.Topics-Throwing_exceptions-Theory.main.iml
+/.idea/modules/Topics/Throwing exceptions/Theory/Battleship.Topics-Throwing_exceptions-Theory.test.iml
+/.idea/modules/Topics/Throwing exceptions/Throw a checked exception/Battleship.Topics-Throwing_exceptions-Throw_a_checked_exception.iml
+/.idea/modules/Topics/Throwing exceptions/Throw a checked exception/Battleship.Topics-Throwing_exceptions-Throw_a_checked_exception.main.iml
+/.idea/modules/Topics/Throwing exceptions/Throw a checked exception/Battleship.Topics-Throwing_exceptions-Throw_a_checked_exception.test.iml
+/.idea/modules/Topics/Throwing exceptions/Throw an IOException/Battleship.Topics-Throwing_exceptions-Throw_an_IOException.iml
+/.idea/modules/Topics/Throwing exceptions/Throw an IOException/Battleship.Topics-Throwing_exceptions-Throw_an_IOException.main.iml
+/.idea/modules/Topics/Throwing exceptions/Throw an IOException/Battleship.Topics-Throwing_exceptions-Throw_an_IOException.test.iml
+/.idea/modules/Topics/Throwing exceptions/Throw an unchecked exception/Battleship.Topics-Throwing_exceptions-Throw_an_unchecked_exception.iml
+/.idea/modules/Topics/Throwing exceptions/Throw an unchecked exception/Battleship.Topics-Throwing_exceptions-Throw_an_unchecked_exception.main.iml
+/.idea/modules/Topics/Throwing exceptions/Throw an unchecked exception/Battleship.Topics-Throwing_exceptions-Throw_an_unchecked_exception.test.iml
+/.idea/modules/Topics/Throwing exceptions/Throwable classes/Battleship.Topics-Throwing_exceptions-Throwable_classes.iml
+/.idea/modules/Topics/Throwing exceptions/Throwable classes/Battleship.Topics-Throwing_exceptions-Throwable_classes.main.iml
+/.idea/modules/Topics/Throwing exceptions/Throwable classes/Battleship.Topics-Throwing_exceptions-Throwable_classes.test.iml
+/.idea/modules/Topics/Throwing exceptions/Throwing an exception/Battleship.Topics-Throwing_exceptions-Throwing_an_exception.iml
+/.idea/modules/Topics/Throwing exceptions/Throwing an exception/Battleship.Topics-Throwing_exceptions-Throwing_an_exception.main.iml
+/.idea/modules/Topics/Throwing exceptions/Throwing an exception/Battleship.Topics-Throwing_exceptions-Throwing_an_exception.test.iml
+/.idea/modules/Topics/Throwing exceptions/Throwing statements/Battleship.Topics-Throwing_exceptions-Throwing_statements.iml
+/.idea/modules/Topics/Throwing exceptions/Throwing statements/Battleship.Topics-Throwing_exceptions-Throwing_statements.main.iml
+/.idea/modules/Topics/Throwing exceptions/Throwing statements/Battleship.Topics-Throwing_exceptions-Throwing_statements.test.iml
+/.idea/uiDesigner.xml
+/Battleship/Fog of war/task.html
+/Battleship/Fog of war/task-info.yaml
+/Battleship/Fog of war/task-remote-info.yaml
+/Battleship/Friend or foe/task.html
+/Battleship/Friend or foe/task-info.yaml
+/Battleship/Friend or foe/task-remote-info.yaml
+/Battleship/Take position/task.html
+/Battleship/Take position/task-info.yaml
+/Battleship/Take position/task-remote-info.yaml
+/Battleship/The end of the war/task.html
+/Battleship/The end of the war/task-info.yaml
+/Battleship/The end of the war/task-remote-info.yaml
+/Battleship/The first shot/task.html
+/Battleship/The first shot/task-info.yaml
+/Battleship/The first shot/task-remote-info.yaml
+/Battleship/battleField
+/Battleship/lesson-info.yaml
+/Topics/Custom exceptions/Custom checked exception/answer.txt
+/Topics/Custom exceptions/Custom checked exception/task.html
+/Topics/Custom exceptions/Custom checked exception/task-info.yaml
+/Topics/Custom exceptions/Custom checked exception/task-remote-info.yaml
+/Topics/Custom exceptions/lesson-info.yaml
+/Topics/Exception handling/lesson-info.yaml
+/Topics/Files/lesson-info.yaml
+/Topics/Getters and setters/lesson-info.yaml
+/Topics/Hierarchy of exceptions/lesson-info.yaml
+/Topics/Inheritance/Forbid extending/answer.txt
+/Topics/Inheritance/Forbid extending/task.html
+/Topics/Inheritance/Forbid extending/task-info.yaml
+/Topics/Inheritance/Forbid extending/task-remote-info.yaml
+/Topics/Inheritance/lesson-info.yaml
+/Topics/Input streams/lesson-info.yaml
+/Topics/Iterating over arrays/lesson-info.yaml
+/Topics/Multidimensional array/lesson-info.yaml
+/Topics/Multiple constructors/lesson-info.yaml
+/Topics/Static members/lesson-info.yaml
+/Topics/The keyword super/Extended classes/answer.txt
+/Topics/The keyword super/Extended classes/task.html
+/Topics/The keyword super/Extended classes/task-info.yaml
+/Topics/The keyword super/Extended classes/task-remote-info.yaml
+/Topics/The keyword super/lesson-info.yaml
+/Topics/The while and do-while loops/lesson-info.yaml
+/Topics/Throwing exceptions/lesson-info.yaml
+/Battleship/task/test/Tests.java
+/Battleship/task/out/production/classes/battleship/Coordinates.class
+/Battleship/task/out/production/classes/battleship/Field.class
+/Battleship/task/out/production/classes/battleship/GamePrinter.class
+/Battleship/task/out/production/classes/battleship/Main.class
+/Battleship/task/out/production/classes/battleship/Vessel.class
+/Battleship/task/out/test/classes/Tests.class
+/Topics/Custom exceptions/Checked exception with constructor/out/production/classes/CustomException.class
+/Topics/Custom exceptions/Checked exception with constructor/out/production/classes/Main.class
+/Topics/Custom exceptions/Checked exception with constructor/task.html
+/Topics/Custom exceptions/Checked exception with constructor/task-info.yaml
+/Topics/Custom exceptions/Checked exception with constructor/task-remote-info.yaml
+/Topics/Custom exceptions/Checked exception with constructor/src/Main.java
+/Topics/Custom exceptions/Custom exceptions features/out/production/classes/Task.class
+/Topics/Custom exceptions/Custom exceptions features/task.html
+/Topics/Custom exceptions/Custom exceptions features/task-info.yaml
+/Topics/Custom exceptions/Custom exceptions features/task-remote-info.yaml
+/Topics/Custom exceptions/Custom exceptions features/src/Task.java
+/Topics/Custom exceptions/DriverNotReadyException/out/production/classes/Driver.class
+/Topics/Custom exceptions/DriverNotReadyException/out/production/classes/DriverNotReadyException.class
+/Topics/Custom exceptions/DriverNotReadyException/task.html
+/Topics/Custom exceptions/DriverNotReadyException/task-info.yaml
+/Topics/Custom exceptions/DriverNotReadyException/task-remote-info.yaml
