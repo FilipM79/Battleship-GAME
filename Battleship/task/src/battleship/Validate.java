@@ -29,17 +29,12 @@ public class Validate {
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-                } else if (!Coordinates.correctLength) {
-                    Coordinates.conditionForValidate = false;
-                    condition = false;
-                    System.out.println("Error, wrong length. Try again.");
-                    System.out.println("Input should contain two coordinates with a space between them.");
-                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
+                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
 
-                } else if (coordinates.getSpaceIndex() == -1) {
                     Coordinates.conditionForValidate = false;
                     condition = false;
-                    System.out.println("Error, there is no space between input coordinates. Try again.");
+                    System.out.println("Error, input coordinates out of battleField. Try again.");
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
@@ -50,14 +45,20 @@ public class Validate {
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
-                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
 
+                } else if (!Coordinates.correctLength) {
                     Coordinates.conditionForValidate = false;
                     condition = false;
-                    System.out.println("Error, input coordinates out of battleField. Try again.");
+                    System.out.println("Error, wrong length. Try again.");
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+//                } else if (coordinates.getSpaceIndex() == -1) {
+//                    Coordinates.conditionForValidate = false;
+//                    condition = false;
+//                    System.out.println("Error, there is no space between input coordinates. Try again.");
+//                    System.out.println("Input should contain two coordinates with a space between them.");
+//                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
                 } else {
                     Coordinates.conditionForValidate = true;
@@ -100,17 +101,12 @@ public class Validate {
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-                } else if (!Coordinates.correctLength) {
-                    Coordinates.conditionForValidate = false;
-                    condition = false;
-                    System.out.println("Error, wrong length. Try again.");
-                    System.out.println("Input should contain two coordinates with a space between them.");
-                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
+                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
 
-                } else if (coordinates.getSpaceIndex() == -1) {
                     Coordinates.conditionForValidate = false;
                     condition = false;
-                    System.out.println("Error, there is no space between input coordinates. Try again.");
+                    System.out.println("Error, input coordinates out of battleField. Try again.");
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
@@ -121,14 +117,20 @@ public class Validate {
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
-                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
 
+                } else if (!Coordinates.correctLength) {
                     Coordinates.conditionForValidate = false;
                     condition = false;
-                    System.out.println("Error, input coordinates out of battleField. Try again.");
+                    System.out.println("Error, wrong length. Try again.");
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+//                } else if (coordinates.getSpaceIndex() == -1) {
+//                    Coordinates.conditionForValidate = false;
+//                    condition = false;
+//                    System.out.println("Error, there is no space between input coordinates. Try again.");
+//                    System.out.println("Input should contain two coordinates with a space between them.");
+//                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
                 } else {
                     Coordinates.conditionForValidate = true;
@@ -140,7 +142,7 @@ public class Validate {
                 System.out.println("Error, invalid input. Try again.");
                 System.out.println("Input should contain two coordinates with a space between them.");
                 System.out.println("Example: 'b2 e2', or 'C1 C5'.");
-                System.out.println(InputMessage.battleshipMessage());
+                System.out.println(InputMessage.aircraftCarrierMessage());
                 System.out.print("> ");
             }
         }
@@ -171,17 +173,12 @@ public class Validate {
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-                } else if (!Coordinates.correctLength) {
-                    Coordinates.conditionForValidate = false;
-                    condition = false;
-                    System.out.println("Error, wrong length. Try again.");
-                    System.out.println("Input should contain two coordinates with a space between them.");
-                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
+                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
 
-                } else if (coordinates.getSpaceIndex() == -1) {
                     Coordinates.conditionForValidate = false;
                     condition = false;
-                    System.out.println("Error, there is no space between input coordinates. Try again.");
+                    System.out.println("Error, input coordinates out of battleField. Try again.");
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
@@ -192,14 +189,20 @@ public class Validate {
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
-                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
 
+                } else if (!Coordinates.correctLength) {
                     Coordinates.conditionForValidate = false;
                     condition = false;
-                    System.out.println("Error, input coordinates out of battleField. Try again.");
+                    System.out.println("Error, wrong length. Try again.");
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+//                } else if (coordinates.getSpaceIndex() == -1) {
+//                    Coordinates.conditionForValidate = false;
+//                    condition = false;
+//                    System.out.println("Error, there is no space between input coordinates. Try again.");
+//                    System.out.println("Input should contain two coordinates with a space between them.");
+//                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
                 } else {
                     Coordinates.conditionForValidate = true;
@@ -211,7 +214,7 @@ public class Validate {
                 System.out.println("Error, invalid input. Try again.");
                 System.out.println("Input should contain two coordinates with a space between them.");
                 System.out.println("Example: 'b2 e2', or 'C1 C5'.");
-                System.out.println(InputMessage.submarineMessage());
+                System.out.println(InputMessage.aircraftCarrierMessage());
                 System.out.print("> ");
             }
         }
@@ -242,17 +245,12 @@ public class Validate {
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-                } else if (!Coordinates.correctLength) {
-                    Coordinates.conditionForValidate = false;
-                    condition = false;
-                    System.out.println("Error, wrong length. Try again.");
-                    System.out.println("Input should contain two coordinates with a space between them.");
-                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
+                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
 
-                } else if (coordinates.getSpaceIndex() == -1) {
                     Coordinates.conditionForValidate = false;
                     condition = false;
-                    System.out.println("Error, there is no space between input coordinates. Try again.");
+                    System.out.println("Error, input coordinates out of battleField. Try again.");
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
@@ -263,14 +261,20 @@ public class Validate {
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
-                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
 
+                } else if (!Coordinates.correctLength) {
                     Coordinates.conditionForValidate = false;
                     condition = false;
-                    System.out.println("Error, input coordinates out of battleField. Try again.");
+                    System.out.println("Error, wrong length. Try again.");
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+//                } else if (coordinates.getSpaceIndex() == -1) {
+//                    Coordinates.conditionForValidate = false;
+//                    condition = false;
+//                    System.out.println("Error, there is no space between input coordinates. Try again.");
+//                    System.out.println("Input should contain two coordinates with a space between them.");
+//                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
                 } else {
                     Coordinates.conditionForValidate = true;
@@ -282,7 +286,7 @@ public class Validate {
                 System.out.println("Error, invalid input. Try again.");
                 System.out.println("Input should contain two coordinates with a space between them.");
                 System.out.println("Example: 'b2 e2', or 'C1 C5'.");
-                System.out.println(InputMessage.destroyerMessage());
+                System.out.println(InputMessage.aircraftCarrierMessage());
                 System.out.print("> ");
             }
         }
@@ -315,17 +319,12 @@ public class Validate {
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-                } else if (!Coordinates.correctLength) {
-                    Coordinates.conditionForValidate = false;
-                    condition = false;
-                    System.out.println("Error, wrong length. Try again.");
-                    System.out.println("Input should contain two coordinates with a space between them.");
-                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
+                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
 
-                } else if (coordinates.getSpaceIndex() == -1) {
                     Coordinates.conditionForValidate = false;
                     condition = false;
-                    System.out.println("Error, there is no space between input coordinates. Try again.");
+                    System.out.println("Error, input coordinates out of battleField. Try again.");
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
@@ -336,14 +335,20 @@ public class Validate {
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
-                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
 
+                } else if (!Coordinates.correctLength) {
                     Coordinates.conditionForValidate = false;
                     condition = false;
-                    System.out.println("Error, input coordinates out of battleField. Try again.");
+                    System.out.println("Error, wrong length. Try again.");
                     System.out.println("Input should contain two coordinates with a space between them.");
                     System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+//                } else if (coordinates.getSpaceIndex() == -1) {
+//                    Coordinates.conditionForValidate = false;
+//                    condition = false;
+//                    System.out.println("Error, there is no space between input coordinates. Try again.");
+//                    System.out.println("Input should contain two coordinates with a space between them.");
+//                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
                 } else {
                     Coordinates.conditionForValidate = true;
@@ -355,7 +360,7 @@ public class Validate {
                 System.out.println("Error, invalid input. Try again.");
                 System.out.println("Input should contain two coordinates with a space between them.");
                 System.out.println("Example: 'b2 e2', or 'C1 C5'.");
-                System.out.println(InputMessage.patrolBoatMessage());
+                System.out.println(InputMessage.aircraftCarrierMessage());
                 System.out.print("> ");
             }
         }

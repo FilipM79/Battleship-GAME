@@ -22,6 +22,7 @@ public class Game {
             System.out.print("> ");
             validate.aircraftCarrier();
 
+
             if(Coordinates.conditionForValidate && Coordinates.correctLength) {
                 battleField.newField();
                 condition = false;

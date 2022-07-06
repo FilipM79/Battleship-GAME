@@ -38,7 +38,6 @@ public class Field {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     public void newField() {
