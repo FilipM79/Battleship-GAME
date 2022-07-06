@@ -293,6 +293,8 @@ public class Validate {
         Scanner scanner = new Scanner(System.in);
         boolean condition = true;
 
+
+
         while (condition) {
             Game.setInputString(scanner.nextLine().toUpperCase().trim());
             Coordinates.inputStringCoords = Game.getInputString();
@@ -300,7 +302,7 @@ public class Validate {
             try {
                 Coordinates coordinates = new Coordinates();
 
-                Vessel patrolBoat = new Vessel("Patrol Boat", 2);
+                        Vessel patrolBoat = new Vessel("Patrol Boat", 2);
                 Coordinates.conditionForValidate = true;
 
                 coordinates.setCorrectLength(patrolBoat.length - 1 == coordinates.getColumnDiff()
