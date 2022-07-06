@@ -1,12 +1,14 @@
 package battleship;
 
-class Coordinates extends Main {
+class Coordinates {
 
-    String inputString = inputCoordinates;
-    private final int f = inputString.length();
-    private final int spaceIndex = inputString.indexOf(" ");
-    private final String k1 = inputString.substring(0, spaceIndex);
-    private final String k2 = inputString.substring(spaceIndex + 1, f);
+    static String inputStringCoords;
+    private boolean correctLength;
+    private boolean conditionForValidate;
+    private final int f = inputStringCoords.length();
+    private final int spaceIndex = inputStringCoords.indexOf(" ");
+    private final String k1 = inputStringCoords.substring(0, spaceIndex);
+    private final String k2 = inputStringCoords.substring(spaceIndex + 1, f);
     private final int ascii_A_index = 64;
     private final int k1RowNum = ((byte) k1.charAt(0)) - ascii_A_index;
     private final int k2RowNum = ((byte) k2.charAt(0)) - ascii_A_index;
@@ -15,13 +17,17 @@ class Coordinates extends Main {
     private final int rowDiff = Math.abs(k2RowNum - k1RowNum);
     private final int columnDiff = Math.abs(k2ColumnNum - k1ColumnNum) / 2;
 
-    public void setInputString(String inputString) {
-        this.inputString = inputString;
+
+    public boolean isConditionForValidate() { return conditionForValidate; }
+    public boolean isCorrectLength() {
+        return correctLength;
     }
-    public String getInputString() {
-        return inputString;
+    public void setCorrectLength(boolean correctLength) {
+        this.correctLength = correctLength;
     }
-    public int getSpaceIndex() { return spaceIndex; }
+    public int getSpaceIndex() {
+        return spaceIndex;
+    }
     public int getK1RowNum() {
         return k1RowNum;
     }
@@ -39,6 +45,9 @@ class Coordinates extends Main {
     }
     public int getColumnDiff() {
         return columnDiff;
+    }
+    public void setConditionForValidate(boolean conditionForValidate) {
+        this.conditionForValidate = conditionForValidate;
     }
 }
 
