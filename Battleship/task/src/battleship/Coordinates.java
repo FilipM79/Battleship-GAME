@@ -3,8 +3,9 @@ package battleship;
 class Coordinates {
 
     static String inputStringCoords;
-    private boolean correctLength;
-    private boolean conditionForValidate;
+    static boolean correctLength;
+    static boolean conditionForValidate;
+
     private final int f = inputStringCoords.length();
     private final int spaceIndex = inputStringCoords.indexOf(" ");
     private final String k1 = inputStringCoords.substring(0, spaceIndex);
@@ -18,12 +19,8 @@ class Coordinates {
     private final int columnDiff = Math.abs(k2ColumnNum - k1ColumnNum) / 2;
 
 
-    public boolean isConditionForValidate() { return conditionForValidate; }
-    public boolean isCorrectLength() {
-        return correctLength;
-    }
     public void setCorrectLength(boolean correctLength) {
-        this.correctLength = correctLength;
+        Coordinates.correctLength = correctLength;
     }
     public int getSpaceIndex() {
         return spaceIndex;
@@ -47,7 +44,7 @@ class Coordinates {
         return columnDiff;
     }
     public void setConditionForValidate(boolean conditionForValidate) {
-        this.conditionForValidate = conditionForValidate;
+        Coordinates.conditionForValidate = conditionForValidate;
     }
 }
 

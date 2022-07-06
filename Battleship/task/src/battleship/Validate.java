@@ -1,116 +1,361 @@
 package battleship;
 
+import java.util.Scanner;
+
 public class Validate {
 
-    Coordinates coordinates = new Coordinates();
+    public void aircraftCarrier() {
 
-    public static class Checking extends Validate {
+        Scanner scanner = new Scanner(System.in);
+        boolean condition = true;
 
-        public void aircraftCarrier() {
+        while (condition) {
+            Game.setInputString(scanner.nextLine().toUpperCase().trim());
+            Coordinates.inputStringCoords = Game.getInputString();
 
-            Vessel aircraftCarrier = new Vessel("Aircraft Carrier", 5);
+            try {
+                Coordinates coordinates = new Coordinates();
 
-            if (aircraftCarrier.length - 1 == coordinates.getColumnDiff()
-                    || aircraftCarrier.length - 1  == coordinates.getRowDiff()) {
+                Vessel aircraftCarrier = new Vessel("Aircraft Carrier", 5);
+                Coordinates.conditionForValidate = true;
 
-                System.out.println();
-                coordinates.setCorrectLength(true);
+                coordinates.setCorrectLength(aircraftCarrier.length - 1 == coordinates.getColumnDiff()
+                        || aircraftCarrier.length - 1 == coordinates.getRowDiff());
 
-            } else {
-                coordinates.setCorrectLength(false);
-            }
-        }
+                if (Game.getInputString() == null || "".equals(Game.getInputString())) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, input coordinates are empty. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-        public void battleShip() {
+                } else if (!Coordinates.correctLength) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, wrong length. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-            Vessel battleShip = new Vessel("Battleship", 4);
+                } else if (coordinates.getSpaceIndex() == -1) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, there is no space between input coordinates. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-            if (battleShip.length - 1 == coordinates.getColumnDiff()
-                    || battleShip.length - 1 == coordinates.getRowDiff()) {
+                } else if (coordinates.getColumnDiff() != 0 && coordinates.getRowDiff() != 0) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, you can only position a vessel horizontally or vertically. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-                System.out.println();
-                coordinates.setCorrectLength(true);
+                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
+                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
 
-            } else {
-                coordinates.setCorrectLength(false);
-            }
-        }
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, input coordinates out of battleField. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-        public void submarine() {
+                } else {
+                    Coordinates.conditionForValidate = true;
+                    System.out.println();
+                    condition = false;
+                }
 
-            Vessel submarine = new Vessel("Submarine", 3);
-
-            if (submarine.length - 1 == coordinates.getColumnDiff()
-                    || submarine.length - 1 == coordinates.getRowDiff()) {
-
-                System.out.println();
-                coordinates.setCorrectLength(true);
-
-            } else {
-                coordinates.setCorrectLength(false);
-            }
-        }
-
-        public void destroyer() {
-
-            Vessel destroyer = new Vessel("Destroyer", 3);
-
-            if (destroyer.length - 1 == coordinates.getColumnDiff()
-                    || destroyer.length - 1 == coordinates.getRowDiff()) {
-
-                System.out.println();
-                coordinates.setCorrectLength(true);
-
-            } else {
-                coordinates.setCorrectLength(false);
-            }
-        }
-
-        public void patrolBoat() {
-
-            Vessel patrolBoat = new Vessel("Patrol Boat", 2);
-
-            if (patrolBoat.length - 1 == coordinates.getColumnDiff()
-                    || patrolBoat.length - 1 == coordinates.getRowDiff()) {
-
-                System.out.println();
-                coordinates.setCorrectLength(true);
-
-            } else {
-                coordinates.setCorrectLength(false);
+            } catch (Exception e) {
+                System.out.println("Error, invalid input. Try again.");
+                System.out.println("Input should contain two coordinates with a space between them.");
+                System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+                System.out.println(InputMessage.aircraftCarrierMessage());
+                System.out.print("> ");
             }
         }
     }
 
-    String isError() {
+    public void battleShip() {
 
-        coordinates.setConditionForValidate(true);
+        Scanner scanner = new Scanner(System.in);
+        boolean condition = true;
 
-        if (Game.getInputString() == null || "".equals(Game.getInputString())) {
-            coordinates.setConditionForValidate(false);
-            return "Error, input coordinates are empty. Try again.";
+        while (condition) {
+            Game.setInputString(scanner.nextLine().toUpperCase().trim());
+            Coordinates.inputStringCoords = Game.getInputString();
 
-        } else if (!coordinates.isCorrectLength()) {
-            coordinates.setConditionForValidate(false);
-            return "Error, wrong length. Try again.";
+            try {
+                Coordinates coordinates = new Coordinates();
 
-        } else if (coordinates.getSpaceIndex() == -1) {
-            coordinates.setConditionForValidate(false);
-            return "Error, there is no space between input coordinates. Try again.";
+                Vessel battleShip = new Vessel("Battleship", 4);
+                Coordinates.conditionForValidate = true;
 
-        } else if (coordinates.getColumnDiff() != 0 && coordinates.getRowDiff() != 0) {
-            coordinates.setConditionForValidate(false);
-            return "Error, you can only position a vessel horizontally or vertically. Try again.";
+                coordinates.setCorrectLength(battleShip.length - 1 == coordinates.getColumnDiff()
+                        || battleShip.length - 1 == coordinates.getRowDiff());
 
-        } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
-                || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
+                if (Game.getInputString() == null || "".equals(Game.getInputString())) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, input coordinates are empty. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-            coordinates.setConditionForValidate(false);
-            return "Error, input coordinates out of battleField. Try again.";
+                } else if (!Coordinates.correctLength) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, wrong length. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
 
-        } else {
-            coordinates.setConditionForValidate(true);
-            return "";
+                } else if (coordinates.getSpaceIndex() == -1) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, there is no space between input coordinates. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (coordinates.getColumnDiff() != 0 && coordinates.getRowDiff() != 0) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, you can only position a vessel horizontally or vertically. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
+                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
+
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, input coordinates out of battleField. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else {
+                    Coordinates.conditionForValidate = true;
+                    System.out.println();
+                    condition = false;
+                }
+
+            } catch (Exception e) {
+                System.out.println("Error, invalid input. Try again.");
+                System.out.println("Input should contain two coordinates with a space between them.");
+                System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+                System.out.println(InputMessage.battleshipMessage());
+                System.out.print("> ");
+            }
+        }
+    }
+
+    public void submarine() {
+
+        Scanner scanner = new Scanner(System.in);
+        boolean condition = true;
+
+        while (condition) {
+            Game.setInputString(scanner.nextLine().toUpperCase().trim());
+            Coordinates.inputStringCoords = Game.getInputString();
+
+            try {
+                Coordinates coordinates = new Coordinates();
+
+                Vessel submarine = new Vessel("Submarine", 3);
+                Coordinates.conditionForValidate = true;
+
+                coordinates.setCorrectLength(submarine.length - 1 == coordinates.getColumnDiff()
+                        || submarine.length - 1 == coordinates.getRowDiff());
+
+                if (Game.getInputString() == null || "".equals(Game.getInputString())) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, input coordinates are empty. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (!Coordinates.correctLength) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, wrong length. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (coordinates.getSpaceIndex() == -1) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, there is no space between input coordinates. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (coordinates.getColumnDiff() != 0 && coordinates.getRowDiff() != 0) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, you can only position a vessel horizontally or vertically. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
+                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
+
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, input coordinates out of battleField. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else {
+                    Coordinates.conditionForValidate = true;
+                    System.out.println();
+                    condition = false;
+                }
+
+            } catch (Exception e) {
+                System.out.println("Error, invalid input. Try again.");
+                System.out.println("Input should contain two coordinates with a space between them.");
+                System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+                System.out.println(InputMessage.submarineMessage());
+                System.out.print("> ");
+            }
+        }
+    }
+
+    public void destroyer() {
+
+        Scanner scanner = new Scanner(System.in);
+        boolean condition = true;
+
+        while (condition) {
+            Game.setInputString(scanner.nextLine().toUpperCase().trim());
+            Coordinates.inputStringCoords = Game.getInputString();
+
+            try {
+                Coordinates coordinates = new Coordinates();
+
+                Vessel destroyer = new Vessel("Destroyer", 3);
+                Coordinates.conditionForValidate = true;
+
+                coordinates.setCorrectLength(destroyer.length - 1 == coordinates.getColumnDiff()
+                        || destroyer.length - 1 == coordinates.getRowDiff());
+
+                if (Game.getInputString() == null || "".equals(Game.getInputString())) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, input coordinates are empty. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (!Coordinates.correctLength) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, wrong length. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (coordinates.getSpaceIndex() == -1) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, there is no space between input coordinates. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (coordinates.getColumnDiff() != 0 && coordinates.getRowDiff() != 0) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, you can only position a vessel horizontally or vertically. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
+                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
+
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, input coordinates out of battleField. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else {
+                    Coordinates.conditionForValidate = true;
+                    System.out.println();
+                    condition = false;
+                }
+
+            } catch (Exception e) {
+                System.out.println("Error, invalid input. Try again.");
+                System.out.println("Input should contain two coordinates with a space between them.");
+                System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+                System.out.println(InputMessage.destroyerMessage());
+                System.out.print("> ");
+            }
+        }
+    }
+
+    void patrolBoat() {
+
+        Scanner scanner = new Scanner(System.in);
+        boolean condition = true;
+
+        while (condition) {
+            Game.setInputString(scanner.nextLine().toUpperCase().trim());
+            Coordinates.inputStringCoords = Game.getInputString();
+
+            try {
+                Coordinates coordinates = new Coordinates();
+
+                Vessel patrolBoat = new Vessel("Patrol Boat", 2);
+                Coordinates.conditionForValidate = true;
+
+                coordinates.setCorrectLength(patrolBoat.length - 1 == coordinates.getColumnDiff()
+                        || patrolBoat.length - 1 == coordinates.getRowDiff());
+
+                if (Game.getInputString() == null || "".equals(Game.getInputString())) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, input coordinates are empty. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (!Coordinates.correctLength) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, wrong length. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (coordinates.getSpaceIndex() == -1) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, there is no space between input coordinates. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (coordinates.getColumnDiff() != 0 && coordinates.getRowDiff() != 0) {
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, you can only position a vessel horizontally or vertically. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else if (coordinates.getK1ColumnNum() > 21 || coordinates.getK2ColumnNum() > 21
+                        || coordinates.getK1RowNum() > 11 || coordinates.getK2RowNum() > 11) {
+
+                    Coordinates.conditionForValidate = false;
+                    condition = false;
+                    System.out.println("Error, input coordinates out of battleField. Try again.");
+                    System.out.println("Input should contain two coordinates with a space between them.");
+                    System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+
+                } else {
+                    Coordinates.conditionForValidate = true;
+                    System.out.println();
+                    condition = false;
+                }
+
+            } catch (Exception e) {
+                System.out.println("Error, invalid input. Try again.");
+                System.out.println("Input should contain two coordinates with a space between them.");
+                System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+                System.out.println(InputMessage.patrolBoatMessage());
+                System.out.print("> ");
+            }
         }
     }
 }

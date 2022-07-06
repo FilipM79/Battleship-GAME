@@ -3,7 +3,6 @@ package battleship;
 class InputMessage {
 
     Coordinates coordinates = new Coordinates();
-    Validate validate = new Validate();
 
     InputMessage() {
 
@@ -12,9 +11,9 @@ class InputMessage {
                 + "K2 (row, column) is " + coordinates.getK2RowNum() + ", " + coordinates.getK2ColumnNum() + ".\n"
                 + "Row difference is: " + coordinates.getRowDiff() + "\n"
                 + "Column difference is: " + coordinates.getColumnDiff() + "\n"
-                + "Correct length is: " + coordinates.isCorrectLength() + "\n"
-                + "Validate message is: " + validate.isError() +  "\n"
-                + "ConditionForValidate je: " + coordinates.isConditionForValidate());
+                + "Correct length is: " + Coordinates.correctLength + "\n"
+                + "Space index is: " + coordinates.getSpaceIndex() + "\n"
+                + "ConditionForValidate je: " + Coordinates.conditionForValidate);
     }
 
     static String aircraftCarrierMessage () {

@@ -8,7 +8,6 @@ public class Field {
 
     String[][] field = new String[11][21];
     String[][] updatedField = new String[11][21];
-    String[][] updatedFieldCopy = new String[11][21];
 
     public void blank() {
 
@@ -30,16 +29,16 @@ public class Field {
                 System.out.println();
             }
 
+            // copying field to updatedField
+            for (int i = 0; i < updatedField.length; i++) {
+                for (int j = 0; j < updatedField[i].length; j += 2) {
+                    updatedField[i][j] = field[i][j];
+                }
+            }
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
 
-        // copying field to updatedField
-        for (int i = 0; i < updatedField.length; i++) {
-            for (int j = 0; j < updatedField[i].length; j += 2) {
-                updatedField[i][j] = field[i][j];
-            }
-        }
     }
 
     public void newField() {
@@ -61,7 +60,7 @@ public class Field {
                 }
 
             } else if (coordinates.getColumnDiff() == 0) {
-                for (int i = coordinates.getK1RowNum(); i < coordinates.getK1RowNum() + 1; i++) {
+                for (int i = coordinates.getK1RowNum(); i < coordinates.getK2RowNum() + 1; i++) {
                     updatedField[i][coordinates.getK2ColumnNum()] = "O ";
                 }
                 for (String[] strings : updatedField) {
@@ -69,20 +68,6 @@ public class Field {
                         System.out.print(strings[j]);
                     }
                     System.out.println();
-                }
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    public void newFieldCopy() {
-
-    // copying updatedField to updatedFieldCopy
-        try {
-            for (int i = 0; i < updatedField.length; i++) {
-                for (int j = 0; j < updatedField[i].length; j += 2) {
-                    updatedFieldCopy[i][j] = updatedField[i][j];
                 }
             }
         } catch (Exception e) {
