@@ -35,6 +35,7 @@ class Field {
                     updatedField[i][j] = field[i][j];
                 }
             }
+
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -45,12 +46,14 @@ class Field {
         CheckUserInput checkUserInput = new CheckUserInput();
 
         try {
+
             if (checkUserInput.getRowDiff() == 0) {
                 for (int i = checkUserInput.getK1RowNum(); i < checkUserInput.getK2RowNum() + 1; i++) {
                     for (int j = checkUserInput.getK1ColumnNum(); j < checkUserInput.getK2ColumnNum() + 1; j += 2) {
                         updatedField[checkUserInput.getK1RowNum()][j] = "O ";
                     }
                 }
+
                 for (String[] strings : updatedField) {
                     for (int j = 0; j < strings.length; j += 2) {
                         System.out.print(strings[j]);
@@ -62,6 +65,7 @@ class Field {
                 for (int i = checkUserInput.getK1RowNum(); i < checkUserInput.getK2RowNum() + 1; i++) {
                     updatedField[i][checkUserInput.getK2ColumnNum()] = "O ";
                 }
+
                 for (String[] strings : updatedField) {
                     for (int j = 0; j < strings.length; j += 2) {
                         System.out.print(strings[j]);
@@ -69,6 +73,7 @@ class Field {
                     System.out.println();
                 }
             }
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
