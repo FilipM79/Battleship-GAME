@@ -2,25 +2,24 @@ package battleship;
 
 class InputMessage {
 
-//
-//    InputMessage() {
-//
-//        try {
-//            Coordinates coordinates = new Coordinates();
-//
-//            System.out.println("Input coordinates : " + Game.getInputString() + ".\n"
-//                    + "K1 (row, column) is " + coordinates.getK1RowNum() + ", " + coordinates.getK1ColumnNum() + ".\n"
-//                    + "K2 (row, column) is " + coordinates.getK2RowNum() + ", " + coordinates.getK2ColumnNum() + ".\n"
-//                    + "Row difference is: " + coordinates.getRowDiff() + "\n"
-//                    + "Column difference is: " + coordinates.getColumnDiff() + "\n"
-//                    + "Correct length is: " + Coordinates.correctLength + "\n"
-//                    + "Space index is: " + coordinates.getSpaceIndex() + "\n"
-//                    + "ConditionForValidate je: " + Coordinates.conditionForValidate + "\n");
-//
-//        } catch (Exception e) {
-//            System.out.print(e.getMessage());
-//        }
-//    }
+    InputMessage() {
+
+        CheckUserInput check = new CheckUserInput();
+
+        try {
+            System.out.println("\nInput coordinates : " + PositionVessel.userInput + ".\n"
+                    + "K1 (row, column) is " + check.getK1RowNum() + ", " + check.getK1ColumnNum() + ".\n"
+                    + "K2 (row, column) is " + check.getK2RowNum() + ", " + check.getK2ColumnNum() + ".\n"
+                    + "Row difference is: " + check.getRowDiff() + "\n"
+                    + "Column difference is: " + check.getColumnDiff() + "\n"
+                    + "Correct length is: " + CheckUserInput.isCorrectLength() + "\n"
+                    + "Space index is: " + CheckUserInput.getSpaceIndex() + "\n"
+                    + "ConditionForValidate je: " + CheckUserInput.isInputOkCondition() + "\n");
+
+        } catch (Exception e) {
+            System.out.println("Something is wrong with printing variables in InputMessage");
+        }
+    }
     static String aircraftCarrierMessage () {
         return "\nEnter the coordinates of the Aircraft Carrier (5 cells):";
     }
