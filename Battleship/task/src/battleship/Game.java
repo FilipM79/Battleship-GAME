@@ -1,79 +1,67 @@
 package battleship;
 
-public class Game {
+class Game {
 
-    public static void setInputString(String inputString) {
-        Game.inputString = inputString;
-    }
-    private static String inputString;
-    public static String getInputString() {
-        return inputString;
-    }
-
-    public void play () {
+    void play () {
 
         Field battleField = new Field();
-        Validate validate = new Validate();
+        PositionVessel positionVessel = new PositionVessel();
+        CheckUserInput check = new CheckUserInput();
         battleField.blank();
 
-        boolean condition = true;
-        while (condition) {
-            System.out.println(InputMessage.aircraftCarrierMessage());
-            System.out.print("> ");
-            validate.aircraftCarrier();
 
+        boolean gameLoopCondition = true;
+        while (gameLoopCondition) {
 
-            if(Coordinates.conditionForValidate && Coordinates.correctLength) {
+            positionVessel.aircraftCarrier();
+
+            if (CheckUserInput.isInputOkCondition() && CheckUserInput.isCorrectLength()) {
                 battleField.newField();
-                condition = false;
+                gameLoopCondition = false;
             }
         }
 
-        condition = true;
-        while (condition) {
-            System.out.println(InputMessage.battleshipMessage());
-            System.out.print("> ");
-            validate.battleShip();
+        gameLoopCondition = true;
+        while (gameLoopCondition) {
 
-            if(Coordinates.conditionForValidate && Coordinates.correctLength) {
+            positionVessel.battleShip();
+
+            if(CheckUserInput.isInputOkCondition() && CheckUserInput.isCorrectLength()) {
                 battleField.newField();
-                condition = false;
+                gameLoopCondition = false;
             }
         }
 
-        condition = true;
-        while (condition) {
-            System.out.println(InputMessage.submarineMessage());
-            System.out.print("> ");
-            validate.submarine();
+        gameLoopCondition = true;
+        while (gameLoopCondition) {
 
-            if(Coordinates.conditionForValidate && Coordinates.correctLength) {
+            positionVessel.submarine();
+
+            if(CheckUserInput.isInputOkCondition() && CheckUserInput.isCorrectLength()) {
                 battleField.newField();
-                condition = false;
+                gameLoopCondition = false;
             }
         }
 
-        condition = true;
-        while (condition) {
-            System.out.println(InputMessage.destroyerMessage());
-            System.out.print("> ");
-            validate.destroyer();
+        gameLoopCondition = true;
+        while (gameLoopCondition) {
 
-            if(Coordinates.conditionForValidate && Coordinates.correctLength) {
+            positionVessel.destroyer();
+
+            if(CheckUserInput.isInputOkCondition() && CheckUserInput.isCorrectLength()) {
                 battleField.newField();
-                condition = false;
+                gameLoopCondition = false;
             }
         }
 
-        condition = true;
-        while (condition) {
-            System.out.println(InputMessage.patrolBoatMessage());
-            System.out.print("> ");
-            validate.patrolBoat();
+        gameLoopCondition = true;
+        while (gameLoopCondition) {
 
-            if(Coordinates.conditionForValidate && Coordinates.correctLength) {
+            positionVessel.patrolBoat();
+
+            if(CheckUserInput.isInputOkCondition() && CheckUserInput.isCorrectLength()) {
                 battleField.newField();
-                condition = false;
+                gameLoopCondition = false;
             }
         }
     }

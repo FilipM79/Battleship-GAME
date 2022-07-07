@@ -4,12 +4,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Field {
+class Field {
 
     String[][] field = new String[11][21];
     String[][] updatedField = new String[11][21];
 
-    public void blank() {
+    void blank() {
 
         File file = new File("C:\\Users\\Filip\\IdeaProjects" +
                 "\\Battleship\\Battleship\\task\\src\\battleship\\battleField.txt");
@@ -40,15 +40,15 @@ public class Field {
         }
     }
 
-    public void newField() {
+    void newField() {
 
-        Coordinates coordinates = new Coordinates();
+        CheckUserInput checkUserInput = new CheckUserInput();
 
         try {
-            if (coordinates.getRowDiff() == 0) {
-                for (int i = coordinates.getK1RowNum(); i < coordinates.getK2RowNum() + 1; i++) {
-                    for (int j = coordinates.getK1ColumnNum(); j < coordinates.getK2ColumnNum() + 1; j += 2) {
-                        updatedField[coordinates.getK1RowNum()][j] = "O ";
+            if (checkUserInput.getRowDiff() == 0) {
+                for (int i = checkUserInput.getK1RowNum(); i < checkUserInput.getK2RowNum() + 1; i++) {
+                    for (int j = checkUserInput.getK1ColumnNum(); j < checkUserInput.getK2ColumnNum() + 1; j += 2) {
+                        updatedField[checkUserInput.getK1RowNum()][j] = "O ";
                     }
                 }
                 for (String[] strings : updatedField) {
@@ -58,9 +58,9 @@ public class Field {
                     System.out.println();
                 }
 
-            } else if (coordinates.getColumnDiff() == 0) {
-                for (int i = coordinates.getK1RowNum(); i < coordinates.getK2RowNum() + 1; i++) {
-                    updatedField[i][coordinates.getK2ColumnNum()] = "O ";
+            } else if (checkUserInput.getColumnDiff() == 0) {
+                for (int i = checkUserInput.getK1RowNum(); i < checkUserInput.getK2RowNum() + 1; i++) {
+                    updatedField[i][checkUserInput.getK2ColumnNum()] = "O ";
                 }
                 for (String[] strings : updatedField) {
                     for (int j = 0; j < strings.length; j += 2) {
