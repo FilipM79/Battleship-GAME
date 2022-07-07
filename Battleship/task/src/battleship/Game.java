@@ -6,9 +6,7 @@ class Game {
 
         Field battleField = new Field();
         PositionVessel positionVessel = new PositionVessel();
-        CheckUserInput check = new CheckUserInput();
         battleField.blank();
-
 
         boolean gameLoopCondition = true;
         while (gameLoopCondition) {
