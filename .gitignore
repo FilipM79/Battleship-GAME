@@ -565,3 +565,82 @@
 /Topics/Custom exceptions/DriverNotReadyException/task.html
 /Topics/Custom exceptions/DriverNotReadyException/task-info.yaml
 /Topics/Custom exceptions/DriverNotReadyException/task-remote-info.yaml
+/.idea/modules/Battleship/task/build/classes/java/Battleship.Battleship-task-build-classes-java.iml
+/.idea/modules/Battleship/task/build/classes/java/Battleship.Battleship-task-build-classes-java.main.iml
+/.idea/modules/Battleship/task/build/classes/java/Battleship.Battleship-task-build-classes-java.test.iml
+/.idea/modules/Battleship/task/build/generated/sources/annotationProcessor/java/Battleship.Battleship-task-build-generated-sources-annotationProcessor-java.iml
+/.idea/modules/Battleship/task/build/generated/sources/annotationProcessor/java/Battleship.Battleship-task-build-generated-sources-annotationProcessor-java.main.iml
+/.idea/modules/Battleship/task/build/generated/sources/annotationProcessor/java/Battleship.Battleship-task-build-generated-sources-annotationProcessor-java.test.iml
+/.idea/modules/Battleship/task/build/generated/sources/headers/java/Battleship.Battleship-task-build-generated-sources-headers-java.iml
+/.idea/modules/Battleship/task/build/generated/sources/headers/java/Battleship.Battleship-task-build-generated-sources-headers-java.main.iml
+/.idea/modules/Battleship/task/build/generated/sources/headers/java/Battleship.Battleship-task-build-generated-sources-headers-java.test.iml
+/.idea/modules/Topics/Arrays as parameters/Application as a class/Battleship.Topics-Arrays_as_parameters-Application_as_a_class.iml
+/.idea/modules/Topics/Arrays as parameters/Application as a class/Battleship.Topics-Arrays_as_parameters-Application_as_a_class.main.iml
+/.idea/modules/Topics/Arrays as parameters/Application as a class/Battleship.Topics-Arrays_as_parameters-Application_as_a_class.test.iml
+/.idea/modules/Topics/Arrays as parameters/How to invoke the method/Battleship.Topics-Arrays_as_parameters-How_to_invoke_the_method.iml
+/.idea/modules/Topics/Arrays as parameters/How to invoke the method/Battleship.Topics-Arrays_as_parameters-How_to_invoke_the_method.main.iml
+/.idea/modules/Topics/Arrays as parameters/How to invoke the method/Battleship.Topics-Arrays_as_parameters-How_to_invoke_the_method.test.iml
+/.idea/modules/Topics/Arrays as parameters/Sorting numbers/Battleship.Topics-Arrays_as_parameters-Sorting_numbers.iml
+/.idea/modules/Topics/Arrays as parameters/Sorting numbers/Battleship.Topics-Arrays_as_parameters-Sorting_numbers.main.iml
+/.idea/modules/Topics/Arrays as parameters/Sorting numbers/Battleship.Topics-Arrays_as_parameters-Sorting_numbers.test.iml
+/.idea/modules/Topics/Arrays as parameters/The declaration of the sumAll method/Battleship.Topics-Arrays_as_parameters-The_declaration_of_the_sumAll_method.iml
+/.idea/modules/Topics/Arrays as parameters/The declaration of the sumAll method/Battleship.Topics-Arrays_as_parameters-The_declaration_of_the_sumAll_method.main.iml
+/.idea/modules/Topics/Arrays as parameters/The declaration of the sumAll method/Battleship.Topics-Arrays_as_parameters-The_declaration_of_the_sumAll_method.test.iml
+/.idea/modules/Topics/Arrays as parameters/Theory/Battleship.Topics-Arrays_as_parameters-Theory.iml
+/.idea/modules/Topics/Arrays as parameters/Theory/Battleship.Topics-Arrays_as_parameters-Theory.main.iml
+/.idea/modules/Topics/Arrays as parameters/Theory/Battleship.Topics-Arrays_as_parameters-Theory.test.iml
+/.idea/modules/Topics/Arrays as parameters/Varargs/Battleship.Topics-Arrays_as_parameters-Varargs.iml
+/.idea/modules/Topics/Arrays as parameters/Varargs/Battleship.Topics-Arrays_as_parameters-Varargs.main.iml
+/.idea/modules/Topics/Arrays as parameters/Varargs/Battleship.Topics-Arrays_as_parameters-Varargs.test.iml
+/.idea/modules/Topics/Arrays as parameters/Varargs method invocation/Battleship.Topics-Arrays_as_parameters-Varargs_method_invocation.iml
+/.idea/modules/Topics/Arrays as parameters/Varargs method invocation/Battleship.Topics-Arrays_as_parameters-Varargs_method_invocation.main.iml
+/.idea/modules/Topics/Arrays as parameters/Varargs method invocation/Battleship.Topics-Arrays_as_parameters-Varargs_method_invocation.test.iml
+/.idea/modules/Topics/Arrays as parameters/What does the code print/Battleship.Topics-Arrays_as_parameters-What_does_the_code_print.iml
+/.idea/modules/Topics/Arrays as parameters/What does the code print/Battleship.Topics-Arrays_as_parameters-What_does_the_code_print.main.iml
+/.idea/modules/Topics/Arrays as parameters/What does the code print/Battleship.Topics-Arrays_as_parameters-What_does_the_code_print.test.iml
+/Battleship/task/out/production/classes/battleship/CheckUserInput.class
+/Battleship/task/build/classes/java/main/battleship/Coordinates.class
+/Battleship/task/build/classes/java/main/battleship/Field.class
+/Battleship/task/build/classes/java/main/battleship/Game.class
+/Battleship/task/build/classes/java/main/battleship/InputMessage.class
+/Topics/Arrays as parameters/lesson-info.yaml
+/Battleship/task/build/classes/java/main/battleship/Main.class
+/Topics/Arrays as parameters/Application as a class/src/Main.java
+/Topics/Arrays as parameters/Sorting numbers/src/Main.java
+/Battleship/task/out/production/classes/battleship/PositionVessel.class
+/Battleship/task/build/tmp/compileJava/previous-compilation-data.bin
+/Battleship/task/build/tmp/compileTestJava/previous-compilation-data.bin
+/.gradle/7.4/fileHashes/resourceHashesCache.bin
+/Topics/Arrays as parameters/Application as a class/task.html
+/Topics/Arrays as parameters/How to invoke the method/task.html
+/Topics/Arrays as parameters/Sorting numbers/task.html
+/Topics/Arrays as parameters/The declaration of the sumAll method/task.html
+/Topics/Arrays as parameters/Theory/task.html
+/Topics/Arrays as parameters/Varargs/task.html
+/Topics/Arrays as parameters/Varargs method invocation/task.html
+/Topics/Arrays as parameters/What does the code print/task.html
+/Topics/Arrays as parameters/How to invoke the method/src/Task.java
+/Topics/Arrays as parameters/The declaration of the sumAll method/src/Task.java
+/Topics/Arrays as parameters/Theory/src/Task.java
+/Topics/Arrays as parameters/Varargs/src/Task.java
+/Topics/Arrays as parameters/Varargs method invocation/src/Task.java
+/Topics/Arrays as parameters/What does the code print/src/Task.java
+/Topics/Arrays as parameters/Application as a class/task-info.yaml
+/Topics/Arrays as parameters/How to invoke the method/task-info.yaml
+/Topics/Arrays as parameters/Sorting numbers/task-info.yaml
+/Topics/Arrays as parameters/The declaration of the sumAll method/task-info.yaml
+/Topics/Arrays as parameters/Theory/task-info.yaml
+/Topics/Arrays as parameters/Varargs/task-info.yaml
+/Topics/Arrays as parameters/Varargs method invocation/task-info.yaml
+/Topics/Arrays as parameters/What does the code print/task-info.yaml
+/Topics/Arrays as parameters/Application as a class/task-remote-info.yaml
+/Topics/Arrays as parameters/How to invoke the method/task-remote-info.yaml
+/Topics/Arrays as parameters/Sorting numbers/task-remote-info.yaml
+/Topics/Arrays as parameters/The declaration of the sumAll method/task-remote-info.yaml
+/Topics/Arrays as parameters/Theory/task-remote-info.yaml
+/Topics/Arrays as parameters/Varargs/task-remote-info.yaml
+/Topics/Arrays as parameters/Varargs method invocation/task-remote-info.yaml
+/Topics/Arrays as parameters/What does the code print/task-remote-info.yaml
+/Battleship/task/build/classes/java/test/Tests.class
+/Battleship/task/build/classes/java/main/battleship/Validate.class
+/Battleship/task/build/classes/java/main/battleship/Vessel.class
