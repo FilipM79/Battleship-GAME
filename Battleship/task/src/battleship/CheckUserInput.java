@@ -1,37 +1,35 @@
 package battleship;
 
-class CheckUserInput extends PositionVessel {
+class CheckUserInput extends PositionShip {
 
-    boolean correctLength;
+    boolean appropriateLength;
     int spaceIndex;
-    String k1;
-    String k2;
+    String c1;
+    String c2;
 
+    static int c1RowNum;
+    static int c2RowNum;
+    static int c1ColumnNum;
+    static int c2ColumnNum;
 
-    static int k1RowNum;
-    static int k2RowNum;
-    static int k1ColumnNum;
-    static int k2ColumnNum;
     static int rowDiff;
     static int columnDiff;
 
-     String validate (String userInput, int vesselLength, boolean loopCondition) {
+     String validate (String userInput, int currentShipLength, boolean loopCondition) {
 
         this.userInput = userInput;
-        this.vesselLength = vesselLength;
+        this.currentShipLength = currentShipLength;
         this.loopCondition = loopCondition;
 
-        if (userInput == null || "".equals(userInput )
-                || userInput.isEmpty() || userInput.isBlank()) {
-
+        if (userInput == null || "".equals(userInput ) || userInput.isEmpty() || userInput.isBlank()) {
             return """
-                    Error, input coordinates are empty. Try again.
+                    Input coordinates are empty. Try again.
                     Input should contain two coordinates with a space between them.
                     Example: 'b2 e2', or 'C1 C5'.""";
 
         } else if (!userInput.contains(" ")) {
             return """
-                    Error, there is no space between input coordinates. Try again.
+                    There is no space between input coordinates. Try again.
                     Input should contain two coordinates with a space between them.
                     Example: 'b2 e2', or 'C1 C5'.""";
 
@@ -40,48 +38,43 @@ class CheckUserInput extends PositionVessel {
             int inputLength = userInput.length();
 
             spaceIndex = userInput.indexOf(" ");
-            k1 = userInput.substring(0, spaceIndex);
-            k2 = userInput.substring(spaceIndex + 1, inputLength);
+            c1 = userInput.substring(0, spaceIndex);
+            c2 = userInput.substring(spaceIndex + 1, inputLength);
 
-            k1RowNum = (byte) k1.charAt(0) - ascii_A_index;
-            k2RowNum = (byte) k2.charAt(0) - ascii_A_index;
-            k1ColumnNum = Integer.parseInt(k1.substring(1)) * 2;
-            k2ColumnNum = Integer.parseInt(k2.substring(1)) * 2;
+            c1RowNum = (byte) c1.charAt(0) - ascii_A_index;
+            c2RowNum = (byte) c2.charAt(0) - ascii_A_index;
+            c1ColumnNum = Integer.parseInt(c1.substring(1)) * 2;
+            c2ColumnNum = Integer.parseInt(c2.substring(1)) * 2;
 
-            if (k2RowNum < k1RowNum) {
-                int temporary = k1RowNum;
-                k1RowNum = k2RowNum;
-                k2RowNum = temporary;
-            }
-            rowDiff = Math.abs(k2RowNum - k1RowNum);
+            if (c2RowNum < c1RowNum) {
+                int temporary = c1RowNum;
+                c1RowNum = c2RowNum;
+                c2RowNum = temporary;
+            } rowDiff = Math.abs(c2RowNum - c1RowNum);
 
-            if (k2ColumnNum < k1ColumnNum) {
-                int temporary = k1ColumnNum;
-                k1ColumnNum = k2ColumnNum;
-                k2ColumnNum = temporary;
-            }
-            columnDiff = Math.abs(k2ColumnNum - k1ColumnNum) / 2;
+            if (c2ColumnNum < c1ColumnNum) {
+                int temporary = c1ColumnNum;
+                c1ColumnNum = c2ColumnNum;
+                c2ColumnNum = temporary;
+            } columnDiff = Math.abs(c2ColumnNum - c1ColumnNum) / 2;
 
-            correctLength = (vesselLength - 1 == columnDiff
-                    || vesselLength - 1 == rowDiff);
+            appropriateLength = (currentShipLength - 1 == columnDiff || currentShipLength - 1 == rowDiff);
 
-            if (k1ColumnNum > 21 || k2ColumnNum > 21
-                    || k1RowNum > 11 || k2RowNum > 11) {
-
+            if (c1ColumnNum > 21 || c2ColumnNum > 21 || c1RowNum > 11 || c2RowNum > 11) {
                 return """
-                        Error, input coordinates out of battleField. Try again.
+                        Input coordinates are out of battlefield range. Row range: A-J, column range: 1-10. Try again.
                         Input should contain two coordinates with a space between them.
                         Example: 'b2 e2', or 'C1 C5'.""";
 
             } else if (columnDiff != 0 && rowDiff != 0) {
                 return """
-                        Error, you can only position a vessel horizontally or vertically. Try again.
+                        You can only position a ship horizontally or vertically, not diagonally. Try again.
                         Input should contain two coordinates with a space between them.
                         Example: 'b2 e2', or 'C1 C5'.""";
 
-            } else if (!correctLength) {
+            } else if (!appropriateLength) {
                 return """
-                        Error, wrong length. Try again.
+                        Incorrect length of the ship. Try again.
                         Input should contain two coordinates with a space between them.
                         Example: 'b2 e2', or 'C1 C5'.""";
 
@@ -90,20 +83,17 @@ class CheckUserInput extends PositionVessel {
             }
         }
     }
+
     public void inputMessage() {
 
-        try {
+    System.out.println("\nInput coordinates : " + userInput + ".\n"
+            + "K1 (row, column) is " + c1RowNum + ", " + c1ColumnNum + ".\n"
+            + "K2 (row, column) is " + c2RowNum + ", " + c2ColumnNum + ".\n"
+            + "Row difference is: " + rowDiff + "\n"
+            + "Column difference is: " + columnDiff + "\n"
+            + "Correct length is: " + appropriateLength + "\n"
+            + "Space index is: " + spaceIndex + "\n");
 
-            System.out.println("\nInput coordinates : " + userInput + ".\n"
-                    + "K1 (row, column) is " + k1RowNum + ", " + k1ColumnNum + ".\n"
-                    + "K2 (row, column) is " + k2RowNum + ", " + k2ColumnNum + ".\n"
-                    + "Row difference is: " + rowDiff + "\n"
-                    + "Column difference is: " + columnDiff + "\n"
-                    + "Correct length is: " + correctLength + "\n"
-                    + "Space index is: " + spaceIndex + "\n");
-
-        } catch (Exception e) {
-            System.out.println("Something is wrong with printing variables in VesselInputMessage");
-        }
     }
 }
+

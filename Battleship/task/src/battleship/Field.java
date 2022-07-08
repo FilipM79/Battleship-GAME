@@ -9,7 +9,7 @@ class Field extends CheckUserInput {
     String[][] field = new String[11][21];
     String[][] updatedField = new String[11][21];
 
-    void blank() {
+    void printBlankField() {
 
         File file = new File("C:\\Users\\Filip\\IdeaProjects" +
                 "\\Battleship\\Battleship\\task\\src\\battleship\\battleField.txt");
@@ -29,7 +29,7 @@ class Field extends CheckUserInput {
                 System.out.println();
             }
 
-            // copying field to updatedField
+            // copying field to printUpdatedField
             for (int i = 0; i < updatedField.length; i++) {
                 for (int j = 0; j < updatedField[i].length; j += 2) {
                     updatedField[i][j] = field[i][j];
@@ -41,14 +41,14 @@ class Field extends CheckUserInput {
         }
     }
 
-    void newField() {
+    void printUpdatedField() {
 
         try {
 
             if (rowDiff == 0) {
-                for (int i = k1RowNum; i < k2RowNum + 1; i++) {
-                    for (int j = k1ColumnNum; j < k2ColumnNum + 1; j += 2) {
-                        updatedField[k1RowNum][j] = "O ";
+                for (int i = c1RowNum; i < c2RowNum + 1; i++) {
+                    for (int j = c1ColumnNum; j < c2ColumnNum + 1; j += 2) {
+                        updatedField[c1RowNum][j] = "O ";
                     }
                 }
 
@@ -60,8 +60,8 @@ class Field extends CheckUserInput {
                 }
 
             } else if (columnDiff == 0) {
-                for (int i = k1RowNum; i < k2RowNum + 1; i++) {
-                    updatedField[i][k2ColumnNum] = "O ";
+                for (int i = c1RowNum; i < c2RowNum + 1; i++) {
+                    updatedField[i][c2ColumnNum] = "O ";
                 }
 
                 for (String[] strings : updatedField) {

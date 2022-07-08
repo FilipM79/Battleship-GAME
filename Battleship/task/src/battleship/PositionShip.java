@@ -3,31 +3,30 @@ package battleship;
 import java.util.Objects;
 import java.util.Scanner;
 
-class PositionVessel {
+class PositionShip {
 
     String userInput;
-    int vesselLength;
+    int currentShipLength;
     boolean loopCondition;
 
     void aircraftCarrier() {
 
-        VesselInputMessage vesselInputMessage = new VesselInputMessage();
         loopCondition = true;
 
         while (loopCondition) {
-            System.out.println(vesselInputMessage.aircraftCarrierMessage());
+            Ship ship = new Ship("Aircraft Carrier", 5);
+            System.out.println("\nEnter the coordinates of the " + ship.name + " (" + ship.length + " cells):");
             System.out.print("> ");
             Scanner scanner = new Scanner(System.in);
-            Vessel vessel = new Vessel("Aircraft Carrier", 5);
-            vesselLength = vessel.length;
+            currentShipLength = ship.length;
 
             try {
                 userInput = scanner.nextLine().toUpperCase().trim();
                 CheckUserInput check = new CheckUserInput();
-                System.out.println(check.validate(userInput, vesselLength, loopCondition));
+                System.out.println(check.validate(userInput, currentShipLength, loopCondition));
                 //check.inputMessage();
 
-                if (Objects.equals(check.validate(userInput, vesselLength, loopCondition), "")) {
+                if (Objects.equals(check.validate(userInput, currentShipLength, loopCondition), "")) {
                     loopCondition = false;
                 }
 
@@ -41,22 +40,21 @@ class PositionVessel {
 
     void battleShip() {
 
-        VesselInputMessage vesselInputMessage = new VesselInputMessage();
         loopCondition = true;
 
         while (loopCondition) {
-            System.out.println(vesselInputMessage.battleshipMessage());
+            Ship ship = new Ship("Battleship", 4);
+            System.out.println("\nEnter the coordinates of the " + ship.name + " (" + ship.length + " cells):");
             System.out.print("> ");
             Scanner scanner = new Scanner(System.in);
-            Vessel vessel = new Vessel("Battleship", 4);
-            vesselLength = vessel.length;
+            currentShipLength = ship.length;
 
             try {
                 userInput = scanner.nextLine().toUpperCase().trim();
                 CheckUserInput check = new CheckUserInput();
-                System.out.println(check.validate(userInput, vesselLength, loopCondition));
+                System.out.println(check.validate(userInput, currentShipLength, loopCondition));
 
-                if (Objects.equals(check.validate(userInput, vesselLength, loopCondition), "")) {
+                if (Objects.equals(check.validate(userInput, currentShipLength, loopCondition), "")) {
                     loopCondition = false;
                 }
 
@@ -70,22 +68,21 @@ class PositionVessel {
 
     void submarine() {
 
-        VesselInputMessage vesselInputMessage = new VesselInputMessage();
         loopCondition = true;
 
         while (loopCondition) {
-            System.out.println(vesselInputMessage.submarineMessage());
+            Ship ship = new Ship("Submarine", 3);
+            System.out.println("\nEnter the coordinates of the " + ship.name + " (" + ship.length + " cells):");
             System.out.print("> ");
             Scanner scanner = new Scanner(System.in);
-            Vessel vessel = new Vessel("Submarine", 3);
-            vesselLength = vessel.length;
+            currentShipLength = ship.length;
 
             try {
                 userInput = scanner.nextLine().toUpperCase().trim();
                 CheckUserInput check = new CheckUserInput();
-                System.out.println(check.validate(userInput, vesselLength, loopCondition));
+                System.out.println(check.validate(userInput, currentShipLength, loopCondition));
 
-                if (Objects.equals(check.validate(userInput, vesselLength, loopCondition), "")) {
+                if (Objects.equals(check.validate(userInput, currentShipLength, loopCondition), "")) {
                     loopCondition = false;
                 }
 
@@ -99,22 +96,21 @@ class PositionVessel {
 
     void destroyer() {
 
-        VesselInputMessage vesselInputMessage = new VesselInputMessage();
         loopCondition = true;
 
         while (loopCondition) {
-            System.out.println(vesselInputMessage.destroyerMessage());
+            Ship ship = new Ship("Destroyer", 3);
+            System.out.println("\nEnter the coordinates of the " + ship.name + " (" + ship.length + " cells):");
             System.out.print("> ");
             Scanner scanner = new Scanner(System.in);
-            Vessel vessel = new Vessel("Destroyer", 3);
-            vesselLength = vessel.length;
+            currentShipLength = ship.length;
 
             try {
                 userInput = scanner.nextLine().toUpperCase().trim();
                 CheckUserInput check = new CheckUserInput();
-                System.out.println(check.validate(userInput, vesselLength, loopCondition));
+                System.out.println(check.validate(userInput, currentShipLength, loopCondition));
 
-                if (Objects.equals(check.validate(userInput, vesselLength, loopCondition), "")) {
+                if (Objects.equals(check.validate(userInput, currentShipLength, loopCondition), "")) {
                     loopCondition = false;
                 }
 
@@ -128,22 +124,21 @@ class PositionVessel {
 
     void patrolBoat() {
 
-        VesselInputMessage vesselInputMessage = new VesselInputMessage();
         loopCondition = true;
 
         while (loopCondition) {
-            System.out.println(vesselInputMessage.patrolBoatMessage());
+            Ship ship = new Ship("Patrol boat", 2);
+            System.out.println("\n Enter the coordinates of the " + ship.name + " (" + ship.length + " cells):");
             System.out.print("> ");
             Scanner scanner = new Scanner(System.in);
-            Vessel vessel = new Vessel("Patrol boat", 2);
-            vesselLength = vessel.length;
+            currentShipLength = ship.length;
 
             try {
                 userInput = scanner.nextLine().toUpperCase().trim();
                 CheckUserInput check = new CheckUserInput();
-                System.out.println(check.validate(userInput, vesselLength, loopCondition));
+                System.out.println(check.validate(userInput, currentShipLength, loopCondition));
 
-                if (Objects.equals(check.validate(userInput, vesselLength, loopCondition), "")) {
+                if (Objects.equals(check.validate(userInput, currentShipLength, loopCondition), "")) {
                     loopCondition = false;
                 }
 

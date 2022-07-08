@@ -4,7 +4,7 @@ class Main {
 
     public static void main(String[] args) {
 
-        Game game = new Game();
+        SeaBattleGame game = new SeaBattleGame();
             game.play();
     }
 }
