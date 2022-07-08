@@ -1,66 +1,28 @@
 package battleship;
 
-class Game {
+class Game extends CheckUserInput {
 
     void play () {
 
         Field battleField = new Field();
         PositionVessel positionVessel = new PositionVessel();
+        CheckUserInput check = new CheckUserInput();
+
         battleField.blank();
 
-        boolean gameLoopCondition = true;
-        while (gameLoopCondition) {
+        positionVessel.aircraftCarrier();
+        battleField.newField();
 
-            positionVessel.aircraftCarrier();
+        positionVessel.battleShip();
+        battleField.newField();
 
-            if (CheckUserInput.isInputOkCondition() && CheckUserInput.isCorrectLength()) {
-                battleField.newField();
-                gameLoopCondition = false;
-            }
-        }
+        positionVessel.submarine();
+        battleField.newField();
 
-        gameLoopCondition = true;
-        while (gameLoopCondition) {
+        positionVessel.destroyer();
+        battleField.newField();
 
-            positionVessel.battleShip();
-
-            if(CheckUserInput.isInputOkCondition() && CheckUserInput.isCorrectLength()) {
-                battleField.newField();
-                gameLoopCondition = false;
-            }
-        }
-
-        gameLoopCondition = true;
-        while (gameLoopCondition) {
-
-            positionVessel.submarine();
-
-            if(CheckUserInput.isInputOkCondition() && CheckUserInput.isCorrectLength()) {
-                battleField.newField();
-                gameLoopCondition = false;
-            }
-        }
-
-        gameLoopCondition = true;
-        while (gameLoopCondition) {
-
-            positionVessel.destroyer();
-
-            if(CheckUserInput.isInputOkCondition() && CheckUserInput.isCorrectLength()) {
-                battleField.newField();
-                gameLoopCondition = false;
-            }
-        }
-
-        gameLoopCondition = true;
-        while (gameLoopCondition) {
-
-            positionVessel.patrolBoat();
-
-            if(CheckUserInput.isInputOkCondition() && CheckUserInput.isCorrectLength()) {
-                battleField.newField();
-                gameLoopCondition = false;
-            }
-        }
+        positionVessel.patrolBoat();
+        battleField.newField();
     }
 }

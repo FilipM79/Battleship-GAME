@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-class Field {
+class Field extends CheckUserInput {
 
     String[][] field = new String[11][21];
     String[][] updatedField = new String[11][21];
@@ -43,14 +43,12 @@ class Field {
 
     void newField() {
 
-        CheckUserInput checkUserInput = new CheckUserInput();
-
         try {
 
-            if (checkUserInput.getRowDiff() == 0) {
-                for (int i = checkUserInput.getK1RowNum(); i < checkUserInput.getK2RowNum() + 1; i++) {
-                    for (int j = checkUserInput.getK1ColumnNum(); j < checkUserInput.getK2ColumnNum() + 1; j += 2) {
-                        updatedField[checkUserInput.getK1RowNum()][j] = "O ";
+            if (rowDiff == 0) {
+                for (int i = k1RowNum; i < k2RowNum + 1; i++) {
+                    for (int j = k1ColumnNum; j < k2ColumnNum + 1; j += 2) {
+                        updatedField[k1RowNum][j] = "O ";
                     }
                 }
 
@@ -61,9 +59,9 @@ class Field {
                     System.out.println();
                 }
 
-            } else if (checkUserInput.getColumnDiff() == 0) {
-                for (int i = checkUserInput.getK1RowNum(); i < checkUserInput.getK2RowNum() + 1; i++) {
-                    updatedField[i][checkUserInput.getK2ColumnNum()] = "O ";
+            } else if (columnDiff == 0) {
+                for (int i = k1RowNum; i < k2RowNum + 1; i++) {
+                    updatedField[i][k2ColumnNum] = "O ";
                 }
 
                 for (String[] strings : updatedField) {

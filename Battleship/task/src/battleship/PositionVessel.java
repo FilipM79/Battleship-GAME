@@ -1,19 +1,21 @@
 package battleship;
 
+import java.util.Objects;
 import java.util.Scanner;
 
-class PositionVessel extends CheckUserInput {
+class PositionVessel {
 
-    static String userInput;
-    static int vesselLength;
-    static boolean loopCondition;
+    String userInput;
+    int vesselLength;
+    boolean loopCondition;
 
     void aircraftCarrier() {
 
+        VesselInputMessage vesselInputMessage = new VesselInputMessage();
         loopCondition = true;
 
         while (loopCondition) {
-            System.out.println(InputMessage.aircraftCarrierMessage());
+            System.out.println(vesselInputMessage.aircraftCarrierMessage());
             System.out.print("> ");
             Scanner scanner = new Scanner(System.in);
             Vessel vessel = new Vessel("Aircraft Carrier", 5);
@@ -21,7 +23,13 @@ class PositionVessel extends CheckUserInput {
 
             try {
                 userInput = scanner.nextLine().toUpperCase().trim();
-                new CheckUserInput().validate();
+                CheckUserInput check = new CheckUserInput();
+                System.out.println(check.validate(userInput, vesselLength, loopCondition));
+                //check.inputMessage();
+
+                if (Objects.equals(check.validate(userInput, vesselLength, loopCondition), "")) {
+                    loopCondition = false;
+                }
 
             } catch (Exception e) {
                 System.out.println("Error, invalid input. Try again.");
@@ -33,10 +41,11 @@ class PositionVessel extends CheckUserInput {
 
     void battleShip() {
 
+        VesselInputMessage vesselInputMessage = new VesselInputMessage();
         loopCondition = true;
 
         while (loopCondition) {
-            System.out.println(InputMessage.battleshipMessage());
+            System.out.println(vesselInputMessage.battleshipMessage());
             System.out.print("> ");
             Scanner scanner = new Scanner(System.in);
             Vessel vessel = new Vessel("Battleship", 4);
@@ -44,7 +53,12 @@ class PositionVessel extends CheckUserInput {
 
             try {
                 userInput = scanner.nextLine().toUpperCase().trim();
-                new CheckUserInput().validate();
+                CheckUserInput check = new CheckUserInput();
+                System.out.println(check.validate(userInput, vesselLength, loopCondition));
+
+                if (Objects.equals(check.validate(userInput, vesselLength, loopCondition), "")) {
+                    loopCondition = false;
+                }
 
             } catch (Exception e) {
                 System.out.println("Error, invalid input. Try again.");
@@ -56,10 +70,11 @@ class PositionVessel extends CheckUserInput {
 
     void submarine() {
 
+        VesselInputMessage vesselInputMessage = new VesselInputMessage();
         loopCondition = true;
 
         while (loopCondition) {
-            System.out.println(InputMessage.submarineMessage());
+            System.out.println(vesselInputMessage.submarineMessage());
             System.out.print("> ");
             Scanner scanner = new Scanner(System.in);
             Vessel vessel = new Vessel("Submarine", 3);
@@ -67,7 +82,12 @@ class PositionVessel extends CheckUserInput {
 
             try {
                 userInput = scanner.nextLine().toUpperCase().trim();
-                new CheckUserInput().validate();
+                CheckUserInput check = new CheckUserInput();
+                System.out.println(check.validate(userInput, vesselLength, loopCondition));
+
+                if (Objects.equals(check.validate(userInput, vesselLength, loopCondition), "")) {
+                    loopCondition = false;
+                }
 
             } catch (Exception e) {
                 System.out.println("Error, invalid input. Try again.");
@@ -79,10 +99,11 @@ class PositionVessel extends CheckUserInput {
 
     void destroyer() {
 
+        VesselInputMessage vesselInputMessage = new VesselInputMessage();
         loopCondition = true;
 
         while (loopCondition) {
-            System.out.println(InputMessage.destroyerMessage());
+            System.out.println(vesselInputMessage.destroyerMessage());
             System.out.print("> ");
             Scanner scanner = new Scanner(System.in);
             Vessel vessel = new Vessel("Destroyer", 3);
@@ -90,7 +111,12 @@ class PositionVessel extends CheckUserInput {
 
             try {
                 userInput = scanner.nextLine().toUpperCase().trim();
-                new CheckUserInput().validate();
+                CheckUserInput check = new CheckUserInput();
+                System.out.println(check.validate(userInput, vesselLength, loopCondition));
+
+                if (Objects.equals(check.validate(userInput, vesselLength, loopCondition), "")) {
+                    loopCondition = false;
+                }
 
             } catch (Exception e) {
                 System.out.println("Error, invalid input. Try again.");
@@ -102,10 +128,11 @@ class PositionVessel extends CheckUserInput {
 
     void patrolBoat() {
 
+        VesselInputMessage vesselInputMessage = new VesselInputMessage();
         loopCondition = true;
 
         while (loopCondition) {
-            System.out.println(InputMessage.patrolBoatMessage());
+            System.out.println(vesselInputMessage.patrolBoatMessage());
             System.out.print("> ");
             Scanner scanner = new Scanner(System.in);
             Vessel vessel = new Vessel("Patrol boat", 2);
@@ -113,7 +140,12 @@ class PositionVessel extends CheckUserInput {
 
             try {
                 userInput = scanner.nextLine().toUpperCase().trim();
-                new CheckUserInput().validate();
+                CheckUserInput check = new CheckUserInput();
+                System.out.println(check.validate(userInput, vesselLength, loopCondition));
+
+                if (Objects.equals(check.validate(userInput, vesselLength, loopCondition), "")) {
+                    loopCondition = false;
+                }
 
             } catch (Exception e) {
                 System.out.println("Error, invalid input. Try again.");
