@@ -3,7 +3,10 @@ package battleship;
 import java.util.Objects;
 import java.util.Scanner;
 
-class PositionShip {
+class ValidateShip {
+// Scanning for user input string and passing it to CheckUserInput class.
+// Constructing different ships and validating all checks of the input,
+// through CheckUserInput class.
 
     String userInput;
     int currentShipLength;

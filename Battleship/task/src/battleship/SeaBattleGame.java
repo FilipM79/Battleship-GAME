@@ -4,24 +4,25 @@ class SeaBattleGame {
 
     void play () {
 
-        Field battleField = new Field();
-        PositionShip positionShip = new PositionShip();
+        GameField gameField = new GameField();
+        ValidateShip validateShip = new ValidateShip();
+        CheckUserInput checkUserInput = new CheckUserInput();
 
-        battleField.printBlankField();
+        gameField.printBlankField();
 
-        positionShip.aircraftCarrier();
-        battleField.printUpdatedField();
+        validateShip.aircraftCarrier(); // Validating ship.
+        gameField.printUpdatedField(); // Updating game field with a new ship, after the validation.
 
-        positionShip.battleShip();
-        battleField.printUpdatedField();
+        validateShip.battleShip();
+        gameField.printUpdatedField();
 
-        positionShip.submarine();
-        battleField.printUpdatedField();
+        validateShip.submarine();
+        gameField.printUpdatedField();
 
-        positionShip.destroyer();
-        battleField.printUpdatedField();
+        validateShip.destroyer();
+        gameField.printUpdatedField();
 
-        positionShip.patrolBoat();
-        battleField.printUpdatedField();
+        validateShip.patrolBoat();
+        gameField.printUpdatedField();
     }
 }
