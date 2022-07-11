@@ -7,20 +7,33 @@ import java.util.*;
 class Field {
 
     String userInput;
-    static int currentShipLength;
+    int currentShipLength;
     String[][] blankField = new String[11][21];
     String[][] battlefield = new String[11][11];
-    static String[][] testField = new String[13][13];
+    String[][] testField = new String[13][13];
+    String[][] shipSurroundingField;
+    List<String> listOfValuesAroundShip = new ArrayList<>();
+    boolean surroundingsOccupied;
+    boolean appropriateLength;
+    boolean loopCondition;
 
-    static int counter = 0;
     static int c1RowNum;
     static int c2RowNum;
     static int c1ColumnNum;
     static int c2ColumnNum;
     static int rowDiff;
     static int columnDiff;
-    boolean appropriateLength;
 
+    static class Ship {
+
+        Ship(String name, int length) {
+            this.name = name;
+            this.length = length;
+        }
+
+        String name;
+        int length;
+    }
 
     void makeBlankField() {
 //    Making blank game field from file
@@ -61,6 +74,62 @@ class Field {
             System.out.println(e.getMessage());
         }
     }
+    void printBlankField() {
+        System.out.println();
+        for (String[] strings : blankField) {
+            for (int j = 0; j < strings.length; j += 2) {
+                System.out.print(strings[j]);
+            } System.out.println();
+        }
+    }
+    String checkUserInput(String userInput, int currentShipLength) {
+//    Validates if input string is ok.
+
+
+//        Checking if input format is ok.
+        if (userInput.isBlank()) {
+            return """
+                    Error. Input coordinates are empty. Try again.
+                    Input should contain two coordinates with a space between them.
+                    Example: 'b2 e2', or 'C1 C5'.""";
+
+        } else if (!userInput.contains(" ")) {
+            return """
+                    Error. There is no space between input coordinates. Try again.
+                    Input should contain two coordinates with a space between them.
+                    Example: 'b2 e2', or 'C1 C5'.""";
+
+        } else {
+//
+            generateCoordinates(userInput, currentShipLength);
+
+//            Checking for other errors in input.
+            if (Field.c1ColumnNum > 11 || Field.c2ColumnNum > 11
+                    || Field.c1RowNum > 11 || Field.c2RowNum > 11) {
+                return """
+                        Error. Input coordinates are out of battlefield range.
+                        Row range is: A-J, column range is: 1-10. Try again.
+                        Input should contain two coordinates with a space between them.
+                        Example: 'b2 e2', or 'C1 C5'.""";
+
+            } else if (columnDiff != 0 && rowDiff != 0) {
+                return """
+                        Error. You can only position a ship horizontally or vertically, not diagonally. Try again.
+                        Input should contain two coordinates with a space between them.
+                        Example: 'b2 e2', or 'C1 C5'.""";
+
+            } else if (!appropriateLength) {
+                return """
+                        Error. Incorrect length of the ship. Try again.
+                        Input should contain two coordinates with a space between them.
+                        Example: 'b2 e2', or 'C1 C5'.""";
+
+            } else {
+//          If everything is ok with the input.
+                return "";
+            }
+        }
+    }
     void generateCoordinates(String userInput, int currentShipLength) {
 
         int ascii_A_index = 64;
@@ -92,7 +161,116 @@ class Field {
         appropriateLength = (currentShipLength - 1 == columnDiff || currentShipLength - 1 == rowDiff);
 
     }
-    void addNewShip() {
+    void makeAircraftCarrier() {
+
+        loopCondition = true;
+        while (loopCondition) {
+            Ship ship = new Ship("Aircraft Carrier", 5);
+            validateShip(ship.name, ship.length);
+        }
+    }
+    void makeBattleShip() {
+
+        loopCondition = true;
+        while (loopCondition) {
+            Ship ship = new Ship("Battleship", 4);
+            validateShip(ship.name, ship.length);
+        }
+    }
+    void makeSubmarine() {
+
+        loopCondition = true;
+
+        while (loopCondition) {
+            Ship ship = new Ship("Submarine", 3);
+            validateShip(ship.name, ship.length);
+        }
+    }
+    void makeCruiser() {
+
+        loopCondition = true;
+
+        while (loopCondition) {
+            Ship ship = new Ship("Cruiser", 3);
+            validateShip(ship.name, ship.length);
+        }
+    }
+    void makeDestroyer() {
+
+        loopCondition = true;
+
+        while (loopCondition) {
+            Ship ship = new Ship("Destroyer", 2);
+            validateShip(ship.name, ship.length);
+        }
+    }
+    String checkForShipsNearby() {
+
+        listOfValuesAroundShip.clear();
+
+//      Making a small array field that surrounds a ship, horizontally or ...
+        if (rowDiff == 0) {
+            shipSurroundingField = new String[3][currentShipLength + 2];
+            for (int i = 0; i < 3; i++) {
+                System.arraycopy(testField[i + Field.c1RowNum], Field.c1ColumnNum, shipSurroundingField[i],
+                        0, currentShipLength + 2);
+            }
+        }
+//      ... vertically.
+        if (columnDiff == 0) {
+            shipSurroundingField = new String[currentShipLength + 2][3];
+            for (int i = 0; i < currentShipLength + 2; i++) {
+                System.arraycopy(testField[i + Field.c1RowNum], Field.c1ColumnNum, shipSurroundingField[i],
+                        0, 3);
+            }
+        }
+
+//      Populating list for checking around ship.
+        for (String[] array : shipSurroundingField) {
+            listOfValuesAroundShip.addAll(Arrays.asList(array));
+        }
+
+        surroundingsOccupied = listOfValuesAroundShip.contains("O ");
+
+        if (surroundingsOccupied) {
+            return """
+                    Error. Too close to another ship. Ships cannot touch. Try again.
+                    Input should contain two coordinates with a space between them.
+                    Example: 'b2 e2', or 'C1 C5'.""";
+
+        } else {
+            return "";
+        }
+    }
+    void validateShip(String shipName, int shipLength) {
+
+        System.out.println("\nEnter the coordinates of the " + shipName + " (" + shipLength + " cells):");
+        System.out.print("> ");
+        Scanner scanner = new Scanner(System.in);
+
+        currentShipLength = shipLength;
+
+        try {
+            userInput = scanner.nextLine().toUpperCase().trim();
+            Field field = new Field();
+
+            if (Objects.equals(field.checkUserInput(userInput, currentShipLength), "")) {
+                if (Objects.equals(checkForShipsNearby(), "")) {
+                    loopCondition = false;
+                } else {
+                    System.out.println(checkForShipsNearby());
+                }
+            } else {
+                System.out.println(field.checkUserInput(userInput, currentShipLength));
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error. Invalid input. Try again.");
+            System.out.println("Input should contain two coordinates with a space between them.");
+            System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+        }
+    }
+    void addNewShipToField() {
 
         try {
 //          Putting the ship in the field horizontally or ...
@@ -118,18 +296,6 @@ class Field {
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
-        } finally {
-            counter++;
-        }
-
-    }
-
-    void printBlankField() {
-        System.out.println();
-        for (String[] strings : blankField) {
-            for (int j = 0; j < strings.length; j += 2) {
-                System.out.print(strings[j]);
-            } System.out.println();
         }
     }
     void printBattlefield() {
@@ -142,4 +308,9 @@ class Field {
         }
 
     }
+    void shoot() {
+
+    }
+
+
 }

@@ -1,33 +1,31 @@
 package battleship;
 
 class SeaBattle {
-
     void play () {
 
         Field field = new Field();
-        MakeShip makeShip = new MakeShip();
 
         field.makeBlankField();
         field.printBlankField();
 
-        makeShip.aircraftCarrier();
-        field.addNewShip();
+        field.makeAircraftCarrier();
+        field.addNewShipToField();
         field.printBattlefield();
 
-        makeShip.battleShip();
-        field.addNewShip();
+        field.makeBattleShip();
+        field.addNewShipToField();
         field.printBattlefield();
 
-        makeShip.submarine();
-        field.addNewShip();
+        field.makeSubmarine();
+        field.addNewShipToField();
         field.printBattlefield();
 
-        makeShip.cruiser();
-        field.addNewShip();
+        field.makeCruiser();
+        field.addNewShipToField();
         field.printBattlefield();
 
-        makeShip.destroyer();
-        field.addNewShip();
+        field.makeDestroyer();
+        field.addNewShipToField();
         field.printBattlefield();
     }
 }
