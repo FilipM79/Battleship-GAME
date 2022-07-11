@@ -2,26 +2,27 @@ package battleship;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
-class Field extends MakeShip {
+class Field {
 
+    String userInput;
+    static int currentShipLength;
+    static boolean loopCondition;
     String[][] blankField = new String[11][21];
     String[][] battlefield = new String[11][11];
-    String[][] previousStateField = new String[13][13];
+    static String[][] testField = new String[13][13];
 
+
+    static int counter = 0;
     static int c1RowNum;
     static int c2RowNum;
     static int c1ColumnNum;
     static int c2ColumnNum;
     static int rowDiff;
     static int columnDiff;
-    static String[][] shipSurroundingField;
     static boolean appropriateLength;
-    static List<String> checkAroundShip = new ArrayList<>();
+
 
     void makeBlankField() {
 //    Making blank game field from file
@@ -30,8 +31,8 @@ class Field extends MakeShip {
 
         try (Scanner fileScanner = new Scanner(file)) {
 
-            for(String[] arr2 : blankField)
-                Arrays.fill(arr2, " ");
+            for(String[] arr1 : blankField)
+                Arrays.fill(arr1, " ");
 
 //            Populating blank field from file
             for (int rows = 0; rows < blankField.length; rows++) {
@@ -40,30 +41,29 @@ class Field extends MakeShip {
                 }
             } blankField[0][0] = "  ";
 
-//            Populating addNewShip from blank field.
+//            Populating battlefield from blank field.
             for (int i = 0; i < battlefield.length; i++) {
                 for (int j = 0; j < battlefield[i].length; j++) {
                     battlefield[i][j] = blankField[i][j * 2];
                 }
             }
 //
-//            Populating updatedFieldCopy with "* "
-            for(String[] arr1 : previousStateField)
+//            Populating previousStateField with "* "
+            for(String[] arr1 : testField)
                 Arrays.fill(arr1, "* ");
 
 //            Populating updatedFieldCopy from updated field.
             for (int i = 0; i < 11; i++) {
-                System.arraycopy(battlefield[i], 0, previousStateField[i + 1], 1, 11);
+                System.arraycopy(battlefield[i], 0, testField[i + 1], 1, 11);
             }
+
+            testField[1][1] = "* ";
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
-    void makeCoordinates (String userInput, int currentShipLength) {
-
-        this.userInput = userInput;
-        this.currentShipLength = currentShipLength;
+    void generateCoordinates(String userInput, int currentShipLength) {
 
         int ascii_A_index = 64;
         int inputLength = userInput.length();
@@ -94,58 +94,40 @@ class Field extends MakeShip {
         appropriateLength = (currentShipLength - 1 == columnDiff || currentShipLength - 1 == rowDiff);
 
     }
-    void checkSurroundings(int currentShipLength) {
-
-        this.currentShipLength = currentShipLength;
-//            Making a small array field that surrounds a ship.
-//            * horizontally or ...
-        if (rowDiff == 0) {
-            shipSurroundingField = new String[3][currentShipLength + 2];
-            for (int i = 0; i < 3; i++) {
-                System.arraycopy(previousStateField[i + c1RowNum], c1ColumnNum, shipSurroundingField[i],
-                        0, currentShipLength + 2);
-            }
-        }
-//            * ... vertically.
-        if (columnDiff == 0) {
-            shipSurroundingField = new String[currentShipLength + 2][3];
-            for (int i = 0; i < currentShipLength + 2; i++) {
-                System.arraycopy(previousStateField[i + c1RowNum], c1ColumnNum, shipSurroundingField[i],
-                        0, 3);
-            }
-        }
-
-//            List for checking around ship.
-        for (String[] array : shipSurroundingField) {
-            checkAroundShip.addAll(Arrays.asList(array));
-        }
-    }
     void addNewShip() {
-//  Updating game field and position ships in turns
-        try {
-//            Making a copy of addNewShip
-            for (int i = 0; i < 11; i++) {
-                System.arraycopy(battlefield[i], 0, previousStateField[i + 1], 1, 11);
-            }
 
-//            Putting the ship in the field horizontally or ...
+        try {
+//          Putting the ship in the field horizontally or ...
             if (rowDiff == 0) {
                 for (int i = c1RowNum; i < c2RowNum + 1; i++) {
                     for (int j = c1ColumnNum; j < c2ColumnNum + 1; j++) {
                         battlefield[c1RowNum][j] = "O ";
                     }
                 }
-//            * ...vertically
+
+//          * ...vertically
             } else if (columnDiff == 0) {
                 for (int i = c1RowNum; i < c2RowNum + 1; i++) {
                     battlefield[i][c2ColumnNum] = "O ";
                 }
             }
+
+            //            Populating updatedFieldCopy from updated field.
+            for (int i = 0; i < 11; i++) {
+                System.arraycopy(battlefield[i], 0, testField[i + 1], 1, 11);
+            }
+
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        } finally {
+            counter++;
         }
+
     }
+
     void printBlankField() {
+        System.out.println();
         for (String[] strings : blankField) {
             for (int j = 0; j < strings.length; j += 2) {
                 System.out.print(strings[j]);
@@ -153,57 +135,21 @@ class Field extends MakeShip {
         }
     }
     void printBattlefield() {
+        System.out.println();
         for (String[] strings : battlefield) {
             for (String string : strings) {
                 System.out.print(string);
             }
             System.out.println();
         }
-    }
-    void printUpdatedFieldCopy () {
-        for (String[] strings : previousStateField) {
-            for (String string : strings) {
-                System.out.print(string);
-            }
-            System.out.println();
-        }
+
     }
 
-    void printSurroundingField () {
-        for (String[] strings : shipSurroundingField) {
-            for (String string : strings) {
-                System.out.print(string);
-            }
-            System.out.println();
-        }
+    public void setUserInput(String userInput) {
+        this.userInput = userInput;
     }
-
-    public List<String> getCheckAroundShip() {
-        return checkAroundShip;
-    }
-    public int getC1RowNum() {
-        return c1RowNum;
-    }
-    public int getC2RowNum() {
-        return c2RowNum;
-    }
-    public int getC1ColumnNum() {
-        return c1ColumnNum;
-    }
-    public int getC2ColumnNum() {
-        return c2ColumnNum;
-    }
-    public int getRowDiff() {
-        return rowDiff;
-    }
-    public int getColumnDiff() {
-        return columnDiff;
-    }
-    public boolean isAppropriateLength() {
-        return appropriateLength;
-    }
-    public String[][] getShipSurroundingField() {
-        return shipSurroundingField;
+    public void setCurrentShipLength(int currentShipLength) {
+        Field.currentShipLength = currentShipLength;
     }
 
 }
