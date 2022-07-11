@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CheckSurroundings {
+public class Surroundings {
 
     String[][] shipSurroundingField;
-    List<String> checkAroundShip = new ArrayList<>();
-    boolean checkSurroundings;
+    List<String> listOfValuesAroundShip = new ArrayList<>();
+    boolean surroundingsOccupied;
 
-    String checkTestField () {
+    String checkForShipsNearby() {
 
-        checkAroundShip.clear();
+        listOfValuesAroundShip.clear();
 
 //      Making a small array field that surrounds a ship, horizontally or ...
         if (Field.rowDiff == 0) {
@@ -22,7 +22,7 @@ public class CheckSurroundings {
                         0, Field.currentShipLength + 2);
             }
         }
-
+//      ... vertically.
         if (Field.columnDiff == 0) {
             shipSurroundingField = new String[Field.currentShipLength + 2][3];
             for (int i = 0; i < Field.currentShipLength + 2; i++) {
@@ -31,16 +31,16 @@ public class CheckSurroundings {
             }
         }
 
-//          populating list for checking around ship.
+//      Populating list for checking around ship.
         for (String[] array : shipSurroundingField) {
-            checkAroundShip.addAll(Arrays.asList(array));
+            listOfValuesAroundShip.addAll(Arrays.asList(array));
         }
 
-        checkSurroundings = checkAroundShip.contains("O ");
+        surroundingsOccupied = listOfValuesAroundShip.contains("O ");
 
-        if (checkSurroundings) {
+        if (surroundingsOccupied) {
             return """
-                    Too close to another ship. Ships cannot touch. Try again.
+                    Error. Too close to another ship. Ships cannot touch. Try again.
                     Input should contain two coordinates with a space between them.
                     Example: 'b2 e2', or 'C1 C5'.""";
 

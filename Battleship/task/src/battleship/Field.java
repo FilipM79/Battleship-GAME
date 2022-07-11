@@ -8,11 +8,9 @@ class Field {
 
     String userInput;
     static int currentShipLength;
-    static boolean loopCondition;
     String[][] blankField = new String[11][21];
     String[][] battlefield = new String[11][11];
     static String[][] testField = new String[13][13];
-
 
     static int counter = 0;
     static int c1RowNum;
@@ -21,7 +19,7 @@ class Field {
     static int c2ColumnNum;
     static int rowDiff;
     static int columnDiff;
-    static boolean appropriateLength;
+    boolean appropriateLength;
 
 
     void makeBlankField() {
@@ -144,12 +142,4 @@ class Field {
         }
 
     }
-
-    public void setUserInput(String userInput) {
-        this.userInput = userInput;
-    }
-    public void setCurrentShipLength(int currentShipLength) {
-        Field.currentShipLength = currentShipLength;
-    }
-
 }

@@ -22,11 +22,11 @@ class SeaBattle {
         field.addNewShip();
         field.printBattlefield();
 
-        makeShip.destroyer();
+        makeShip.cruiser();
         field.addNewShip();
         field.printBattlefield();
 
-        makeShip.patrolBoat();
+        makeShip.destroyer();
         field.addNewShip();
         field.printBattlefield();
     }

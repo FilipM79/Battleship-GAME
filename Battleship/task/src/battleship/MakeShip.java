@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 class MakeShip extends Field {
 
+    boolean loopCondition;
+
     void aircraftCarrier() {
 
         loopCondition = true;
@@ -13,7 +15,6 @@ class MakeShip extends Field {
             validateShip(ship.name, ship.length);
         }
     }
-
     void battleShip() {
 
         loopCondition = true;
@@ -22,7 +23,6 @@ class MakeShip extends Field {
             validateShip(ship.name, ship.length);
         }
     }
-
     void submarine() {
 
         loopCondition = true;
@@ -32,23 +32,21 @@ class MakeShip extends Field {
             validateShip(ship.name, ship.length);
         }
     }
+    void cruiser() {
 
+        loopCondition = true;
+
+        while (loopCondition) {
+            Ship ship = new Ship("Cruiser", 3);
+            validateShip(ship.name, ship.length);
+        }
+    }
     void destroyer() {
 
         loopCondition = true;
 
         while (loopCondition) {
-            Ship ship = new Ship("Destroyer", 3);
-            validateShip(ship.name, ship.length);
-        }
-    }
-
-    void patrolBoat() {
-
-        loopCondition = true;
-
-        while (loopCondition) {
-            Ship ship = new Ship("Patrol boat", 2);
+            Ship ship = new Ship("Destroyer", 2);
             validateShip(ship.name, ship.length);
         }
     }
@@ -58,33 +56,29 @@ class MakeShip extends Field {
         System.out.println("\nEnter the coordinates of the " + shipName + " (" + shipLength + " cells):");
         System.out.print("> ");
         Scanner scanner = new Scanner(System.in);
-        setCurrentShipLength(shipLength);
+        currentShipLength = shipLength;
 
         try {
-            setUserInput(scanner.nextLine().toUpperCase().trim());
+            userInput = scanner.nextLine().toUpperCase().trim();
             CheckUserInput checkUserInput = new CheckUserInput();
-            CheckSurroundings checkSurroundings = new CheckSurroundings();
-
+            Surroundings surroundings = new Surroundings();
 
             if (Objects.equals(checkUserInput.validateInput(userInput, currentShipLength), "")) {
-                if (Objects.equals(checkSurroundings.checkTestField(), "")) {
+                if (Objects.equals(surroundings.checkForShipsNearby(), "")) {
                     loopCondition = false;
                 } else {
-                    System.out.println(checkSurroundings.checkTestField());
+                    System.out.println(surroundings.checkForShipsNearby());
                 }
             } else {
                 System.out.println(checkUserInput.validateInput(userInput, currentShipLength));
             }
 
         } catch (Exception e) {
-            System.out.println("Error, invalid input. Try again.");
+            System.out.println("Error. Invalid input. Try again.");
             System.out.println("Input should contain two coordinates with a space between them.");
             System.out.println("Example: 'b2 e2', or 'C1 C5'.");
         }
     }
-
-
-
 }
 
 
