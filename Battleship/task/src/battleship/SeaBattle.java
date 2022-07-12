@@ -27,5 +27,13 @@ class SeaBattle {
         field.makeDestroyer();
         field.addNewShipToField();
         field.printBattlefield();
+
+        System.out.println("\nThe game starts!");
+        field.printBattlefield();
+
+        field.shoot();
+        field.addNewShotToField();
+        field.printBattlefield();
+
     }
 }

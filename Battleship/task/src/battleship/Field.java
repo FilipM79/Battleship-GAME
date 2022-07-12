@@ -82,85 +82,6 @@ class Field {
             } System.out.println();
         }
     }
-    String checkUserInput(String userInput, int currentShipLength) {
-//    Validates if input string is ok.
-
-
-//        Checking if input format is ok.
-        if (userInput.isBlank()) {
-            return """
-                    Error. Input coordinates are empty. Try again.
-                    Input should contain two coordinates with a space between them.
-                    Example: 'b2 e2', or 'C1 C5'.""";
-
-        } else if (!userInput.contains(" ")) {
-            return """
-                    Error. There is no space between input coordinates. Try again.
-                    Input should contain two coordinates with a space between them.
-                    Example: 'b2 e2', or 'C1 C5'.""";
-
-        } else {
-//
-            generateCoordinates(userInput, currentShipLength);
-
-//            Checking for other errors in input.
-            if (Field.c1ColumnNum > 11 || Field.c2ColumnNum > 11
-                    || Field.c1RowNum > 11 || Field.c2RowNum > 11) {
-                return """
-                        Error. Input coordinates are out of battlefield range.
-                        Row range is: A-J, column range is: 1-10. Try again.
-                        Input should contain two coordinates with a space between them.
-                        Example: 'b2 e2', or 'C1 C5'.""";
-
-            } else if (columnDiff != 0 && rowDiff != 0) {
-                return """
-                        Error. You can only position a ship horizontally or vertically, not diagonally. Try again.
-                        Input should contain two coordinates with a space between them.
-                        Example: 'b2 e2', or 'C1 C5'.""";
-
-            } else if (!appropriateLength) {
-                return """
-                        Error. Incorrect length of the ship. Try again.
-                        Input should contain two coordinates with a space between them.
-                        Example: 'b2 e2', or 'C1 C5'.""";
-
-            } else {
-//          If everything is ok with the input.
-                return "";
-            }
-        }
-    }
-    void generateCoordinates(String userInput, int currentShipLength) {
-
-        int ascii_A_index = 64;
-        int inputLength = userInput.length();
-
-        int spaceIndex = userInput.indexOf(" ");
-        String c1 = userInput.substring(0, spaceIndex);
-        String c2 = userInput.substring(spaceIndex + 1, inputLength);
-
-        c1RowNum = (byte) c1.charAt(0) - ascii_A_index;
-        c2RowNum = (byte) c2.charAt(0) - ascii_A_index;
-        c1ColumnNum = Integer.parseInt(c1.substring(1));
-        c2ColumnNum = Integer.parseInt(c2.substring(1));
-
-//            Switching places if first input value is bigger than second.
-        if (c2RowNum < c1RowNum) {
-            int temporary = c1RowNum;
-            c1RowNum = c2RowNum;
-            c2RowNum = temporary;
-        } rowDiff = Math.abs(c2RowNum - c1RowNum);
-//            Switching places if first input value is bigger than second.
-        if (c2ColumnNum < c1ColumnNum) {
-            int temporary = c1ColumnNum;
-            c1ColumnNum = c2ColumnNum;
-            c2ColumnNum = temporary;
-        } columnDiff = Math.abs(c2ColumnNum - c1ColumnNum);
-
-//            Confirming that the length of the ship is correct.
-        appropriateLength = (currentShipLength - 1 == columnDiff || currentShipLength - 1 == rowDiff);
-
-    }
     void makeAircraftCarrier() {
 
         loopCondition = true;
@@ -204,6 +125,107 @@ class Field {
             validateShip(ship.name, ship.length);
         }
     }
+    void validateShip(String shipName, int shipLength) {
+
+        System.out.println("\nEnter the coordinates of the " + shipName + " (" + shipLength + " cells):");
+        System.out.print("> ");
+        Scanner scanner = new Scanner(System.in);
+
+        currentShipLength = shipLength;
+
+        try {
+            userInput = scanner.nextLine().toUpperCase().trim();
+            Field field = new Field();
+
+            if (Objects.equals(field.checkShipInput(userInput, currentShipLength), "")) {
+                if (Objects.equals(checkForShipsNearby(), "")) {
+                    loopCondition = false;
+                } else {
+                    System.out.println(checkForShipsNearby());
+                }
+            } else {
+                System.out.println(field.checkShipInput(userInput, currentShipLength));
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error. Invalid input. Try again.");
+            System.out.println("Input should contain two coordinates with a space between them.");
+            System.out.println("Example: 'b2 e2', or 'C1 C5'.");
+        }
+    }
+    String checkShipInput(String userInput, int currentShipLength) {
+//    Validates if input string is ok.
+
+
+//        Checking if input format is ok.
+        if (userInput.isBlank()) {
+            return """
+                    Error. Input coordinates are empty. Try again.
+                    Input should contain two coordinates with a space between them.
+                    Example: 'b2 e2', or 'C1 C5'.""";
+
+        } else if (!userInput.contains(" ")) {
+            return """
+                    Error. There is no space between input coordinates. Try again.
+                    Input should contain two coordinates with a space between them.
+                    Example: 'b2 e2', or 'C1 C5'.""";
+
+        } else {
+            int ascii_A_index = 64;
+            int inputLength = userInput.length();
+
+            int spaceIndex = userInput.indexOf(" ");
+            String c1 = userInput.substring(0, spaceIndex);
+            String c2 = userInput.substring(spaceIndex + 1, inputLength);
+
+            c1RowNum = (byte) c1.charAt(0) - ascii_A_index;
+            c2RowNum = (byte) c2.charAt(0) - ascii_A_index;
+            c1ColumnNum = Integer.parseInt(c1.substring(1));
+            c2ColumnNum = Integer.parseInt(c2.substring(1));
+
+//            Switching places if first input value is bigger than second.
+            if (c2RowNum < c1RowNum) {
+                int temporary = c1RowNum;
+                c1RowNum = c2RowNum;
+                c2RowNum = temporary;
+            } rowDiff = Math.abs(c2RowNum - c1RowNum);
+//            Switching places if first input value is bigger than second.
+            if (c2ColumnNum < c1ColumnNum) {
+                int temporary = c1ColumnNum;
+                c1ColumnNum = c2ColumnNum;
+                c2ColumnNum = temporary;
+            } columnDiff = Math.abs(c2ColumnNum - c1ColumnNum);
+
+//          Confirming that the length of the ship is correct.
+            appropriateLength = (currentShipLength - 1 == columnDiff || currentShipLength - 1 == rowDiff);
+
+//          Checking for other errors in input.
+            if (Field.c1ColumnNum > 11 || Field.c2ColumnNum > 11
+                    || Field.c1RowNum > 11 || Field.c2RowNum > 11) {
+                return """
+                        Error. Input coordinates are out of battlefield range.
+                        Row range is: A-J, column range is: 1-10. Try again.
+                        Input should contain two coordinates with a space between them.
+                        Example: 'b2 e2', or 'C1 C5'.""";
+
+            } else if (columnDiff != 0 && rowDiff != 0) {
+                return """
+                        Error. You can only position a ship horizontally or vertically, not diagonally. Try again.
+                        Input should contain two coordinates with a space between them.
+                        Example: 'b2 e2', or 'C1 C5'.""";
+
+            } else if (!appropriateLength) {
+                return """
+                        Error. Incorrect length of the ship. Try again.
+                        Input should contain two coordinates with a space between them.
+                        Example: 'b2 e2', or 'C1 C5'.""";
+
+            } else {
+//          If everything is ok with the input.
+                return "";
+            }
+        }
+    }
     String checkForShipsNearby() {
 
         listOfValuesAroundShip.clear();
@@ -240,34 +262,6 @@ class Field {
 
         } else {
             return "";
-        }
-    }
-    void validateShip(String shipName, int shipLength) {
-
-        System.out.println("\nEnter the coordinates of the " + shipName + " (" + shipLength + " cells):");
-        System.out.print("> ");
-        Scanner scanner = new Scanner(System.in);
-
-        currentShipLength = shipLength;
-
-        try {
-            userInput = scanner.nextLine().toUpperCase().trim();
-            Field field = new Field();
-
-            if (Objects.equals(field.checkUserInput(userInput, currentShipLength), "")) {
-                if (Objects.equals(checkForShipsNearby(), "")) {
-                    loopCondition = false;
-                } else {
-                    System.out.println(checkForShipsNearby());
-                }
-            } else {
-                System.out.println(field.checkUserInput(userInput, currentShipLength));
-            }
-
-        } catch (Exception e) {
-            System.out.println("Error. Invalid input. Try again.");
-            System.out.println("Input should contain two coordinates with a space between them.");
-            System.out.println("Example: 'b2 e2', or 'C1 C5'.");
         }
     }
     void addNewShipToField() {
@@ -310,7 +304,57 @@ class Field {
     }
     void shoot() {
 
+        loopCondition = true;
+        while (loopCondition) {
+
+            System.out.println("\nTake a shot!");
+            System.out.print("> ");
+            Scanner scanner = new Scanner(System.in);
+
+            try {
+                userInput = scanner.nextLine().toUpperCase().trim();
+//              Check for errors in input format
+                if (userInput.isBlank()) {
+                    System.out.println( "Error. Input is empty. Shoot again.");
+
+                } else if (userInput.length() > 3) {
+                    System.out.println( "Error. Too many characters in input. Shoot again.");
+
+                } else {
+                    int ascii_A_index = 64;
+                    int inputLength = userInput.length();
+
+                    String c1 = userInput.substring(0, inputLength);
+
+                    c1RowNum = (byte) c1.charAt(0) - ascii_A_index;
+                    c1ColumnNum = Integer.parseInt(c1.substring(1));
+
+//          Checking for other errors in input.
+                    if (c1ColumnNum > 10 || c1RowNum > 10
+                            || c1ColumnNum < 0 || c1RowNum < 0) {
+                        System.out.println("Error. Input coordinates are out of battlefield range. Shoot again! ");
+
+                    }   else {
+//          If everything is ok with the input.
+                        loopCondition = false;
+                    }
+                }
+
+            } catch (Exception e) {
+                System.out.println("Error. Invalid input. Shoot again.");
+            }
+        }
     }
+    void addNewShotToField() {
+        if (Objects.equals(battlefield[c1RowNum][c1ColumnNum], "O ")) {
+            battlefield[c1RowNum][c1ColumnNum] = "X ";
+            System.out.println();
+            System.out.println("You hit a ship!");
 
-
+        } else {
+            battlefield[c1RowNum][c1ColumnNum] = "M ";
+            System.out.println();
+            System.out.println("You missed!");
+        }
+    }
 }
