@@ -11,11 +11,13 @@ class Field {
     String[][] blankField = new String[11][21];
     String[][] battlefield = new String[11][11];
     String[][] testField = new String[13][13];
+    String[][] fogField = new String[11][11];
     String[][] shipSurroundingField;
     List<String> listOfValuesAroundShip = new ArrayList<>();
     boolean surroundingsOccupied;
     boolean appropriateLength;
     boolean loopCondition;
+    String hitOrMiss;
 
     static int c1RowNum;
     static int c2RowNum;
@@ -59,11 +61,16 @@ class Field {
                 }
             }
 //
-//            Populating previousStateField with "* "
+//            Populating testField with "* "
             for(String[] arr1 : testField)
                 Arrays.fill(arr1, "* ");
 
-//            Populating updatedFieldCopy from updated field.
+//          Copying battleField to fogField.
+            for (int i = 0; i < 11; i++) {
+                System.arraycopy(battlefield[i], 0, fogField[i], 0, 11);
+            }
+
+//          Copying battleField to testField.
             for (int i = 0; i < 11; i++) {
                 System.arraycopy(battlefield[i], 0, testField[i + 1], 1, 11);
             }
@@ -282,11 +289,10 @@ class Field {
                 }
             }
 
-            //            Populating updatedFieldCopy from updated field.
+//          Copying battleField to testField.
             for (int i = 0; i < 11; i++) {
                 System.arraycopy(battlefield[i], 0, testField[i + 1], 1, 11);
             }
-
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -295,6 +301,16 @@ class Field {
     void printBattlefield() {
         System.out.println();
         for (String[] strings : battlefield) {
+            for (String string : strings) {
+                System.out.print(string);
+            }
+            System.out.println();
+        }
+
+    }
+    void printFogField() {
+        System.out.println();
+        for (String[] strings : fogField) {
             for (String string : strings) {
                 System.out.print(string);
             }
@@ -345,16 +361,21 @@ class Field {
             }
         }
     }
-    void addNewShotToField() {
+    void addShotToField() {
         if (Objects.equals(battlefield[c1RowNum][c1ColumnNum], "O ")) {
             battlefield[c1RowNum][c1ColumnNum] = "X ";
+            fogField[c1RowNum][c1ColumnNum] = "X ";
             System.out.println();
-            System.out.println("You hit a ship!");
+            hitOrMiss = "You hit a ship!";
 
         } else {
             battlefield[c1RowNum][c1ColumnNum] = "M ";
+            fogField[c1RowNum][c1ColumnNum] = "M ";
             System.out.println();
-            System.out.println("You missed!");
+            hitOrMiss = "You missed!";
         }
+    }
+    void shotMessage(){
+        System.out.println("\n" + hitOrMiss);
     }
 }

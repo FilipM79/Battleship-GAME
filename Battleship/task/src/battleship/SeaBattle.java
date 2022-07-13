@@ -29,11 +29,12 @@ class SeaBattle {
         field.printBattlefield();
 
         System.out.println("\nThe game starts!");
-        field.printBattlefield();
+        field.printFogField();
 
         field.shoot();
-        field.addNewShotToField();
+        field.addShotToField();
+        field.printFogField();
+        field.shotMessage();
         field.printBattlefield();
-
     }
 }
