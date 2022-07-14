@@ -9,32 +9,34 @@ class SeaBattle {
         field.printBlankField();
 
         field.makeAircraftCarrier();
-        field.addNewShipToField();
+        field.addShipToField();
         field.printBattlefield();
 
         field.makeBattleShip();
-        field.addNewShipToField();
+        field.addShipToField();
         field.printBattlefield();
 
         field.makeSubmarine();
-        field.addNewShipToField();
+        field.addShipToField();
         field.printBattlefield();
 
         field.makeCruiser();
-        field.addNewShipToField();
+        field.addShipToField();
         field.printBattlefield();
 
         field.makeDestroyer();
-        field.addNewShipToField();
+        field.addShipToField();
         field.printBattlefield();
 
         System.out.println("\nThe game starts!");
         field.printFogField();
+        System.out.println("\nTake a shot!");
 
-        field.shoot();
-        field.addShotToField();
-        field.printFogField();
-        field.shotMessage();
-        field.printBattlefield();
+        while (!field.endGame) {
+            field.shoot();
+            field.addShotToField();
+            field.printFogField();
+            field.shotMessage();
+        }
     }
 }
