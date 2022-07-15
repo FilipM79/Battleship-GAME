@@ -5,7 +5,7 @@ class SeaBattle {
 
         Field field = new Field();
 
-        field.makeBlankField();
+        field.makeFields();
         field.printBlankField();
 
         field.makeAircraftCarrier();
@@ -35,7 +35,7 @@ class SeaBattle {
         while (!field.endGame) {
             field.shoot();
             field.addShotToField();
-            field.printBattlefield();
+//            field.printBattlefield();
             field.printFogField();
             field.shotMessage();
         }

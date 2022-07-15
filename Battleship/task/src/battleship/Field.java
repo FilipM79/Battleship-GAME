@@ -6,31 +6,31 @@ import java.util.*;
 
 class Field {
 
-    String userInput;
-    int currentShipLength;
     String[][] blankField = new String[11][21];
     String[][] battlefield = new String[11][11];
-    String[][] labelledField = new String[11][11];
-    String[][] testField = new String[13][13];
     String[][] fogField = new String[11][11];
-    String[][] shipSurroundingField;
-    List<String> listOfValuesAroundShip = new ArrayList<>();
-    List<String> listOfLabelledField = new ArrayList<>();
+    private String[][] shipSurroundingField;
+    private final String[][] labelledField = new String[11][11];
+    private final String[][] testField = new String[13][13];
+    private final List<String> listOfValuesAroundShip = new ArrayList<>();
+    private final List<String> listOfLabelledField = new ArrayList<>();
 
-    boolean surroundingsOccupied;
-    boolean appropriateLength;
-    boolean loopCondition;
+
     boolean endGame = false;
-    static int sunkCounter = 0;
-    static int c1RowNum;
-    static int c2RowNum;
-    static int c1ColumnNum;
-    static int c2ColumnNum;
-    static int rowDiff;
-    static int columnDiff;
-    String shipName;
+    private boolean loopCondition;
+    private String userInput;
+    private String shipName;
+    private int currentShipLength;
+    private int sunkCounter = 0;
 
-    static class Ship {
+    private static int c1RowNum;
+    private static int c2RowNum;
+    private static int c1ColumnNum;
+    private static int c2ColumnNum;
+    private static int rowDiff;
+    private static int columnDiff;
+
+    private static class Ship {
 
         Ship(String name, int length) {
             this.name = name;
@@ -41,7 +41,7 @@ class Field {
         int length;
     }
 
-    void makeBlankField() {
+    void makeFields() {
 //    Making blank game field from file
         File file = new File("C:\\Users\\Filip\\IdeaProjects" +
                 "\\Battleship\\Battleship\\task\\src\\battleship\\battleField.txt");
@@ -144,7 +144,7 @@ class Field {
             validateShip(ship.name, ship.length);
         }
     }
-    void validateShip(String shipName, int shipLength) {
+    private void validateShip(String shipName, int shipLength) {
 
         System.out.println("\nEnter the coordinates of the " + shipName + " (" + shipLength + " cells):");
         System.out.print("> ");
@@ -172,22 +172,18 @@ class Field {
             System.out.println("Example: 'b2 e2', or 'C1 C5'.");
         }
     }
-    String checkShipInput(String userInput, int currentShipLength) {
-//    Validates if input string is ok.
-
+    private String checkShipInput(String userInput, int currentShipLength) {
 
 //        Checking if input format is ok.
         if (userInput.isBlank()) {
-            return """
-                    Error. Input coordinates are empty. Try again.
-                    Input should contain two coordinates with a space between them.
-                    Example: 'b2 e2', or 'C1 C5'.""";
+            return "Error. Input coordinates are empty. Try again." + "\n" +
+                    "Input should contain two coordinates with a space between them." + "\n" +
+                    "Example: 'b2 e2', or 'C1 C5'.";
 
         } else if (!userInput.contains(" ")) {
-            return """
-                    Error. There is no space between input coordinates. Try again.
-                    Input should contain two coordinates with a space between them.
-                    Example: 'b2 e2', or 'C1 C5'.""";
+            return "Error. There is no space between input coordinates. Try again." + "\n" +
+                    "Input should contain two coordinates with a space between them." + "\n" +
+                    "Example: 'b2 e2', or 'C1 C5'.";
 
         } else {
             int ascii_A_index = 64;
@@ -202,13 +198,14 @@ class Field {
             c1ColumnNum = Integer.parseInt(c1.substring(1));
             c2ColumnNum = Integer.parseInt(c2.substring(1));
 
-//            Switching places if first input value is bigger than second.
+//            Switching rowNum places if first input value is bigger than second.
             if (c2RowNum < c1RowNum) {
                 int temporary = c1RowNum;
                 c1RowNum = c2RowNum;
                 c2RowNum = temporary;
             } rowDiff = Math.abs(c2RowNum - c1RowNum);
-//            Switching places if first input value is bigger than second.
+
+//            Switching columnNum places if first input value is bigger than second.
             if (c2ColumnNum < c1ColumnNum) {
                 int temporary = c1ColumnNum;
                 c1ColumnNum = c2ColumnNum;
@@ -216,28 +213,26 @@ class Field {
             } columnDiff = Math.abs(c2ColumnNum - c1ColumnNum);
 
 //          Confirming that the length of the ship is correct.
-            appropriateLength = (currentShipLength - 1 == columnDiff || currentShipLength - 1 == rowDiff);
+            boolean appropriateLength = (currentShipLength - 1 == columnDiff || currentShipLength - 1 == rowDiff);
 
 //          Checking for other errors in input.
-            if (Field.c1ColumnNum > 11 || Field.c2ColumnNum > 11
-                    || Field.c1RowNum > 11 || Field.c2RowNum > 11) {
-                return """
-                        Error. Input coordinates are out of battlefield range.
-                        Row range is: A-J, column range is: 1-10. Try again.
-                        Input should contain two coordinates with a space between them.
-                        Example: 'b2 e2', or 'C1 C5'.""";
+            if (Field.c1ColumnNum > 11 || Field.c2ColumnNum > 11 || Field.c1RowNum > 11 || Field.c2RowNum > 11 ||
+                    Field.c1ColumnNum < 1 || Field.c1RowNum < 1) {
+
+                return "Error. Input coordinates are out of battlefield range." + "\n" +
+                        "Row range is: A-J, column range is: 1-10. Try again." + "\n" +
+                        "Input should contain two coordinates with a space between them." + "\n" +
+                        "Example: 'b2 e2', or 'C1 C5'.";
 
             } else if (columnDiff != 0 && rowDiff != 0) {
-                return """
-                        Error. You can only position a ship horizontally or vertically, not diagonally. Try again.
-                        Input should contain two coordinates with a space between them.
-                        Example: 'b2 e2', or 'C1 C5'.""";
+                return "Error. You can only position a ship horizontally or vertically, not diagonally. Try again.\n" +
+                       "Input should contain two coordinates with a space between them." + "\n" +
+                       "Example: 'b2 e2', or 'C1 C5'.";
 
             } else if (!appropriateLength) {
-                return """
-                        Error. Incorrect length of the ship. Try again.
-                        Input should contain two coordinates with a space between them.
-                        Example: 'b2 e2', or 'C1 C5'.""";
+                return "Error. Incorrect length of the ship. Try again." + "\n" +
+                        "Input should contain two coordinates with a space between them." + "\n" +
+                        "Example: 'b2 e2', or 'C1 C5'.";
 
             } else {
 //          If everything is ok with the input.
@@ -245,7 +240,7 @@ class Field {
             }
         }
     }
-    String checkForShipsNearby() {
+    private String checkForShipsNearby() {
 
         listOfValuesAroundShip.clear();
 
@@ -271,7 +266,7 @@ class Field {
             listOfValuesAroundShip.addAll(Arrays.asList(array));
         }
 
-        surroundingsOccupied = listOfValuesAroundShip.contains("O ");
+        boolean surroundingsOccupied = listOfValuesAroundShip.contains("O ");
 
         if (surroundingsOccupied) {
             return """
@@ -389,7 +384,7 @@ class Field {
 //                  Checking for other errors in input.
                     if (c1ColumnNum > 10 || c1RowNum > 10
                             || c1ColumnNum < 1 || c1RowNum < 1) {
-                        System.out.println("Error. Input coordinates are out of battlefield range. Shoot again! ");
+                        System.out.println("Error. Input coordinates are out of battlefield range. Shoot again.");
 
                     }   else {
 //                      If everything is ok with the input.
