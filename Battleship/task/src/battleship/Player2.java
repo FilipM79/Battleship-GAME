@@ -4,44 +4,19 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-class Field {
+public class Player2 extends JointVariables {
 
-    String[][] blankField = new String[11][21];
-    String[][] battlefield = new String[11][11];
-    String[][] fogField = new String[11][11];
     private String[][] shipSurroundingField;
     private final String[][] labelledField = new String[11][11];
     private final String[][] testField = new String[13][13];
     private final List<String> listOfValuesAroundShip = new ArrayList<>();
     private final List<String> listOfLabelledField = new ArrayList<>();
 
-
     boolean endGame = false;
-    private boolean loopCondition;
-    private String userInput;
-    private String shipName;
-    private int currentShipLength;
-    private int sunkCounter = 0;
+    String userInput;
+    int sunkCounter = 0;
 
-    private static int c1RowNum;
-    private static int c2RowNum;
-    private static int c1ColumnNum;
-    private static int c2ColumnNum;
-    private static int rowDiff;
-    private static int columnDiff;
-
-    private static class Ship {
-
-        Ship(String name, int length) {
-            this.name = name;
-            this.length = length;
-        }
-
-        String name;
-        int length;
-    }
-
-    void makeFields() {
+    protected void makeFields() {
 //    Making blank game field from file
         File file = new File("C:\\Users\\Filip\\IdeaProjects" +
                 "\\Battleship\\Battleship\\task\\src\\battleship\\battleField.txt");
@@ -88,7 +63,7 @@ class Field {
             System.out.println(e.getMessage());
         }
     }
-    void printBlankField() {
+    protected void printBlankField() {
         System.out.println();
         for (String[] strings : blankField) {
             for (int j = 0; j < strings.length; j += 2) {
@@ -96,7 +71,7 @@ class Field {
             } System.out.println();
         }
     }
-    void makeAircraftCarrier() {
+    protected void addAircraftCarrier() {
 
         loopCondition = true;
         while (loopCondition) {
@@ -104,8 +79,10 @@ class Field {
             shipName = ship.name;
             validateShip(ship.name, ship.length);
         }
+        addShipToField();
+        printBattlefield();
     }
-    void makeBattleShip() {
+    protected void addBattleShip() {
 
         loopCondition = true;
         while (loopCondition) {
@@ -113,8 +90,10 @@ class Field {
             shipName = ship.name;
             validateShip(ship.name, ship.length);
         }
+        addShipToField();
+        printBattlefield();
     }
-    void makeSubmarine() {
+    protected void addSubmarine() {
 
         loopCondition = true;
 
@@ -123,8 +102,10 @@ class Field {
             shipName = ship.name;
             validateShip(ship.name, ship.length);
         }
+        addShipToField();
+        printBattlefield();
     }
-    void makeCruiser() {
+    protected void addCruiser() {
 
         loopCondition = true;
 
@@ -133,8 +114,10 @@ class Field {
             shipName = ship.name;
             validateShip(ship.name, ship.length);
         }
+        addShipToField();
+        printBattlefield();
     }
-    void makeDestroyer() {
+    protected void addDestroyer() {
 
         loopCondition = true;
 
@@ -143,27 +126,27 @@ class Field {
             shipName = ship.name;
             validateShip(ship.name, ship.length);
         }
+        addShipToField();
+        printBattlefield();
     }
     private void validateShip(String shipName, int shipLength) {
 
-        System.out.println("\nEnter the coordinates of the " + shipName + " (" + shipLength + " cells):");
+        System.out.println("\nPlayer 2, enter the coordinates of the " + shipName + " (" + shipLength + " cells):");
         System.out.print("> ");
-        Scanner scanner = new Scanner(System.in);
 
         currentShipLength = shipLength;
 
         try {
             userInput = scanner.nextLine().toUpperCase().trim();
-            Field field = new Field();
 
-            if (Objects.equals(field.checkShipInput(userInput, currentShipLength), "")) {
+            if (Objects.equals(checkShipInput(userInput, currentShipLength), "")) {
                 if (Objects.equals(checkForShipsNearby(), "")) {
                     loopCondition = false;
                 } else {
                     System.out.println(checkForShipsNearby());
                 }
             } else {
-                System.out.println(field.checkShipInput(userInput, currentShipLength));
+                System.out.println(checkShipInput(userInput, currentShipLength));
             }
 
         } catch (Exception e) {
@@ -216,8 +199,8 @@ class Field {
             boolean appropriateLength = (currentShipLength - 1 == columnDiff || currentShipLength - 1 == rowDiff);
 
 //          Checking for other errors in input.
-            if (Field.c1ColumnNum > 11 || Field.c2ColumnNum > 11 || Field.c1RowNum > 11 || Field.c2RowNum > 11 ||
-                    Field.c1ColumnNum < 1 || Field.c1RowNum < 1) {
+            if (Player1.c1ColumnNum > 11 || Player1.c2ColumnNum > 11 || Player1.c1RowNum > 11 || Player1.c2RowNum > 11 ||
+                    Player1.c1ColumnNum < 1 || Player1.c1RowNum < 1) {
 
                 return "Error. Input coordinates are out of battlefield range." + "\n" +
                         "Row range is: A-J, column range is: 1-10. Try again." + "\n" +
@@ -226,8 +209,8 @@ class Field {
 
             } else if (columnDiff != 0 && rowDiff != 0) {
                 return "Error. You can only position a ship horizontally or vertically, not diagonally. Try again.\n" +
-                       "Input should contain two coordinates with a space between them." + "\n" +
-                       "Example: 'b2 e2', or 'C1 C5'.";
+                        "Input should contain two coordinates with a space between them." + "\n" +
+                        "Example: 'b2 e2', or 'C1 C5'.";
 
             } else if (!appropriateLength) {
                 return "Error. Incorrect length of the ship. Try again." + "\n" +
@@ -248,7 +231,7 @@ class Field {
         if (rowDiff == 0) {
             shipSurroundingField = new String[3][currentShipLength + 2];
             for (int i = 0; i < 3; i++) {
-                System.arraycopy(testField[i + Field.c1RowNum], Field.c1ColumnNum, shipSurroundingField[i],
+                System.arraycopy(testField[i + Player1.c1RowNum], Player1.c1ColumnNum, shipSurroundingField[i],
                         0, currentShipLength + 2);
             }
         }
@@ -256,7 +239,7 @@ class Field {
         if (columnDiff == 0) {
             shipSurroundingField = new String[currentShipLength + 2][3];
             for (int i = 0; i < currentShipLength + 2; i++) {
-                System.arraycopy(testField[i + Field.c1RowNum], Field.c1ColumnNum, shipSurroundingField[i],
+                System.arraycopy(testField[i + Player1.c1RowNum], Player1.c1ColumnNum, shipSurroundingField[i],
                         0, 3);
             }
         }
@@ -411,21 +394,23 @@ class Field {
                 case "d " -> listOfLabelledField.remove("d ");
             }
 
-        } else if (Objects.equals(battlefield[c1RowNum][c1ColumnNum], "X ")){ // ???
+        } else if (Objects.equals(battlefield[c1RowNum][c1ColumnNum], "X ")) { // ???
             battlefield[c1RowNum][c1ColumnNum] = "X ";
             fogField[c1RowNum][c1ColumnNum] = "X ";
-        }
-
-        else if (Objects.equals(battlefield[c1RowNum][c1ColumnNum], "M ")){ // ???
+        } else if (Objects.equals(battlefield[c1RowNum][c1ColumnNum], "M ")) { // ???
             battlefield[c1RowNum][c1ColumnNum] = "M ";
             fogField[c1RowNum][c1ColumnNum] = "M ";
+            missP1 = true;
 
         } else {
             battlefield[c1RowNum][c1ColumnNum] = "M ";
             fogField[c1RowNum][c1ColumnNum] = "M ";
+            missP1 = true;
         }
+        printFogField();
+        shotMessage();
     }
-    void shotMessage(){
+    void shotMessage() {
 
         String hitOrMiss;
         boolean aircraftCarrierSunk = !listOfLabelledField.contains("a ");
@@ -442,62 +427,75 @@ class Field {
 
             if (aircraftCarrierSunk) {
                 if (sunkCounter < 4) {
-                    hitOrMiss = "You sank an Aircraft Carrier. Choose your next target.";
+                    hitOrMiss = "Player 1, you sank an Aircraft Carrier. Choose your next target.";
                     listOfLabelledField.add("a ");
                     sunkCounter++;
                 } else {
-                    hitOrMiss = "You sank the last ship. You won. \nCongratulations!";
+                    hitOrMiss = "Player 1, you sank the last ship. You won. \nCongratulations!";
                     endGame = true;
                 }
 
             } else if (battleshipSunk) {
                 if (sunkCounter < 4) {
-                    hitOrMiss = "You sank a Battleship. Choose your next target.";
+                    hitOrMiss = "Player 1, you sank a Battleship. Choose your next target.";
                     listOfLabelledField.add("b ");
                     sunkCounter++;
                 } else {
-                    hitOrMiss = "You sank the last ship. You won. \nCongratulations!";
+                    hitOrMiss = "Player 1, you sank the last ship. You won. \nCongratulations!";
                     endGame = true;
                 }
 
             } else if (submarineSunk) {
                 if (sunkCounter < 4) {
-                    hitOrMiss = "You sank a Submarine. Choose your next target.";
+                    hitOrMiss = "Player 1, you sank a Submarine. Choose your next target.";
                     listOfLabelledField.add("s ");
                     sunkCounter++;
                 } else {
-                    hitOrMiss = "You sank the last ship. You won. \nCongratulations!";
+                    hitOrMiss = "Player 1, you sank the last ship. You won. \nCongratulations!";
                     endGame = true;
                 }
 
             } else if (cruiserSunk) {
                 if (sunkCounter < 4) {
-                    hitOrMiss = "You sank a Cruiser. Choose your next target.";
+                    hitOrMiss = "Player 1, you sank a Cruiser. Choose your next target.";
                     listOfLabelledField.add("c ");
                     sunkCounter++;
                 } else {
-                    hitOrMiss = "You sank the last ship. You won. \nCongratulations!";
+                    hitOrMiss = "Player 1, you sank the last ship. You won. \nCongratulations!";
                     endGame = true;
                 }
 
             } else if (destroyerSunk) {
                 if (sunkCounter < 4) {
-                    hitOrMiss = "You sank a Destroyer. Choose your next target.";
+                    hitOrMiss = "Player 1, you sank a Destroyer. Choose your next target.";
                     listOfLabelledField.add("d ");
                     sunkCounter++;
                 } else {
-                    hitOrMiss = "You sank the last ship. You won. \nCongratulations!";
+                    hitOrMiss = "Player 1, you sank the last ship. You won. \nCongratulations!";
                     endGame = true;
                 }
 
             } else {
-                hitOrMiss = "You hit a ship! Shoot again.";
+                hitOrMiss = "Player 1, you hit a ship! Shoot again.";
             }
 
+
         } else {
-            hitOrMiss = "You missed! Shoot again.";
+            hitOrMiss = "Player 1, you missed!";
         }
 
         System.out.println("\n" + hitOrMiss);
+
+
+//        System.out.println("Press Enter and pass the move to another player.");
+//        while (enter.charAt(0) != 10) {
+//            enter = scanner.next();
+//            if (enter.charAt(0) == 10) {
+//                for (int i = 0; i < 100; ++i) System.out.println();
+//                System.out.println("Another player shoots now ... ");
+//            } else {
+//                System.out.println("Press Enter and pass the move to another player.");
+//            }
+//        }
     }
 }
