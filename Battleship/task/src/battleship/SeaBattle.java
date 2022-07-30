@@ -3,41 +3,54 @@ package battleship;
 class SeaBattle {
     void play () {
 
-        Field field = new Field();
+        Player1 P1 = new Player1();
+        Player2 P2 = new Player2();
 
-        field.makeFields();
-        field.printBlankField();
+        P1.makeFields();
+        P1.printBlankField();
 
-        field.makeAircraftCarrier();
-        field.addShipToField();
-        field.printBattlefield();
+        P1.addAircraftCarrier();
+        P1.addBattleShip();
+        P1.addSubmarine();
+        P1.addCruiser();
+        P1.addDestroyer();
 
-        field.makeBattleShip();
-        field.addShipToField();
-        field.printBattlefield();
+        for (int i = 0; i < 100; ++i) System.out.println();
 
-        field.makeSubmarine();
-        field.addShipToField();
-        field.printBattlefield();
+        P2.makeFields();
+        P2.printBlankField();
 
-        field.makeCruiser();
-        field.addShipToField();
-        field.printBattlefield();
+        P2.addAircraftCarrier();
+        P2.addBattleShip();
+        P2.addSubmarine();
+        P2.addCruiser();
+        P2.addDestroyer();
 
-        field.makeDestroyer();
-        field.addShipToField();
-        field.printBattlefield();
+        for (int i = 0; i < 100; ++i) System.out.println();
 
         System.out.println("\nThe game starts!");
-        field.printFogField();
-        System.out.println("\nTake a shot!");
+        P1.printFogField();
 
-        while (!field.endGame) {
-            field.shoot();
-            field.addShotToField();
-//            field.printBattlefield();
-            field.printFogField();
-            field.shotMessage();
+        boolean victory = false;
+        while (!victory) {
+            if (!P1.endGame && !P2.endGame) {
+
+                System.out.println("\nPlayer1, take a shot!");
+                P1.shoot();
+                P2.addShotToField();
+
+                System.out.println("\nPlayer2, take a shot!");
+                P2.shoot();
+                P1.addShotToField();
+
+            } else if (P1.endGame) {
+                victory = true;
+                System.out.println("P1 wins!");
+
+            } else {
+                victory = true;
+                System.out.println("P2 wins!");
+            }
         }
     }
 }
