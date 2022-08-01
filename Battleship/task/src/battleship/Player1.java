@@ -131,7 +131,7 @@ class Player1 extends JointVariables {
     }
     private void validateShip(String shipName, int shipLength) {
 
-        System.out.println("\nPlayer 1, enter the coordinates of the " + shipName + " (" + shipLength + " cells):");
+        System.out.println("\nEnter the coordinates of the " + shipName + " (" + shipLength + " cells):");
         System.out.print("> ");
 
         currentShipLength = shipLength;
@@ -343,8 +343,8 @@ class Player1 extends JointVariables {
         loopCondition = true;
         while (loopCondition) {
 
+            System.out.println("\nPlayer1, take a shot!");
             System.out.print("> ");
-            Scanner scanner = new Scanner(System.in);
 
             try {
                 userInput = scanner.nextLine().toUpperCase().trim();
@@ -378,10 +378,10 @@ class Player1 extends JointVariables {
             } catch (Exception e) {
                 System.out.println("Error. Invalid input. Shoot again.");
             }
+
         }
     }
     void addShotToField() {
-
 
         if (Objects.equals(battlefield[c1RowNum][c1ColumnNum], "O ")) {
             battlefield[c1RowNum][c1ColumnNum] = "X ";
@@ -410,7 +410,6 @@ class Player1 extends JointVariables {
             fogField[c1RowNum][c1ColumnNum] = "M ";
             missP2 = true;
         }
-        printFogField();
         shotMessage();
     }
     void shotMessage() {
