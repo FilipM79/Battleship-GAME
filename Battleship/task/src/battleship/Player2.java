@@ -154,6 +154,7 @@ public class Player2 extends JointVariables {
             System.out.println("Input should contain two coordinates with a space between them.");
             System.out.println("Example: 'b2 e2', or 'C1 C5'.");
         }
+        System.out.println();
     }
     private String checkShipInput(String userInput, int currentShipLength) {
 
@@ -321,7 +322,6 @@ public class Player2 extends JointVariables {
         }
     }
     void printBattlefield() {
-        System.out.println();
         for (String[] strings : battlefield) {
             for (String string : strings) {
                 System.out.print(string);
@@ -330,7 +330,6 @@ public class Player2 extends JointVariables {
         }
     }
     void printFogField() {
-        System.out.println();
         for (String[] strings : fogField) {
             for (String string : strings) {
                 System.out.print(string);
@@ -343,7 +342,7 @@ public class Player2 extends JointVariables {
         loopCondition = true;
         while (loopCondition) {
 
-            System.out.println("\nPlayer2, take a shot!");
+            System.out.println("\nTake a shot!");
             System.out.print("> ");
 
             try {
@@ -385,6 +384,7 @@ public class Player2 extends JointVariables {
         if (Objects.equals(battlefield[c1RowNum][c1ColumnNum], "O ")) {
             battlefield[c1RowNum][c1ColumnNum] = "X ";
             fogField[c1RowNum][c1ColumnNum] = "X ";
+            missP1 = true; // delete for continuous shooting after a hit
 
             switch (labelledField[c1RowNum][c1ColumnNum]) {
                 case "a " -> listOfLabelledField.remove("a ");
@@ -397,6 +397,8 @@ public class Player2 extends JointVariables {
         } else if (Objects.equals(battlefield[c1RowNum][c1ColumnNum], "X ")) { // ???
             battlefield[c1RowNum][c1ColumnNum] = "X ";
             fogField[c1RowNum][c1ColumnNum] = "X ";
+            missP1 = true; // delete for continuous shooting after a hit
+
         } else if (Objects.equals(battlefield[c1RowNum][c1ColumnNum], "M ")) { // ???
             battlefield[c1RowNum][c1ColumnNum] = "M ";
             fogField[c1RowNum][c1ColumnNum] = "M ";
@@ -426,7 +428,7 @@ public class Player2 extends JointVariables {
 
             if (aircraftCarrierSunk) {
                 if (sunkCounter < 4) {
-                    hitOrMiss = "Player 1, you sank an Aircraft Carrier. Choose your next target.";
+                    hitOrMiss = "Player 1, you sank an Aircraft Carrier.";
                     listOfLabelledField.add("a ");
                     sunkCounter++;
                 } else {
@@ -436,7 +438,7 @@ public class Player2 extends JointVariables {
 
             } else if (battleshipSunk) {
                 if (sunkCounter < 4) {
-                    hitOrMiss = "Player 1, you sank a Battleship. Choose your next target.";
+                    hitOrMiss = "Player 1, you sank a Battleship.";
                     listOfLabelledField.add("b ");
                     sunkCounter++;
                 } else {
@@ -446,7 +448,7 @@ public class Player2 extends JointVariables {
 
             } else if (submarineSunk) {
                 if (sunkCounter < 4) {
-                    hitOrMiss = "Player 1, you sank a Submarine. Choose your next target.";
+                    hitOrMiss = "Player 1, you sank a Submarine.";
                     listOfLabelledField.add("s ");
                     sunkCounter++;
                 } else {
@@ -456,7 +458,7 @@ public class Player2 extends JointVariables {
 
             } else if (cruiserSunk) {
                 if (sunkCounter < 4) {
-                    hitOrMiss = "Player 1, you sank a Cruiser. Choose your next target.";
+                    hitOrMiss = "Player 1, you sank a Cruiser.";
                     listOfLabelledField.add("c ");
                     sunkCounter++;
                 } else {
@@ -466,7 +468,7 @@ public class Player2 extends JointVariables {
 
             } else if (destroyerSunk) {
                 if (sunkCounter < 4) {
-                    hitOrMiss = "Player 1, you sank a Destroyer. Choose your next target.";
+                    hitOrMiss = "Player 1, you sank a Destroyer.";
                     listOfLabelledField.add("d ");
                     sunkCounter++;
                 } else {
@@ -475,7 +477,7 @@ public class Player2 extends JointVariables {
                 }
 
             } else {
-                hitOrMiss = "Player 1, you hit a ship! Shoot again.";
+                hitOrMiss = "Player 1, you hit a ship!";
             }
 
 
@@ -484,17 +486,5 @@ public class Player2 extends JointVariables {
         }
 
         System.out.println("\n" + hitOrMiss);
-
-
-//        System.out.println("Press Enter and pass the move to another player.");
-//        while (enter.charAt(0) != 10) {
-//            enter = scanner.next();
-//            if (enter.charAt(0) == 10) {
-//                for (int i = 0; i < 100; ++i) System.out.println();
-//                System.out.println("Another player shoots now ... ");
-//            } else {
-//                System.out.println("Press Enter and pass the move to another player.");
-//            }
-//        }
     }
 }
