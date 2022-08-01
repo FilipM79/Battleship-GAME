@@ -160,14 +160,14 @@ public class Player2 extends JointVariables {
 
 //        Checking if input format is ok.
         if (userInput.isBlank()) {
-            return "Error. Input coordinates are empty. Try again." + "\n" +
-                    "Input should contain two coordinates with a space between them." + "\n" +
-                    "Example: 'b2 e2', or 'C1 C5'.";
+            return String.join("\n", "Error. Input coordinates are empty. Try again.",
+                    "Input should contain two coordinates with a space between them.",
+                    "Example: 'b2 e2', or 'C1 C5'.");
 
         } else if (!userInput.contains(" ")) {
-            return "Error. There is no space between input coordinates. Try again." + "\n" +
-                    "Input should contain two coordinates with a space between them." + "\n" +
-                    "Example: 'b2 e2', or 'C1 C5'.";
+            return String.join("\n", "Error. There is no space between input coordinates. Try again.",
+                    "Input should contain two coordinates with a space between them.",
+                    "Example: 'b2 e2', or 'C1 C5'.");
 
         } else {
             int ascii_A_index = 64;
@@ -200,23 +200,24 @@ public class Player2 extends JointVariables {
             boolean appropriateLength = (currentShipLength - 1 == columnDiff || currentShipLength - 1 == rowDiff);
 
 //          Checking for other errors in input.
-            if (Player1.c1ColumnNum > 11 || Player1.c2ColumnNum > 11 || Player1.c1RowNum > 11 || Player1.c2RowNum > 11 ||
-                    Player1.c1ColumnNum < 1 || Player1.c1RowNum < 1) {
+            if (Player1.c1ColumnNum > 11 || Player1.c2ColumnNum > 11 || Player1.c1RowNum > 11
+                    || Player1.c2RowNum > 11 || Player1.c1ColumnNum < 1 || Player1.c1RowNum < 1) {
 
-                return "Error. Input coordinates are out of battlefield range." + "\n" +
-                        "Row range is: A-J, column range is: 1-10. Try again." + "\n" +
-                        "Input should contain two coordinates with a space between them." + "\n" +
-                        "Example: 'b2 e2', or 'C1 C5'.";
+                return String.join("\n", "Error. Input coordinates are out of battlefield range.",
+                        "Row range is: A-J, column range is: 1-10. Try again.",
+                        "Input should contain two coordinates with a space between them.",
+                        "Example: 'b2 e2', or 'C1 C5'.");
 
             } else if (columnDiff != 0 && rowDiff != 0) {
-                return "Error. You can only position a ship horizontally or vertically, not diagonally. Try again.\n" +
-                        "Input should contain two coordinates with a space between them." + "\n" +
-                        "Example: 'b2 e2', or 'C1 C5'.";
+                return String.join("\n", "Error. You can only position a ship " +
+                        "horizontally or vertically, not diagonally. Try again.",
+                        "Input should contain two coordinates with a space between them.",
+                        "Example: 'b2 e2', or 'C1 C5'.");
 
             } else if (!appropriateLength) {
-                return "Error. Incorrect length of the ship. Try again." + "\n" +
-                        "Input should contain two coordinates with a space between them." + "\n" +
-                        "Example: 'b2 e2', or 'C1 C5'.";
+                return String.join("\n", "Error. Incorrect length of the ship. Try again.",
+                        "Input should contain two coordinates with a space between them.",
+                        "Example: 'b2 e2', or 'C1 C5'.");
 
             } else {
 //          If everything is ok with the input.

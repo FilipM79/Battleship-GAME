@@ -1,13 +1,13 @@
 package battleship;
 
 import java.util.Objects;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 class SeaBattle extends JointVariables {
     void play () {
 
         Player1 p1 = new Player1();
         Player2 p2 = new Player2();
-        String enter;
 
         System.out.println("\nPlayer 1, place your ships on the game field");
         p1.makeFields();
@@ -22,7 +22,7 @@ class SeaBattle extends JointVariables {
         System.out.println("\nPress Enter and pass the move to another player");
         enter = scanner.nextLine();
         if (Objects.equals(enter, "")) {
-            for (int i = 0; i < 100; ++i) System.out.println();
+            for (int i = 0; i < 50; ++i) System.out.println();
         } else {
             System.out.println("\nPress Enter and pass the move to another player");
         }
@@ -40,57 +40,56 @@ class SeaBattle extends JointVariables {
         System.out.println("\nPress Enter and pass the move to another player");
         enter = scanner.nextLine();
         if (Objects.equals(enter, "")) {
-            for (int i = 0; i < 100; ++i) System.out.println();
+            for (int i = 0; i < 50; ++i) System.out.println();
         } else {
             System.out.println("\nPress Enter and pass the move to another player");
         }
 
-        boolean victory = false;
-        while (!victory) {
+        AtomicBoolean victory = new AtomicBoolean(false);
+        while (!victory.get()) {
 
-            if (!p1.endGame && !p2.endGame) {
-                while (!missP1 && !p1.endGame && !p2.endGame) {
-                    p2.printFogField();
-                    System.out.println("---------------------");
-                    p1.printBattlefield();
-                    System.out.println("\nPlayer 1, it's your turn:");
-                    p1.shoot();
-                    p2.addShotToField();
-                }
-                missP1 = false;
-                System.out.println("Press Enter and pass the move to another player");
-                enter = scanner.nextLine();
-                if (Objects.equals(enter, "")) {
-                    for (int i = 0; i < 100; ++i) System.out.println();
-                } else {
-                    System.out.println("\nPress Enter and pass the move to another player");
-                }
+            p2.printFogField();
+            System.out.println("---------------------");
+            p1.printBattlefield();
+            System.out.println("\nPlayer 1, it's your turn:");
+            p1.shoot();
+            p2.addShotToField();
 
-                while (!missP2 && !p1.endGame && !p2.endGame) {
-                    p1.printFogField();
-                    System.out.println("---------------------");
-                    p2.printBattlefield();
-                    System.out.println("\nPlayer 2, it's your turn:");
-                    p2.shoot();
-                    p1.addShotToField();
-                }
-                missP2 = false;
-                System.out.println("Press Enter and pass the move to another player");
-                enter = scanner.nextLine();
-                if (Objects.equals(enter, "")) {
-                    for (int i = 0; i < 100; ++i) System.out.println();
-                } else {
-                    System.out.println("\nPress Enter and pass the move to another player");
-                }
-
-
-            } else if (p1.endGame) {
-                victory = true;
-                System.out.println("\nPlayer 2 wins!");
+            if (p2.endGame) {
+                victory.set(true);
+                System.out.println("Player 1 wins!");
+                break;
 
             } else {
-                victory = true;
+                System.out.println("Press Enter and pass the move to another player");
+                enter = scanner.nextLine();
+                if (Objects.equals(enter, "")) {
+                    for (int i = 0; i < 50; ++i) System.out.println();
+                } else {
+                    System.out.println("\nPress Enter and pass the move to another player");
+                }
+            }
+
+            p1.printFogField();
+            System.out.println("---------------------");
+            p2.printBattlefield();
+            System.out.println("\nPlayer 2, it's your turn:");
+            p2.shoot();
+            p1.addShotToField();
+
+            if (p2.endGame) {
+                victory.set(true);
                 System.out.println("\nPlayer 1 wins!");
+                break;
+
+            } else {
+                System.out.println("Press Enter and pass the move to another player");
+                enter = scanner.nextLine();
+                if (Objects.equals(enter, "")) {
+                    for (int i = 0; i < 50; ++i) System.out.println();
+                } else {
+                    System.out.println("\nPress Enter and pass the move to another player");
+                }
             }
         }
     }
